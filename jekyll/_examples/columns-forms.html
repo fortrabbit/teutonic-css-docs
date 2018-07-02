@@ -1,0 +1,23 @@
+---
+
+title:    Form columns
+category: columns
+hide:     no
+order:    6
+
+description: >
+  This example shows another application for columns. You can have your form elements flow in a И way as well.
+
+scss-files:
+  - columns
+  - form-box
+
+---
+
+<div class="columns cols-3 cols-2-p gap_xs gap-h_s">
+  {% include examples/form-text-fields-form-box.html %}
+  {%- comment %}
+  <!-- This other example works with flex and is buggy  -->
+  {% include examples/form-text-fields.html %}
+  {%- endcomment %}
+</div>

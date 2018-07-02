@@ -1,0 +1,57 @@
+---
+
+title:      Comparsion list
+category:   real-world
+order:      40
+
+description: >
+   Here are a few helpers and [utility classes](/utilities) combined to achieve a comparion definition list.
+
+
+scss-files:
+  - 'grid'
+  - 'position-defaults'
+  - 'position-helpers'
+  - 'margin'
+  - 'definition-list'
+
+data:
+  devices:
+    - "Name": "Commodore 64"
+      "Processor": "1.023 MHz"
+      "Memory": "64 KB"
+      "Display": "320 x 200 px"
+      "Colors": "16"
+      "Weight": "1.8 kg"
+      "Released": "1982"
+    - "Name": "Samsung Galaxy S3"
+      "Processor": "1.4 GHz"
+      "Memory": "1 GB"
+      "Display": "1280 x 720 px"
+      "Colors": "16m"
+      "Weight": "133 g"
+      "Released": "2012"
+
+---
+
+<div class="grid gap_s collapse-t pos-rel">
+  <div class="pos-abs pos-c text_xxl text-thin ra-circle inverted pa_m docs-vs">VS</div>
+  {%- for device in page.data.devices %}
+  <div class="span-6">
+    <div class="bg-1 pa_l">
+      <h3 class="pa-b_s bo-b_xs text-center text-clip">{{ device["Name"] }}</h3>
+      <dl class="flex">
+        {%- for spec in device -%}
+        {% unless forloop.first %}
+        <dt class="span-half bo-t_px pa-v_s text-clip">{{ spec[0] }}</dt>
+        <dd class="span-half bo-t_px pa-v_s text-right text-clip">{{ spec[1] }}</dd>
+        {%- endunless -%}
+        {%- endfor %}
+      </dl>
+    </div>
+  </div>
+  {%- endfor %}
+</div>
+<p class="text-serif text_s text-center ma-t_l">
+  <a href="https://en.wikipedia.org/wiki/Moore%27s_law">Moore's law &rarr;</a>
+</p>

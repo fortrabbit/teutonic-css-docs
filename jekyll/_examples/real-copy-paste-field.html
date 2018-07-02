@@ -1,0 +1,24 @@
+---
+
+title:      Copy-paste field
+category:   real-world
+order:      12
+
+description: >
+   Here is the scenario: You want your user to display something to copy/paste. I found readonly text inputs most usable for this, as you can asure that no white space characters are copied accidentally.
+
+details: >
+  The text-helper text-select-all should select the inputs contents by click/touch, but it only seems to work with Safari that way, so I have cheated a little JS in there. For longer multi-line values a textarea will work the same way. Here the long text string is cropped.
+
+scss-files:
+  - 'forms'
+  - 'form-box'
+  - 'form-box'
+
+---
+
+<div class="form-box pa_m read_m">
+  <label class="mini-label required">API key</label>
+  <input onClick="this.select();" type="text" class="input text-select-all text-clip" value="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" readonly>
+  <div class="mini-info shown">copy/paste</div>
+</div>

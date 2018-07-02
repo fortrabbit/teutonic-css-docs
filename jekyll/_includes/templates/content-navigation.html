@@ -1,0 +1,16 @@
+{% assign categories = site.data.example-categories %}
+<div class="span-auto">
+  <!-- MS Edge:  ↓  pa_l doesm't work for some stange reason -->
+  <nav class="pa-h_l pa-v_m flex gap_s">
+    <div>
+      <h3 class="text_l bo-b_xs pa-b_xs">Examples</h3>
+      <ul class="columns cols-6 cols-4-t cols-2-p">
+        {% for category in categories %}
+        <li>
+          <a href="/examples/{{ category.id }}" class="block-link pa_xs{% if page.category == category.id %} active{%  endif %}">{{ category.title }}</a>
+        </li>
+        {% endfor %}
+     </ul>
+   </div>
+  </nav>
+</div>

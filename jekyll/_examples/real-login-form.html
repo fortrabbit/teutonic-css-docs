@@ -1,0 +1,40 @@
+---
+
+title:      Login form
+category:   real-world
+sub-cat:    form
+order:      1
+
+description: >
+  Using rounded borders on top and bottom of the form.
+
+scss-files:
+  - 'forms'
+  - 'form-box'
+  - 'link'
+  - 'gap-no'
+  - 'radio-checkbox'
+  - 'flex'
+
+---
+
+<form class="gap-no read_s">
+  <div class="form-box pa_m">
+    <label for="email" class="mini-label">E-mail</label>
+    <input type="email" id="email" name="email" class="input text_l pa_m ra-t_s" placeholder="your@email.com" required="required">
+  </div>
+  <div class="form-box pa_m">
+    <label for="password" class="mini-label">Password</label>
+    <input type="password" id="password" name="password" class="input text_l pa_m" placeholder="•••••••••" required="required">
+  </div>
+  <button class="button block prime text_l pa_m ra-b_s bo-b_xs" type="submit">Log in &rarr;</button>
+  <div class="text_s ma-t_m flex pa-h_m">
+    <div>
+      <input type="checkbox" id="choice" name="choice" class="checkbox">
+      <label for="choice">Remember me</label>
+    </div>
+    <div class="span-auto">
+      <a href="#" class="link">Forgot password?</a>
+    </div>
+  </div>
+</form>

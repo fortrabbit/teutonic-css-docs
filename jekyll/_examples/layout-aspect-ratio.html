@@ -1,0 +1,159 @@
+---
+
+title:      Aspect ratio
+category:   layout
+order:      12
+syntax:     ar_{ratio}
+
+description: |
+  Here is an addition to the [media](#media) container. The aspect ratio classes are reserving space in the page layout. This is handy for iframes or any situation you want to have full control about the media size, or have a height for a media container while the media is still loading. It comes with a set of predefined ratios. Put in any kind of content, customize it with the CSS Vars `--ar-x` and `--ar-y`.
+
+details: |
+  Resize your browser to see that quote-text get's cropped. Examine how you can change the default background color and work with unkown or not exactly fitting images, using the extra `.cover` class. The funny faces are making use of the special radius modifier class `.r-circle`.
+
+
+scss-files:
+  - 'aspect-ratio'
+
+css-vars:
+  - selector: .ar-custom
+    vars:
+      - "--ar-x: 1100"
+      - "--ar-y: 300"
+
+data:
+  aspect-ratios:
+    - 1  :  2,
+    - 9  : 16,
+    - 2  :  3,
+    - 3  :  4,
+    - 1  :  1,
+    - 4  :  3,
+    - 3  :  2,
+    - 16 :  9,
+    - 2  :  1
+  image-sizes:
+    -   a : a,
+    - 450 : 900,
+    - 450 : 800,
+    - 450 : 675,
+    - 450 : 600,
+    - 450 : 450,
+    - 600 : 450,
+    - 450 : 300,
+    - 640 : 360,
+    - 800 : 400
+  avatars:
+    - assffsdf
+    - 21eequwo
+
+---
+
+{%- assign quotes = site.data.quotes -%}
+{%- assign min = 1 -%}
+{%- assign max = 188 -%}
+{%- assign diff = max | minus: min -%}
+{%- assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min -%}
+<h3 class="ma-b_xs">
+  Different media types
+</h3>
+<div class="grid gap_s ">
+  <div class="span-4">
+    <figure class="ar-16-9 media bo_px">
+      <iframe src="https://www.youtube.com/embed/FZ1KCIZCenw?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </figure>
+    <p class="text_s ma-t_xs">
+      &uarr; This an embbeded video
+    </p>
+  </div>
+  <div class="span-4">
+    <figure class="ar-16-9 media bo_px">
+      <blockquote class="text-serif text-italic pa_m">
+        <p class="text_xl">{{ quotes[randomNumber].text }}</p>
+        <p class="text_s ma-t_s">—{{ quotes[randomNumber].author }}</p>
+      </blockquote>
+    </figure>
+    <p class="text_s ma-t_xs">
+      &uarr; This is text
+    </p>
+  </div>
+  <div class="span-4">
+    <figure class="ar-16-9 media bo_px">
+      <img src="//picsum.photos/800/450/?random" alt="Photo via picsum.photos">
+    </figure>
+    <p class="text_s ma-t_xs">
+      &uarr; This an image
+    </p>
+  </div>
+</div>
+
+<h3 class="ma-t_l ma-b_xs">
+  Aspect ratio presets
+</h3>
+<div class="grid gap_s">
+  {% for aspect-ratios in page.data.aspect-ratios -%}
+  {%- assign image-sizes = page.data.image-sizes[forloop.index] -%}
+  {%- for image-size in image-sizes -%}  
+    {%- assign i-0 = image-size[0] -%}
+    {%- assign i-1 = image-size[1] -%}
+  {%- endfor -%}
+  {%- for aspect-ratio in aspect-ratios -%}
+  {%- assign ar-x = aspect-ratio[0] -%}
+  {%- assign ar-y = aspect-ratio[1] -%}
+  <div class="span-2 span-4-t span-6-p">
+    <figure class="ar-{{ ar-x }}-{{ ar-y }} media">
+      <img src="//picsum.photos/{{ i-0 }}/{{ i-1 }}/?random&asd=23" alt="Photo via picsum.photos">
+      <div class="text-mono mini-info">ar-{{ ar-x }}-{{ ar-y }}</div>
+    </figure>
+  </div>
+  {% endfor %}
+  {%- endfor -%}
+  {%- for avatar in page.data.avatars -%}
+  <div class="span-1 span-2-t span-3-p">
+    <img class="ar-1-1 ra-circle media" src="//api.adorable.io/avatars/300/{{ avatar }}.png" alt="Photo via adorable.io/avatars">
+  </div>
+  {%- endfor -%}
+</div>
+
+<div class="grid gap_s ma-t_l">
+  <div class="span-4">
+    <h3 class="ma-b_xs text-clip">
+      Covered background image
+    </h3>
+    <figure class="ar-2-1 cover" style="background-image: url('//picsum.photos/400/400/?random')">
+      <div class="text-mono mini-info">Cropped image</div>
+    </figure>
+    <p class="text_s ma-t_xs">
+      &uarr; Larger background-image cut out to fit into content
+    </p>
+
+  </div>
+  <div class="span-4">
+    <h3 class="ma-b_xs text-clip">
+      Covered image
+    </h3>
+    <figure class="ar-2-1 cover">
+      <img class="cover" src="//picsum.photos/450/450/?random" alt="">
+      <div class="text-mono mini-info">Cropped image</div>
+    </figure>
+    <p class="text_s ma-t_xs">
+      &uarr; Larger image cut out to fit into content
+    </p>
+
+  </div>
+  <div class="span-4">
+    <h3 class="ma-b_xs text-clip">
+      Custom aspect ratio
+    </h3>
+    {%- assign custom-x = 1100 -%}
+    {%- assign custom-y = 300 -%}
+    <figure class="ar-custom">
+      <img src="//picsum.photos/{{ custom-x }}/{{ custom-y }}/?random&asd=223" alt="Photo via picsum.photos">
+      <div class="text-mono mini-info">{{ custom-x }}:{{ custom-y }}</div>
+    </figure>
+    <p class="text_s ma-t_xs">
+      &uarr; Aspect ratio works with any image size, with locally scoped CSS Vars.
+    </p>
+
+  </div>
+</div>

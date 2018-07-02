@@ -1,0 +1,47 @@
+{%- comment %}
+
+A dumb way to figure out the right amount of columns based on the number of items...
+
+{%- endcomment %}
+
+{%- assign s = 3 %}
+
+{%- if examples.size == 4 %}
+  {% assign s = 4 %}
+{%- endif %}
+
+{%- if examples.size == 5 %}
+  {% assign s = 5 %}
+{%- endif %}
+
+{%- if examples.size == 7 %}
+  {% assign s = 4 %}
+{%- endif %}
+
+{%- if examples.size == 8 %}
+  {% assign s = 4 %}
+{%- endif %}
+
+{%- if examples.size == 9 %}
+  {% assign s = 3 %}
+{%- endif %}
+
+{%- if examples.size >= 10 %}
+  {% assign s = 5 %}
+{%- endif %}
+
+{%- if examples.size >= 11 %}
+  {% assign s = 6 %}
+{%- endif %}
+
+{%- if examples.size >= 13 %}
+  {% assign s = 7 %}
+{%- endif %}
+
+{%- if examples.size >= 15 %}
+  {% assign s = 8 %}
+{%- endif %}
+
+{%- if examples.size >= 17 %}
+  {% assign s = 6 %}
+{%- endif %}

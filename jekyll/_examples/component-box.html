@@ -1,0 +1,139 @@
+---
+
+title:      Box
+category:   components
+order:      1
+syntax:     .box
+
+description: >
+  Boxes are rectangles with visible outlines. Use them for navigational elements and to structure your contents.
+
+details: >
+  There are two modes: `div.box` is passive, while `a.box`, `label.box` or `button.box` will be an active version, adding a background color and hover/focus effects.
+
+scss-files:
+  - box
+
+---
+
+<div class="grid gap_s">
+  <div class="span-6">
+    <h5 class="bo-b_xs pa-b_xs">Interactive</h5>
+    <div class="flex gap-no wrap-no text-mono">
+      <a class="box text-clip" href="">a.box</a>
+      <a class="box text-clip" href="">a.box</a>
+    </div>
+  </div>
+  <div class="span-6">
+    <h5 class="bo-b_xs pa-b_xs">Passive</h5>
+    <div class="flex gap-no wrap-no text-mono">
+      <div class="box text-clip">div.box</div>
+      <div class="box text-clip">div.box</div>
+    </div>
+  </div>
+</div>
+
+
+{% comment %}
+<!-- Testing for empty boxes min-height  -->
+<h3 class="ma-t_l">
+  Modified text sizes
+</h3>
+<div class="grid ma-t_s">
+  <div class="span-4">
+    <h5 class="bo-b_xs pa-b_xs">Interactive</h5>
+    <div class="flex gap-no wrap-no text-mono text_l">
+      <a class="box text-clip" href="">a.box</a>
+      <a class="box text-clip" href="">a.box</a>
+    </div>
+  </div>
+  <div class="span-4">
+    <h5 class="bo-b_xs pa-b_xs">Passive</h5>
+    <div class="flex gap-no wrap-no text-mono text_l">
+      <div class="box text-clip">div.box</div>
+      <div class="box text-clip">div.box</div>
+    </div>
+  </div>
+  <div class="span-4">
+    <h5 class="bo-b_xs pa-b_xs">Empty</h5>
+    <div class="flex gap-no wrap-no text-mono text_l">
+      <div class="box text-clip"></div>
+      <div class="box text-clip"></div>
+    </div>
+  </div>
+</div>
+<div class="grid ma-t_s">
+  <div class="span-4">
+    <h5 class="bo-b_xs pa-b_xs">Interactive</h5>
+    <div class="flex gap-no wrap-no text-mono text_xxl">
+      <a class="box text-clip" href="">a.box</a>
+      <a class="box text-clip" href="">a.box</a>
+    </div>
+  </div>
+  <div class="span-4">
+    <h5 class="bo-b_xs pa-b_xs">Passive</h5>
+    <div class="flex gap-no wrap-no text-mono text_xxl">
+      <div class="box text-clip">div.box</div>
+      <div class="box text-clip">div.box</div>
+    </div>
+  </div>
+  <div class="span-4">
+    <h5 class="bo-b_xs pa-b_xs">Empty</h5>
+    <div class="flex gap-no wrap-no text-mono text_xxl">
+      <div class="box text-clip"></div>
+      <div class="box text-clip"></div>
+    </div>
+  </div>
+</div>
+
+<h3 class="ma-t_l">
+  Modified padding
+</h3>
+<div class="grid ma-t_s">
+  <div class="span-4">
+    <h5 class="bo-b_xs pa-b_xs">Interactive</h5>
+    <div class="flex gap-no wrap-no text-mono">
+      <a class="box pa_m" href="">a.box</a>
+      <a class="box pa_m" href="">a.box</a>
+    </div>
+  </div>
+  <div class="span-4">
+    <h5 class="bo-b_xs pa-b_xs">Passive</h5>
+    <div class="flex gap-no wrap-no text-mono">
+      <div class="box pa_m">div.box</div>
+      <div class="box pa_m">div.box</div>
+    </div>
+  </div>
+  <div class="span-4">
+    <h5 class="bo-b_xs pa-b_xs">Empty</h5>
+    <div class="flex gap-no wrap-no text-mono">
+      <div class="box pa_m"></div>
+      <div class="box pa_m"></div>
+    </div>
+  </div>
+</div>
+
+<div class="grid ma-t_s">
+  <div class="span-4">
+    <h5 class="bo-b_xs pa-b_xs">Interactive</h5>
+    <div class="flex gap-no wrap-no text-mono">
+      <a class="box pa_l" href="">a.box</a>
+      <a class="box pa_l" href="">a.box</a>
+    </div>
+  </div>
+  <div class="span-4">
+    <h5 class="bo-b_xs pa-b_xs">Passive</h5>
+    <div class="flex gap-no wrap-no text-mono">
+      <div class="box pa_l">div.box</div>
+      <div class="box pa_l">div.box</div>
+    </div>
+  </div>
+  <div class="span-4">
+    <h5 class="bo-b_xs pa-b_xs">Empty</h5>
+    <div class="flex gap-no wrap-no text-mono">
+      <div class="box pa_l"></div>
+      <div class="box pa_l"></div>
+    </div>
+  </div>
+</div>
+{% endcomment %}

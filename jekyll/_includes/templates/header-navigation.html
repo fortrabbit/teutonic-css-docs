@@ -1,0 +1,19 @@
+<header class="flex wrap-no gap_xs ma-t_m">
+  <div class="span-auto">
+    <a href="/" class="pa_s pa-l_l block bo-t_px bo-r_px bo-b_px text-bold docs-teutonic-link{% if page.active == 'start' %} active{%  endif %}">
+      {{ site.title }}
+    </a>
+  </div>
+
+  {% comment %}
+  <div class="span-auto">
+    <div class="search-box docs-search">
+      <input type="search" class="input" placeholder="Search Teutonic">
+    </div>
+  </div>
+  {% endcomment %}
+
+  <div class="span-auto ma-l-auto">
+    <a href="/usage" class="button prime ma-r_l{% if page.active == "usage" %} active arrow_l{%  endif %}">Use it</a>
+  </div>
+</header>

@@ -1,0 +1,33 @@
+---
+
+title:    Fluid span
+category: flexbox
+order:    5
+
+scss-files:
+  - 'flex'
+
+description: >
+  The width of flex child containers is not only defined by the number of containers, but also by their content. They will adjust and distrubute their widths automatically acording to content. 
+
+details: >
+  Usage is a bit tricky :)
+
+data:
+  tweets:
+   "Rant tweet" : "[YOUR OWN PERSONAL OPINION ON A TOPIC] > [ARTICLE TITLE]: https://[URL] #[HASHTAG] by @[HANDLE]"
+   "Endorsement tweet" : "I ♥ this post by @[HANDLE] - https://[URL] #[HASHTAG]"
+   "Solution tweet" : "Don't let your [ASSET] [NEGATIVE RESULT]. Find out how to [GOAL] here: https://[URL] #[HASHTAG]"
+
+---
+
+<div class="flex wrap-no gap_m collapse-p">
+  {%- for tweet in page.data.tweets %}
+  <div>
+    <div>
+      <h5 class="text-clip ma-b_s">{{ tweet[0] }}</h5>
+      <p class="text-hyphen">{{ tweet[1] }}</p>
+    </div>
+  </div>
+  {%- endfor %}
+</div>

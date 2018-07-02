@@ -1,0 +1,93 @@
+[
+  {
+    "letter": "A",
+    "bands": [
+      "Abba",
+      "AC/DC",
+      "Apparat",
+      "Arcade Fire",
+      "At The Drive-In"
+    ]
+  },
+  {
+    "letter": "B",
+    "bands": [
+      "Beastie Boys",
+      "The Beatles",
+      "Beck",
+      "Beirut",
+      "Billy Joel"
+    ]
+  },
+  {
+    "letter": "C",
+    "bands": [
+      "Carl Perkins",
+      "Chromeo",
+      "cLOUDDEAD",
+      "Common",
+      "Converge",
+      "Crystal Castles",
+      "Cursive",
+      "Curtis Mayfield",
+      "Cypress Hill"
+    ]
+  },
+  {
+    "letter": "D",
+    "bands": [
+      "Daedelus",
+      "Daft Punk",
+      "Daphni",
+      "Deadbeat",
+      "Deichkind",
+      "Dictaphone",
+      "Digable Planets"
+    ]
+  },
+  {
+    "letter": "E",
+    "bands": [
+      "Eek A Mouse",
+      "Electric Light Orchestra",
+      "Elvis Costello",
+      "Eminem",
+      "Erland Øye",
+      "Ernest Ranglin"
+    ]
+  },
+  {
+    "letter": "F",
+    "bands": [
+      "Fat Jack",
+      "Figurines",
+      "Flanger",
+      "Fourcolor",
+      "Frank Zappa",
+      "Funkdoobiest",
+      "Futureshock"
+    ]
+  },
+  {
+    "letter": "G",
+    "bands": [
+      "Ghostpoet",
+      "Gift of Gab",
+      "Gnarls Barkley",
+      "Goldmund",
+      "Grace Jones",
+      "Grand Agent",
+      "Guther"
+    ]
+  },
+  {
+    "letter": "H",
+    "bands": [
+      "Heist",
+      "Henrik Schwarz",
+      "Hot Chip",
+      "Human League",
+      "Hushpuppies"
+    ]
+  }
+]

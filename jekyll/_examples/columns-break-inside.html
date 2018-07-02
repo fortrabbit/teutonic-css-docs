@@ -1,0 +1,34 @@
+---
+
+title:    Break inside
+category: columns
+hide:     yes
+order:    6
+syntax:   .columns.break-inside
+
+description: >
+  Usually columns childs are 'trained' to stay together in one peace.
+
+scss-files:
+  - columns
+
+---
+
+
+{%- capture markdown_content %}{% include examples/blindtext.md %}{% endcapture %}
+
+<h4 class="flex wrap-no ma-b_xs ma-b_m">
+  <div>Standard</div>
+  <div class="span-auto text-thin text-mono">.columns</div>
+</h4>
+<article class="columns cols-3 collapse-p gap-h_l article text-all_s">
+  {{ markdown_content }}
+</article>
+
+<h4 class="flex wrap-no ma-b_xs ma-b_m ma-t_l">
+  <div>With break</div>
+  <div class="span-auto text-thin text-mono">.columns.break-inside</div>
+</h4>
+<article class="columns break-inside cols-3 collapse-p gap-h_l article text-all_s">
+  {{ markdown_content }}
+</article>

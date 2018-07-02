@@ -1,0 +1,73 @@
+---
+title:    Meter
+category: forms
+order:    14
+
+
+description: >
+  The meter element - similar to it's little brother [progress](#progress) - looks like horizontal graph element. But the meter has a colored bar chart, which indicates if the value is too low, too high or just right. Use this for disk usage, the relevance of a query result …
+
+
+details: >
+  It doesn't have an indeterminate state. The HTML element has a lot of attributes: `min`, `max`, `low`, `high`, `optimum` and `value`. Wrap it in box for best alignment with other form elements within Teutonic CSS. Browser support for a styled meter element is a bit sloppy. This looks kind of OK in MS Edge.
+
+scss-files:
+  - 'forms'
+  - 'meter'
+
+---
+
+<div class="read_l">
+  {%- comment %}
+  <h4>
+    No style
+  </h4>
+  <div><meter></meter></div>
+  <div><meter value="5"   min="0" low="10" optimum="50" high="90" max="100"></meter></div>
+  <div><meter value="50"  min="0" low="10" optimum="50" high="90" max="100"></meter></div>
+  <div><meter value="95"  min="0" low="10" optimum="50" high="90" max="100"></meter></div>
+  <div><meter low=".25" optimum=".2" high=".75" value=".8"></meter></div>
+  {%- endcomment %}
+  <h4 class="ma-t_m">
+    Standalone
+  </h4>
+  <meter class="meter ma-t_xs" value="5"   min="0" low="10" optimum="50" high="90" max="100"></meter>
+  <meter class="meter ma-t_xs" value="50"  min="0" low="10" optimum="50" high="90" max="100"></meter>
+  <meter class="meter ma-t_xs" value="95"  min="0" low="10" optimum="50" high="90" max="100"></meter>
+  <meter class="meter ma-t_xs" low=".25" optimum=".2" high=".75" value=".8"></meter>
+  <h4 class="ma-t_m">
+    Wrapped in a .meter-box
+  </h4>
+  <div class="meter-box ma-t_xs">
+    <meter class="meter" value="5" min="0" low="10" optimum="50" high="90" max="100"></meter>
+  </div>
+  <div class="meter-box ma-t_xs">
+    <meter class="meter" value="50" min="0" low="10" optimum="50" high="90" max="100"></meter>
+  </div>
+  <div class="meter-box ma-t_xs">
+    <meter class="meter" value="91" min="0" low="10" optimum="50" high="90" max="100"></meter>
+  </div>
+  <div class="meter-box ma-t_xs">
+    <meter class="meter" value="110" min="0" low="10" optimum="5" high="90" max="100"></meter>
+  </div>
+  <h4 class="ma-t_m">
+    Wrapped in a .meter-box with content
+  </h4>
+  <div class="meter-box ma-t_xs">
+    <div>5</div>
+    <meter class="meter" value="5" min="0" low="10" optimum="50" high="90" max="100"></meter>
+  </div>
+  <div class="meter-box ma-t_xs">
+    <div>50</div>
+    <meter class="meter" value="50" min="0" low="10" optimum="50" high="90" max="100"></meter>
+  </div>
+  <div class="meter-box ma-t_xs">
+    <div>91</div>
+    <meter class="meter" value="91" min="0" low="10" optimum="50" high="90" max="100"></meter>
+  </div>
+  <div class="meter-box ma-t_xs">
+    <div>110</div>
+    <meter class="meter" value="110" min="0" low="10" optimum="5" high="90" max="100"></meter>
+  </div>
+</div>
+

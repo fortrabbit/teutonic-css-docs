@@ -1,0 +1,46 @@
+---
+
+title:    Breakpoints
+category: css-grid
+order:    5
+syntax:   .span-{columns}-{breakpoint}
+
+description: >
+  With these media query helper classes you can make your containers span over less columns on smaller viewports. Make your browser windows smaller to see how the grid reflows on tablet and phone.
+
+
+details: >
+  Classes with the breakpoint `-t` will realign on tablet-like screen resolution size, `-p` will do so on phone screen size. The example below will have three rows on desktop screens. 
+
+scss-files:
+  - 'grid'
+  - 'grid-breakpoints'
+
+data:
+  boxes:
+    - "span-2 span-4-t span-6-p"
+    - "span-2 span-4-t span-6-p"
+    - "span-2 span-4-t span-6-p"
+    - "span-2 span-4-t span-6-p"
+    - "span-2 span-4-t span-6-p"
+    - "span-2 span-4-t span-6-p"
+    - "span-3 span-6-t span-12-p"
+    - "span-3 span-6-t span-12-p"
+    - "span-3 span-6-t span-12-p"
+    - "span-3 span-6-t span-12-p"
+
+---
+
+{%- assign letters = site.data.alphabet -%}
+
+<div class="grid gap-no ma-b_s text-mono text_s">
+  {%- for box in page.data.boxes %}
+  <div class="box text-clip bg-{{ letters[forloop.index] }} {{ box }}">{{ box }}</div>
+  {%- endfor %}
+</div>
+<p>
+  &uarr;<br>
+  2 rows on desktop<br>
+  4 rows on tablet<br>
+  7 rows on phone
+</p>

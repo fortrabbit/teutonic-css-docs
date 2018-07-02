@@ -1,0 +1,62 @@
+---
+
+title:      Radius
+category:   utilities
+order:      10
+syntax:     .ra{-direction?}{_size?}
+
+description: >
+   Some people believe rounded corners are better recognoziable by humans. So here are your radius helper classes. There are three sizes, defined by space CSS vars, options for all  directions as well as an extra pill-look class and a perfectly rounded square, AKA circle.
+
+
+details: >
+  When no direction is given, the border radius will apply on all for corners. When a cardinal direction (t,r,b,l) is present, radius will apply on two corners. When a diagonal direction (tr,br,bl,l) is given, only one corner will be rounded.
+
+scss-files:
+  - 'radius'
+
+data:
+  radii-sizes:
+    - extra-small: xs
+    - small: s
+    - medium: m
+  radii-cardinal-directions:
+    - top: t
+    - right: r
+    - bottom: b
+    - left: l
+  radii-diagonal-directions:
+    - top-right: tr
+    - bottom-right: br
+    - bottom-left: bl
+    - top-left: tl
+
+---
+
+{%- for sizes in page.data.radii-sizes %}
+{% for size in sizes -%}
+<div class="grid gap_s collapse-p text-mono ma-b_s " style="--grid-cols: 9">
+  <div class="text-clip pa_m bg-a ra_{{ size[1] }}">ra_{{ size[1] }}</div>
+  {%- for radii in page.data.radii-cardinal-directions -%}
+  {%- for radius in radii %}
+  <div class="text-clip pa_m bg-d ra-{{ radius[1] }}_{{ size[1] }}">ra-{{ radius[1] }}_{{ size[1] }}</div>
+  {%- endfor -%}
+  {%- endfor -%}
+  {%- for radii in page.data.radii-diagonal-directions -%}
+  {%- for radius in radii %}
+  <div class="text-clip pa_m bg-j ra-{{ radius[1] }}_{{ size[1] }}">ra-{{ radius[1] }}_{{ size[1] }}</div>
+  {%- endfor -%}
+  {%- endfor %}
+</div>
+{%- endfor -%}{%- endfor -%}
+
+<div class="grid text-mono ma-t_s">
+  <div class="text-center pa_m span-6 ra-pill" style="background-color: RoyalBlue">ra-pill</div>
+  <div class="text-center pa_m span-6 ra-pill" style="background-color: OrangeRed">ra-pill</div>
+</div>
+
+<div class="grid gap-no ma-t_s">
+  <button class="text-center button pa_m span-6 ra-pill-l">ra-pill-l</button>
+  <button class="text-center button pa_m span-6 ra-pill-r">ra-pill-r</button>
+</div>
+

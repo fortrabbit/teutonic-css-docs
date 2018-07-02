@@ -1,0 +1,76 @@
+---
+
+title:      Form box
+category:   forms
+order:      15
+syntax:     .form-box
+
+description: >
+  This wrapper element combines a "label" with some form element and possibly other helpers. Most commonly used with `.input`, `.textarea` or `.select`. By default, the padding is small. Add the `.pa_m` class for a some padding.
+
+details: > 
+  You can also combine it with a `.search-box` — pushing the magnifier glass will to the right — but it will not work in combonation with `.range-box`, `.meter-box` or `.progress-box`.
+
+scss-files:
+  - 'form-box'
+
+---
+
+<div class="read_l">
+  <div class="gap_xs">
+    <h4>Standard</h4>
+    <div class="form-box">
+      <label class="mini-label required">Text input</label>
+      <input type="text" class="input">
+      <div class="mini-info">Give sense here</div>
+    </div>
+    <div class="form-box">
+      <label class="mini-label">Select</label>
+      <select class="select">
+        <option value="">Please select</option>
+        <optgroup label="Favorite CSS preprocessor">
+          <option>SASS</option>
+          <option>LESS</option>
+          <option>Stylus</option>
+          <option>Post CSS</option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="form-box search-box">
+      <label class="mini-label">Search</label>
+      <input type="search" class="input">
+    </div>
+    <div class="form-box">
+      <label class="mini-label">Textarea</label>
+      <textarea class="textarea" name="form-box-message" id="form-box-message" rows="3"></textarea>
+    </div>
+  </div>
+  <div class="gap_xs ma-t_m">
+    <h4>With extra padding</h4>
+    <div class="form-box pa_m">
+      <label class="mini-label required">Text input</label>
+      <input type="text" class="input pa-l_s">
+      <div class="mini-info">Please provide some sense here</div>
+    </div>
+    <div class="form-box pa_m">
+      <label class="mini-label">Select</label>
+      <select class="select" name="" id="">
+        <option value="">Please select</option>
+        <optgroup label="Favorite CSS preprocessor">
+          <option>SASS</option>
+          <option>LESS</option>
+          <option>Stylus</option>
+          <option>Post CSS</option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="form-box search-box pa_m">
+      <label class="mini-label">Search</label>
+      <input type="search" class="input">
+    </div>
+    <div class="form-box pa_m">
+      <label class="mini-label">Textarea</label>
+      <textarea class="textarea" name="form-box-message" id="form-box-message" rows="3"></textarea>
+    </div>
+  </div>
+</div>

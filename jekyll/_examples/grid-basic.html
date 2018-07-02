@@ -1,0 +1,39 @@
+---
+title:    Basic grid
+category: css-grid
+order:    1
+syntax:   .grid
+
+description: >
+  This is the bare naked grid. The content containers are wrapping over multiple implicit rows. This example makes no sense for daily usage, but it shows you the underlying structure of the grid.
+
+details: > 
+  You can customize the number of columns by adjustng the CSS Var `--grid-cols`. This looks similar to the [Flexbox basic grid](/examples/flexbox#basic-grid), but is different.
+
+
+css-vars:
+  - selector: .grid.custom
+    vars:
+      - "--grid-cols : 6"
+
+scss-files:
+  - 'grid'
+
+---
+
+<h3 class="ma-b_s">
+  Standard 12 columns grid
+</h3>
+<div class="grid gap_s">
+  {%- for i in (1..24) %}
+  <div class="box span-1">&nbsp;</div>
+  {%- endfor %}
+</div>
+<h3 class="ma-b_s ma-t_m">
+  Custom number of grid columns
+</h3>
+<div class="grid gap_s custom">
+  {%- for i in (1..6) %}
+  <div class="box span-1">&nbsp;</div>
+  {%- endfor %}
+</div>

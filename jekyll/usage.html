@@ -1,0 +1,159 @@
+---
+
+layout:  usage
+active:  usage
+
+headline: >
+  Comprehensive guides
+
+subline: >
+  Dig deeper: advanced usage, concepts and details.
+
+---
+
+## About CSS Vars
+
+With CSS variables — the official name is "CSS Custom Properties" — also CSS Vars here after — you can store key/value variables in CSS. Unlike with variables from a pre-processor (SASS, LESS, Stylus …) these variables are understood and parsed by the browser. That's a big deal for working with CSS. Modern browsers are [supporting it](https://caniuse.com/#feat=css-variables). Read the [MDN article](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) to learn more about CSS variables in general.
+
+## CSS Vars in Teutonic
+
+Teutonic CSS incorporates CSS Vars heavily, so you can adjust all important parts without touching the SCSS source. See that in action with the [theming page](examples/theming).
+
+### Global theming
+
+Alter the main CSS Vars with your own custom values to create your own Teutonic theme. The main CSS Vars are stored with the `:root` element like so:
+
+```css
+:root {
+  --{key}: {value};
+  ...
+}
+```
+
+For a full list of available CSS Vars you can also inspect the `:root` element in your browsers developer tools or browse the [source at GitHub]({{ site.github_url }}). In order to theme Teutonic, you can overwrite those values. Your theme only has to hold the values you are actually changing, of course.
+
+### Local theming
+
+You can also overwrite certain CSS Var values on deeper levels for local adujustments. So instead of defining the variables in `:root` you can define them with your own container: 
+
+```css
+.my-elem {
+  --{key}: {value};
+}
+```
+
+### Element adjustments
+
+Beside the global theming variables usally stored in :root you will find additional CSS Vars for elements. Browse the examples and find the little "edit this" CSS style boxes on the side. See the example with the [CSS grid](examples/css-grid#basic-grid). These element CSS Vars are storing parameters to locally overwrite. You can do that with inline styles like so:
+
+```html
+<div class="grid" style="--grid-cols: 12">…</div>
+```
+
+
+## Work with Teutonic
+
+The original source of Teutonic is available as a collection of SCSS files on [GitHub]({{ site.github_url }}). These files are getting compiled and uglified to CSS to be as small as possible and production-ready. Now, with traditional CSS frameworks you usually had to compile it yourself to make any adjuments. With Teutonic CSS this is different and you can go both ways:
+
+
+### 1. Use the compiled
+
+Unlike with many other CSS frameworks, the compiled version of Teutonic CSS is actually useful. Thanks to CSS Vars you can still customize it. Include the compiled CSS file and add your own flavor by overwriting the CSS Vars with your own theme file. Use this workflow not only to get started and prototyping, but also for small and medium sized projects. You can easily upgrade to the more advanced compile your own workflow later on.
+
+#### Get the compiled
+
+The compiled version of Teutonic is just one CSS file. There are two ways to include into `teutonic.css.min` into your HTML project:
+
+##### A. CDN
+
+This is the easiest way. See the above [quick start guide](#quick-start) on how to hotlink a specific Teutonic CSS version from the UNPKG Content Delivery Network.
+
+##### B. Download
+
+You can also download and include the [teutonic.min.css]({{ site.github_min_css_url }}) directly into your project to avoid external sources.
+
+#### Theme the compiled
+
+With the compiled version, you can do so by adding an additional theme file that overwrites the variables with your own values. So the head of your HTML might include something like this:
+
+```html
+<link rel="stylesheet" href="{{ site.cdn_url }}">
+<link rel="stylesheet" href="{/css/mytheme.css}">
+```
+
+The first line includes the original teutonic.css file. The second file links to your local theme. Substitute name and path in the curly braces.
+
+
+### 2. Compile your own
+
+You can also incorporate Teutonic CSS into your frontend build process. This way gives you greater control on which parts to include and exclude. Beside CSS var theming you can make modifications on deeper levels. Set the CSS Vars directly in a clean way instead of overwriting them. Extend and concatenate it with your other files. Use this advanced workflow for bigger sophisticated projects.
+
+#### Get the source
+
+Choose your workflow to get the Teutonic source:
+
+##### A. NPM
+
+```bash
+$ npm install {{ site.slug-title }}@{{ site.version }} --save-dev
+```
+
+This terminal command will install Teutonic CSS as a dev dependency deep into your projects `node_modules` folder. 
+
+##### B. Git
+
+```bash
+$ git clone {{ site.github_url }}
+```
+
+This terminal command will clone the repo onto your local machine.
+
+##### C. Download
+
+You can also [download the release package]({{ site.github_download_url }}) from GitHub directly.
+
+### Theme the source
+
+The source is a folder containing all the files needed to build the final output file. Browse the [GitHub repo]({{ site.github_url }}) to get the idea.
+
+#### File structure
+
+The Teutonic source folder, slightly simplified, looks like when you have downloaded the source files:
+
+```
+- gulpfile.js          < simple build with Gulp
++ includes             < folder where the magic happens
+- package.json         < node dev dependencies for simple build
+- teutonic.min.css     < minified version
+- teutonic.scss        < entry point
+```
+
+#### Build process
+
+The current release of Teutonic is based on basic SCSS, without any other dependencies, not even auto-prefixer. So you can easily plug into any frontend build system. Included with the source is a simple example `gulpfile.js` boilerplate and a `package.json` so you can easily get started building the final output with Gulp. [Jekyll](https://jekyllrb.com/), [Grav](https://getgrav.org/) and others have options for SASS built in. There are plugins to work with SCSS in PostSCSS as well.
+
+#### Include and exclude
+
+The file `teutonic.scss` bascially just imports all the files that are stored within the `includes` folder. Each file represents a component named accordingly. `table.scss` for example contains styling for — guess what — tables. Some files depend on each other, the correcr order can also play a role. Variables, functions and dependencies are loaded first.
+
+#### Read the source
+
+Teutonic contains some features not documented here in the docs. Discover them, by reading the source files. Each file contains an abstract on what to expect, functions and styles are self-explaining.
+
+## Resposnive design
+
+Altough Teutonic CSS is more responsive and less adapative, some media queries and breakpoints are provided. Unfortunatly these breakpoints can not be controlled by CSS Vars and are therefore "hardcoded" as SCSS Vars: `$breakpoint-desktop: 1600px`, `$breakpoint-tablet: 800px` and `$breakpoint-phone: 400px`. While changing the viewport to smaller breakpoints, the only global rule affects the font size, which will get smaller, which in return has a huge effect, as everything depends on it. Additional helpers media query breakpoint classes are supplied to:
+
+* [Hide content](/examples/utilities#hide) on smaller screen sizes
+* [Collapse rows and columns](/examples/utilities#collapse) on smaller screen sizes
+* Individually resize cells of [grids](examples/css-grid#breakpoints), [flexboxes](/examples/flexbox#breakpoints) and [columns](/examples/columns#breakpoints)
+
+
+## Update Teutonic
+
+Upgrading a CSS framework within a customized production environment is an unsolved problem. Teutonic CSS is aiming for semantic versioning. Expect breaking changes with major releases, like when upgrading from 0.8.5 to version 1.0.2. Dot-releases, like from 1.0.1 to 1.1.0 might contain some changes, forcing you to upgrade class names or alike. You should be able to Dot-dot-release, like form 1.1.1 to 1.1.5 without touching your code. The way to get a new version depends on how you are using Teutonic.
+
+
+## Contribute to Teutonic
+
+Pull requests are welcome! This documentation with all it's examples can be your play-ground.

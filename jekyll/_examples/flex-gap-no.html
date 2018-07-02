@@ -1,0 +1,42 @@
+---
+
+title:     No gap
+category:  flexbox
+order:     11
+hide:      no
+
+description: >
+  The special gutter class `.gap-no` gives a border-collapsed look.
+
+details: >
+  In this case the direct childs of `.flex` can be styled, no need for an extra encapsulated padding-div.
+
+scss-files:
+  - 'flex'
+  - 'gap-no'
+
+data: 
+  box-widths:
+    - span-fifth
+    - span-fifth
+    - span-fifth
+    - span-fifth
+    - span-fifth
+    - span-third
+    - span-third
+    - span-third
+
+---
+
+{% assign letters = site.data.alphabet %}
+
+<h3 class="flex wrap-no">
+  <span>No gutter</span>
+  <span class="span-auto text-thin text-mono">.flex.gap-no</span>
+</h3>
+
+<div class="flex gap-no ma-t_s">
+  {%- for box-width in page.data.box-widths %}
+  <div class="{{ box-width }} box text-clip text-mono bg-{{ letters[forloop.index] }}">&nbsp;</div>
+  {%- endfor %}
+</div>

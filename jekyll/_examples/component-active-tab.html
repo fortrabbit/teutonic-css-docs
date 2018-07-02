@@ -1,0 +1,28 @@
+---
+
+title:      Tab
+category:   components
+order:      4
+fullscreen: yes
+syntax:     .active-tab
+
+description: >
+  This is an alternative active state, a simple horizontal tabbed navigation.
+
+
+details: > 
+  This fancy example includes some utility classes for the colored background container, and the border on the bottom. Only horizontal tabs are supported. 
+
+scss-files:
+  - 'active-tab'
+
+---
+
+<nav class="pa-h_m pa-t_l bo-b_px bg-1">
+  <div class="flex gap-no text-mono">
+    <a class="box" href="">a.box</a>
+    <a class="box active-tab" href="">a.box.active-tab</a>
+    <a class="box" href="">a.box</a>
+  </div>
+</nav>
+<div class="pa_m"></div>

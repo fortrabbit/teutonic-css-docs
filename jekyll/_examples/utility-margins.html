@@ -1,0 +1,46 @@
+---
+title:      Margin
+category:   utilities
+order:      1
+syntax:     .m{-direction}{_size}
+
+description: >
+  Sometimes your elements just need a little space on the outside. Use margin to separate the block from things outside it. Here are utility classes for all cardinal directions, plus combined horizontal and vertical helpers.
+
+
+details: >
+  Example: `ma-t_s` — where the first letter `m` obviously stands for margin, while `-t` is for top and `_s` for the small size.
+
+
+scss-files:
+  - 'margin'
+
+data:
+  margin-sizes:
+    - xs
+    - s
+    - m
+    - l
+  margin-directions:
+    - t : 'Top'
+    - r : 'Right'
+    - b : 'Bottom'
+    - l : 'Left'
+    - v : 'Vertical'
+    - h : 'Horizontal'
+
+---
+
+{% assign letters = site.data.alphabet %}
+
+{%- for directions in page.data.margin-directions -%}
+{%- for direction in directions -%}
+<h3 class="ma-t_l">{{ direction[1] }}</h3>
+<div class="ma-b_m">{% for size in page.data.margin-sizes %}
+  <div class="docs-margin-helper bg-0 ma-v_xs"><div class="box text-mono text-clip bg-{{letters[forloop.index]}} ma-{{direction[0]}}_{{size}}">ma-{{direction[0]}}_{{size}}</div></div>{% endfor %}
+</div>
+{% endfor %}{% endfor %}
+
+<style>
+  .docs-margin-helper {  border: 1px solid transparent; } /* avoid margin collaspe */
+</style>

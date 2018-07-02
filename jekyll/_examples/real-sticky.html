@@ -1,0 +1,38 @@
+---
+
+title:      Sticky list
+category:   real-world
+sub-cat:    interface
+order:      10
+fullscreen: false
+
+description: >
+  This indexed definition list combines some Teutonic design methods. You can scroll within it and in [some browsers](https://caniuse.com/#feat=css-sticky) the alphabetical headlines will be "stick" on top until the next letter is reached.
+
+details: >
+  Sticky seems not to work with Safari here.
+
+scss-files:
+  - 'size'
+  - 'border'
+  - 'scrollable'
+  - 'colors-alphabet'
+  - 'read-widths'
+  - 'striped'
+  - 'position'
+  - 'inverted'
+  - 'padding'
+
+---
+
+{%- assign bands = site.data.bands-alphabet  %}
+{%- assign letters = site.data.alphabet %}
+
+<dl class="scroll-v read_m bo_xs height_xxl">
+  {%- for entry in bands %}
+  <dt class="inverted pa_s text-bold pos-stick striped" style="top:0">{{ entry.letter }}</dt>
+  {%- for band in entry.bands %}
+  <dd class="pa_s bo-t_px bg-{{ entry.letter | downcase }}">{{ band }}</dd>
+  {%- endfor %}
+  {%- endfor %}
+</dl>

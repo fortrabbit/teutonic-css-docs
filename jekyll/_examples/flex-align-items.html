@@ -1,0 +1,54 @@
+---
+
+title:    Align items 
+category: flexbox
+order:    24
+hide:     no
+syntax:   .items-{alignment}
+
+description: >
+  Use the Flexbox item alignment helper class to position the Flexbox childs on the **secondary axis** (cross axis). This will set the CSS property `align-items`.
+
+details: >
+  Are you getting confused by the differnt alignment methods with Flexbox? Don't bother too much! You are not alone. The axis concept in Flexbox is puzzeling. These methods will be there when you'll need them.
+
+scss-files:
+  - 'flex-align-items'
+
+---
+
+<h4 class="text-mono ma-b_xs">.items-stretch</h4>
+<div class="bg-0 pa_s text-mono">
+  <div class="flex gap-no items-stretch height_xl">
+    <div class="bg-d box">.box</div>
+    <div class="bg-e box">.box</div>
+    <div class="bg-f box">.box</div>
+  </div>
+</div>
+<p class="ma-t_xs text_s">
+  &uarr; Stretched items take all the place. Will not work with gapped flexboxes, as those need to be nested and the strechting only applis to the first child.
+</p>
+
+<h4 class="text-mono ma-t_m ma-b_xs">.items-end</h4>
+<div class="bg-0 pa_s text-mono">
+  <div class="flex gap-no items-end height_xl">
+    <div class="bg-d box">.box</div>
+    <div class="bg-e box">.box</div>
+    <div class="bg-f box">.box</div>
+  </div>
+</div>
+<p class="ma-t_xs text_s">
+  &uarr; Items aligned on the end of the secondary axis.
+</p>
+
+<h4 class="text-mono ma-t_m ma-b_xs">.items-center</h4>
+<div class="bg-0 pa_s text-mono">
+  <div class="flex gap-no items-center height_xl">
+    <div class="bg-d box">.box</div>
+    <div class="bg-e box">.box</div>
+    <div class="bg-f box">.box</div>
+  </div>
+</div>
+<p class="ma-t_xs text_s">
+  &uarr; Items aligned in the middle of the secondary axis.
+</p>

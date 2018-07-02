@@ -1,0 +1,43 @@
+---
+
+title:    Breakpoints
+category: flexbox
+order:    22
+hide:     no
+syntax:   .span-third.span-half-t
+
+description: >
+  The responsive helper classes for childs: `.span-half-t`, `.span-half-p`, `collapse-t` and `collapse-p`. `-t` is for tablet and `-p` for phone screen resolutions.
+
+scss-files:
+  - 'flex'
+  - 'box'
+
+
+data: 
+  boxes:
+    - "span-third span-half-t"
+    - "span-third span-half-t"
+    - "span-third span-half-t"
+    - "span-third span-half-t"
+    - "span-third span-half-t"
+    - "span-third span-half-t"
+    - "span-quarter span-half-t collapse-p"
+    - "span-quarter span-half-t collapse-p"
+    - "span-quarter span-half-t collapse-p"
+    - "span-quarter span-half-t collapse-p"
+    - "span-third collapse-p"
+    - "span-third collapse-p"
+    - "span-third collapse-p"
+
+---
+
+{% assign letters = site.data.alphabet %}
+
+<div class="flex gap_s">
+  {% for box in page.data.boxes %}
+  <div class="{{ box }} text-clip">
+    <div class="box text-clip text-mono bg-{{ letters[forloop.index] }}">{{ box }}</div>
+  </div>
+  {%- endfor %}
+</div>

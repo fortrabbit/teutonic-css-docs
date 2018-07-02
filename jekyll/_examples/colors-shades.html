@@ -1,0 +1,42 @@
+---
+
+title:     Shades
+category:  colors
+hideCode:  yes
+syntax:    .bg-{state}-{level}
+order:     3
+
+description: >
+  Here are two light and two dark semi transparent shades.
+
+details: >
+  The shades are used in various places, like for placeholder text, skeuomorphic effetcs and stripes. Per default, the shade color is slightly tinted as the main color.
+
+scss-files:
+  - 'color-map'
+  - 'color-vars'
+  - 'color-shades'
+
+---
+
+{%- assign colors = site.data.shades  %}
+
+
+<div class="box height_l text-clip docs-checker-bg">
+  <div class="mini-info pos-c">Neutral 50% gray checkers for reference</div>
+</div>
+
+<div class="grid-auto collapse-p" style="--grid-auto-min: 14rem;">
+  {%- for group in colors %}
+  <div>
+    <div class="gap_s ma-t_s">
+      {%- for color in group.colors %}
+      <div class="box height_l text-clip docs-checker-bg">
+        <div class="docs-bg-shade bg-{{ group.title | downcase }}-{{ forloop.index }}"></div>
+        <div class="mini-info">.bg-{{ group.title | downcase }}-{{ forloop.index }}</div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+  {%- endfor %}
+</div>

@@ -1,0 +1,25 @@
+---
+
+title:      Triangle
+category:   components
+order:      8
+syntax:    .arrow{_size?}
+
+description: >
+  This adds a little triangle on the bottom of an element, available in three sizes.
+
+
+details: >
+  The arrow is only available in a downwards poting direction currently. It will not work when the element has some overflow hidden property or when the element is not positioned relativly. The additional `.active` class shown in this example is not required.
+
+
+scss-files:
+  - 'arrow'
+
+---
+
+<div class="grid gap_s text-mono">
+  <div class="span-4 box active arrow">.box.arrow</div>
+  <div class="span-4 box active arrow_l">.box.arrow_l</div>
+  <div class="span-4 box active arrow_xl">.box.arrow_xl</div>
+</div>

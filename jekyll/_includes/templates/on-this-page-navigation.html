@@ -1,0 +1,21 @@
+
+{% comment %}
+<!-- OLD syntax -->
+{% include templates/old--example-cols-assignment.html %}
+<div class="box colored-warn ma-t_m">
+  <div>Example size:  {{ examples.size }}</div>
+  <div>Gaps: {{s}}</div>
+  <div class="mini-info">debug</div>
+</div>
+{% endcomment %}
+
+<div class="ma-t_m ma-h_l- pa-h_l pa-v_m inverted pos-rel">
+  <ul class="row-list columns cols-4 cols-2-p gap_px read_xl ma-v_s">
+    {% for example in examples %}
+    {% unless example.hide %}
+    <li><a href="#{{ example.title | slugify }}" class="block-link">{{ example.title }}</a></li>
+    {% endunless %}
+    {% endfor %}
+  </ul>
+  <div class="mini-info text_s text-bold pa-l_l pa-r_s pos-tl">On this page</div>
+</div>

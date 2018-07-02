@@ -1,0 +1,48 @@
+---
+
+title:      Padding
+category:   utilities
+order:      3
+syntax:     .p{-direction?}{_size?}
+
+description: >
+  Here is a little bit of extra padding. Use padding to move the contents away from the edges of the block.
+
+
+details: >
+  Use the padding helpers in combination with any block element, especially with `.box`, `.button` and form elemets. When no padding class is given, the default value for interface elements is mostly `--space-s`. 
+
+scss-files:
+  - 'padding'
+
+data: 
+  padding-sizes:
+    - xs
+    - s
+    - m
+    - l
+  padding-directions:
+    - "": 'All'
+    - t : 'Top'
+    - r : 'Right'
+    - b : 'Bottom'
+    - l : 'Left'
+    - v : 'Vertical'
+    - h : 'Horizontal'
+
+---
+
+{%- assign letters = site.data.alphabet %}
+<div class="docs-padding-helper">
+  {%- for directions in page.data.padding-directions %}
+  {%- for direction in directions %}
+  <h3 class="ma-t_l">{{ direction[1] }}</h3>
+  {%- for size in page.data.padding-sizes %}
+  <div class="bg-0 ma-v_xs {% if direction[0] == "" %}pa_{{size}}{% else %}pa-{{direction[0]}}_{{size}}{% endif %}"><div class="box text-clip text-mono bg-{{letters[forloop.index]}}">{% if direction[0] == "" %}pa_{{size}}{% else %}pa-{{direction[0]}}_{{size}}{% endif %}</div></div>
+  {%- endfor %}
+  {%- endfor %}
+  {%- endfor %}
+</div>
+<style>
+  .docs-padding-helper > div {  border: 1px solid transparent; } /* avoid margin collaspe */
+</style>

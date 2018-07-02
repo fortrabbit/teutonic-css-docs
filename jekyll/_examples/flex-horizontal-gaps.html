@@ -1,0 +1,51 @@
+---
+title:     Horizontal gaps
+category:  flexbox
+order:     17
+hide:      no
+syntax:    .gap-h_{size}
+
+description: >
+   The gutter size alters horizontal and vertical spacing at the same sizing ratio by default. In certain scenatios you want the horizontal and vertical gap spacing to differ.
+
+details: >
+  So you can combine that standard gap classes with an additional horizontal gap class that will overwrite only the horizontal value.
+
+
+scss-files:
+  - 'flex'
+  - 'flex-gaps'
+
+data: 
+  box-widths:
+    - span-third
+    - span-third
+    - span-third
+    - span-quarter
+    - span-quarter
+    - span-quarter
+    - span-quarter
+
+---
+
+{%- assign letters = site.data.alphabet -%}
+
+<h4 class="flex wrap-no">
+  <div>Horizontally smaller gap</div>
+  <div class="span-auto text-thin text-mono">.flex.gap_xs.gap-h_s</div>
+</h4>
+<div class="flex gap_xs gap-h_s ma-t_s text-mono">
+  {%- for box-width in page.data.box-widths %}
+  <div class="{{ box-width }}"><div class="box text-clip bg-{{ letters[forloop.index] }}">&nbsp;</div></div>
+  {%- endfor %}
+</div>
+
+<h4 class="flex wrap-no ma-t_m">
+  <div>Vertically smaller gap</div>
+  <div class="span-auto text-thin text-mono">.flex.gap_s.gap-h_xs</div>
+</h4>
+<div class="flex gap_s gap-h_xs ma-t_s text-mono">
+  {%- for box-width in page.data.box-widths %}
+  <div class="{{ box-width }}"><div class="box text-clip bg-{{ letters[forloop.index] }}">&nbsp;</div></div>
+  {%- endfor %}
+</div>

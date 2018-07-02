@@ -1,0 +1,52 @@
+---
+
+title:    Text size containers
+category: typography
+order:    3
+syntax:   .text-all_{size}
+
+description: >
+  Add a resize-all-text-class on a parent conainer element to scale all text within there. So all differently sized text within there get's bigger or smaller, from your headlines, to individual text-size-classes.
+
+
+details: >
+  Size needs to be given and can be: `s`, `l` or `xl`.
+
+scss-files:
+  - 'typography'
+  - 'text-sizes'
+  - 'flex'
+
+data:
+  all-sizes:
+    - s
+    - default
+    - l
+    - xl
+  sizes:
+    - xxxl
+    - xxl
+    - xl
+    - l
+    - m
+    - s
+    - xs
+
+---
+
+<div class="grid gap_s collapse-p">
+{%- for a-size in page.data.all-sizes %}
+  <div class="text-clip span-3 span-6-t">
+    {% if a-size == 'default' -%}
+    <h4 class="bo-b_xs pa_s inverted text-mono text-thin ma-no">Default</h4>
+    {% else -%}
+    <h4 class="bo-b_xs pa_s inverted text-mono">.text-all_{{a-size}}</h4>
+    {% endif -%}
+    <div class="text-all_{{a-size}} pa_s {% if a-size == 'default' -%}bg-3{% else %}bg-0{% endif %}">
+      {%- for size in page.data.sizes %}
+      <div class="text_{{size}}">text_{{size}}</div>
+      {%- endfor %}
+    </div>
+  </div>
+{%- endfor %}
+</div>

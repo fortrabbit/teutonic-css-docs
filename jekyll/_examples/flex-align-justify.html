@@ -1,0 +1,63 @@
+---
+
+title:    Align justify
+category: flexbox
+order:    25
+hide:     no
+syntax:   .justify-{alignment}
+
+description: >
+  Use the Flexbox justify alignment helper class to position ALL childs on the **main axis**. This will only work when the items are NOT streched over the full space. This will set the CSS property `justify-content`.
+
+scss-files:
+  - 'flex-align-justify'
+
+---
+
+<h4 class="text-mono ma-b_xs">.justify-end</h4>
+<div class="bg-0 pa_s text-mono">
+  <div class="flex gap-no justify-end">
+    <div class="bg-d box span-auto">.box.auto</div>
+    <div class="bg-e box span-auto">.box.auto</div>
+    <div class="bg-f box span-auto">.box.auto</div>
+  </div>
+</div>
+<p class="ma-t_xs text_s">
+  &uarr; All items pushed to the end of the main axis.
+</p>
+
+<h4 class="text-mono ma-t_m ma-b_xs">.justify-center</h4>
+<div class="bg-0 pa_s text-mono">
+  <div class="flex gap-no justify-center">
+    <div class="bg-d box span-auto">.box.auto</div>
+    <div class="bg-e box span-auto">.box.auto</div>
+    <div class="bg-f box span-auto">.box.auto</div>
+  </div>
+</div>
+<p class="ma-t_xs text_s">
+  &uarr; All items aligned on the middle of the main axis.
+</p>
+
+<h4 class="text-mono ma-t_m ma-b_xs">.justify-between</h4>
+<div class="bg-0 pa_s text-mono">
+  <div class="flex gap-no justify-between">
+    <div class="bg-d box span-auto">.box.auto</div>
+    <div class="bg-e box span-auto">.box.auto</div>
+    <div class="bg-f box span-auto">.box.auto</div>
+  </div>
+</div>
+<p class="ma-t_xs text_s">
+  &uarr; Items are trying to get away from each other, starting at start, ending at end.
+</p>
+
+<h4 class="text-mono ma-t_m ma-b_xs">.justify-around</h4>
+<div class="bg-0 pa_s text-mono">
+  <div class="flex gap-no justify-around">
+    <div class="bg-d box span-auto">.box.auto</div>
+    <div class="bg-e box span-auto">.box.auto</div>
+    <div class="bg-f box span-auto">.box.auto</div>
+  </div>
+</div>
+<p class="ma-t_xs text_s">
+  &uarr; Items are trying to get away from each other, with some space left to start and end.
+</p>

@@ -1,0 +1,19 @@
+---
+
+title:     Visibility
+category:  utilities
+order:     100
+hide:      no
+
+description: >
+  Here are three boxes. You can clearly see the `.visible` box. You can not see the `.invisible` box, but you can see that it still takes it space in the layout. The `.removed` box finally is just not there in any way.
+
+scss-files:
+  - 'visibility'
+---
+
+<div class="gap_s pa_m bg-0 text-mono">
+  <div class="box visible">.visible</div>     <!-- visibility:visible -->
+  <div class="box invisible">.invisible</div> <!-- visibility:hidden -->
+  <div class="box removed">.removed</div>     <!-- display:none -->
+</div>

@@ -1,0 +1,55 @@
+---
+
+title:      Space scale
+category:   theming
+order:      2
+hideCode:   yes
+
+scss-files:
+  - 'scale-vars'
+
+description: >
+  Teutonic uses modular scale for sizing things. Sizes grow exponential not linear: smaller sizes have smaller steps and larger sizes have larger steps in between. The beauty is that you basically only need two values to control everyting: The starting point (base) and the multiplier (ratio). See the "Modular scale calculation" below to understand how it works. You can also skip the calculation part completly or in parts by aligning your own values to the vars directly. 
+
+details: > 
+  See [this A-List-Apart article](http://alistapart.com/article/more-meaningful-typography) to dive deeper into modular scale and some historical background. Teutonic has two modular scale spaces: One for spacing, which defines all the margins and paddings (this here) and one for typography (below). They basically work in the same way. In the original SCSS file you will find a switch to define how the calculation is done: `$css-calc:true`. Wuth the default set, the browser will do the calculations (which is some heavy lifting but works well). Also by default way, you can control the modular scale output by modifying the values directly. With css-calc set to false, SCSS will do the calc for you, less lifting in the browser, but harder to adjust later on.
+
+
+---
+
+<div class="grid gap_s collapse-p">
+  <div class="span-6">
+    <h4 class="bo-b_xs pa-b_xs">Space base</h4>
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_s">:root {
+  --space-base: .25rem;
+}
+</style>
+    <p class="ma-t_s read_l">
+      &uarr; This is the smallest starting point from where it grows bigger. Something between <code>.1rem</code> and <code>.4rem</code> looks good.
+    </p>
+  </div>
+  <div class="span-6">
+    <h4 class="bo-b_xs pa-b_xs">Space ratio</h4>
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_s">:root {
+  --space-ratio: 2.5;
+}
+</style>
+    <p class="ma-t_s read_l">
+      &uarr; This is the multiplier defining how fast the space base should grow. Something between <code>1.5</code> and <code>3</code> looks good.
+    </p>
+  </div>
+</div>
+
+<h4 class="bo-b_xs pa-b_xs ma-t_m" id="space-scale-calculation">Space scale calculation</h4>
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_s">:root {
+  --space-xs  : var(--space-base);
+  --space-s   : calc(var(--space-ratio) * var(--space-xs));
+  --space-m   : calc(var(--space-ratio) * var(--space-s) );
+  --space-l   : calc(var(--space-ratio) * var(--space-m) );
+  --space-xl  : calc(var(--space-ratio) * var(--space-l) );
+  --space-xxl : calc(var(--space-ratio) * var(--space-xl));
+}
+</style>
+<p class="ma-t_s read_l">
+  &uarr; This is how the space sizes are getting calculated in the browser using the <code>--space-base</code> and <code>--space-ratio</code>. It starts with the smallest value and get's bigger, from small step to larger steps. Using the modular scale is optional, you can also assign your own values to the variables from <code>--space-xs</code> to <code>--space-xxl</code> directly.
+</p>

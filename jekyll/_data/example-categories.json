@@ -1,0 +1,77 @@
+[
+  {
+    "id"           : "components",
+    "title"        : "Components",
+    "sub-title"    : "Interface elements",
+    "description"  : "Here are some micro-components with little markup, but lot's of style."
+  },
+  {
+    "id"           : "layout",
+    "title"        : "Layout",
+    "sub-title"    : "Basic formarting concepts",
+    "description"  : "Layout is about distributing different sized rectangles within a page — which happens also to be a rectangle. A rectangle is the most simple, universal shape."
+  },
+  {
+    "id"           : "css-grid",
+    "title"        : "CSS Grid",
+    "sub-title"    : "CSS Grid for the rest of us",
+    "description"  : "Here is a table-like grid system. The basic version works with 12 columns. It will create Z-style semi-rigid wrapping rows. 100% float free.",
+    "details"      : "Please mind the sublte differences between this grid system and the Flexbox grid. While some options are overlapping, there are unique features to CSS Grid which are missing with Flexbox and vis verca."
+  },
+  {
+    "id"           : "flexbox",
+    "title"        : "Flexbox",
+    "sub-title"    : "Flexbox is for flexiblity",
+    "description"  : "Here is your Flexbox toolbox. It contains a flexible grid system, to create Z-flowed wrapping and floating rows.",
+    "details"      : "Please mind the sublte differences between this grid system and the CSS Grid. This one here can be used as a classical grid system. It is not intended to be full page layout system, it's more like a content iteration module."
+  },
+  {
+    "id"           : "columns",
+    "title"        : "Columns",
+    "sub-title"    : "CSS Columns content iteration",
+    "description"  : "Here is a simple column layout option leveraging 'CSS3 Multiple column'. Yet another grid option here? It's about the flow: These are И-flowed wrapping columns, first top to bottom, then from left to right.",
+    "details"      : ""
+  },
+  {
+    "id"           : "forms",
+    "title"        : "Forms",
+    "sub-title"    : "Styled HTML5 form elements",
+    "description"  : "Forms are a corner stone of any interactive web application. Here is a consitent yet familar look across Operating Systems and browsers while respecting standards.",
+    "details"      : "The aim here is not pixel-perfection. It's about dealing with standard elements with as little intervention, extra markup and classes as possible. Teutonic CSS does not apply the form styles directly, instead all elements are styled with a class named like the element itself: `select.select`,`textarea.textarea` …"
+  },
+  {
+    "id"           : "utilities",
+    "title"        : "Utilities",
+    "sub-title"    : "Magnificent modifier classes",
+    "description"  : "The examples below are not very sexy looking, but you'll get an overview on how you can tweak the design of most elements."
+  },
+  {
+    "id"           : "typography",
+    "title"        : "Typography",
+    "sub-title"    : "Web design is 95% typography"
+  },
+  {
+    "id"           : "colors",
+    "title"        : "Colors",
+    "sub-title"    : "Branding and emotion"
+  },
+  {
+    "id"           : "theming",
+    "title"        : "Theming",
+    "sub-title"    : "Make it yours",
+    "description"  : "Alter CSS Vars to customize the look and feel.",
+    "details"      : "The examples here are interactive — type within the `edit this` areas, so they will update the browser window for immediate feedback. Don't fortget to check out the [usage guides](/usage)."
+  },
+  {
+    "id"           : "table",
+    "title"        : "Tables",
+    "sub-title"    : "Data tables with style",
+    "description"  : "",
+  },
+  {
+    "id"           : "real-world",
+    "title"        : "Real world",
+    "sub-title"    : "Actually use in action",
+    "description"  : "How to combine the Teutonic methods in different design situations."
+  }
+]

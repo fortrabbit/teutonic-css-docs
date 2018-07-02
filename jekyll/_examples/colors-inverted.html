@@ -1,0 +1,40 @@
+---
+
+title:     Inverted
+category:  colors
+order:     16
+hideCode:  yes
+syntax:    .inverted
+
+description: >
+  Apply this to a container to flip all the colors > light will become dark, dark will be light.
+
+details: >
+  
+
+scss-files:
+  - 'inverted'
+
+fullscreen:  true
+
+---
+
+{%- assign css-blabla = site.data.css-blabla %}
+{%- capture markdown_content %}{% include examples/markdown-example.md %}{% endcapture %}
+
+<div class="grid collapse-t gap-no">
+  <div class="span-6 pa_l inverted">
+    <h2 class="pa-b_xs bo-b_s ma-b_s">
+      Inverted
+      <span class="text-thin">is whitish on <mark>blackish</mark></span>
+    </h2>
+    {% include examples/inverted-test.html %}
+  </div>
+  <div class="span-6 pa_l">
+    <h2 class="pa-b_xs bo-b_s ma-b_s">
+      Normal
+      <span class="text-thin">is blackish on <mark>whitish</mark></span>
+    </h2>
+    {% include examples/inverted-test.html %}
+  </div>
+</div>

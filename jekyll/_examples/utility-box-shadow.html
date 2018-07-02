@@ -1,0 +1,41 @@
+---
+
+title:     Box shadow
+category:  utilities
+order:     50
+
+description: |
+  Some material design look.
+
+details: >
+  Predefined sizes are: `xs`, `s`, `m` and `l`. Within a container called `.bs_{your-custom-string}` you can define the CSS vars. MS Edge (17) currently fails with this, `--space-m` is not interpreted correcty.
+
+syntax: .bs_{size}
+
+scss-files:
+  - 'box-shadow'
+
+css-vars:
+  - selector: .bs_custom
+    vars:
+      - "--shadow-color: hsl(55,100%,60%)"
+      - "--shadow-top:   -.5rem"
+      - "--shadow-size:  6rem"
+
+data:
+  box-shadows:
+   - xs
+   - s
+   - m
+   - l
+
+---
+
+{%- assign letters = site.data.alphabet %}
+
+<div class="grid-auto text-mono">
+  {%- for size in page.data.box-shadows %}
+  <div class="text-clip box bg-{{ letters[forloop.index] }} bs_{{ size }}">bs_{{ size }}</div>
+  {%- endfor %}
+  <div class="text-clip box bg-e bs_custom">bs_custom</div>
+</div>

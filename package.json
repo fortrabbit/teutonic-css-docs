@@ -1,0 +1,35 @@
+{
+  "name": "teutonic-css-docs",
+  "version": "0.7.0",
+  "description": "Jekyll based static page to showcase Teutonic CSS.",
+  "directories": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fortrabbit/teutonic-css-docs.git"
+  },
+  "keywords": [
+    "CSS grid",
+    "CSS vars",
+    "Flexbox",
+    "scss",
+    "framework",
+    "jekyll"
+  ],
+  "author": "Frank Lämmer, <frank@franklaemmer.de>, (https://www.franklaemmer.de)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fortrabbit/teutonic-css-docs/issues"
+  },
+  "homepage": "https://github.com/fortrabbit/teutonic-css-docs#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-header": "^2.0.5",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-watch": "^5.0.0"
+  }
+}

@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Typography - Teutonic CSS</title>
+  <meta name="description" content="Enjoy a fresh look. Customize at ease.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Twitter -->
+  <meta name="twitter:site" content="frank_laemmer">
+  <meta name="twitter:creator" content="frank_laemmer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Teutonic CSS">
+  <meta name="twitter:description" content="Enjoy a fresh look. Customize at ease.">
+  <meta name="twitter:image" content="">
+  
+  <!-- Facebook -->
+  <meta property="og:url" content="http://localhost:4000">
+  <meta property="og:title" content="Teutonic CSS">
+  <meta property="og:description" content="Enjoy a fresh look. Customize at ease.">
+  <meta property="og:image" content="">
+  <meta property="og:image:secure_url" content="TODO">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  
+  <link rel="stylesheet" href="/css/teutonic.css">
+  
+  <link rel="stylesheet" href="/css/teutonic-docs.css">
+
+  
+</head>
+
+<div class="docs-hide-old pa_m bg-warn-3 text_l span-auto">
+  OOOOPS. Your browser seems to be too old for this. Please update your browser.
+</div>
+
+  <body>
+    
+    
+    
+
+    <header class="flex wrap-no gap_xs ma-t_m">
+  <div class="span-auto">
+    <a href="/" class="pa_s pa-l_l block bo-t_px bo-r_px bo-b_px text-bold docs-teutonic-link">
+      Teutonic CSS
+    </a>
+  </div>
+
+  
+
+  <div class="span-auto ma-l-auto">
+    <a href="/usage" class="button prime ma-r_l">Use it</a>
+  </div>
+</header>
+    
+<div class="span-auto">
+  <!-- MS Edge:  ↓  pa_l doesm't work for some stange reason -->
+  <nav class="pa-h_l pa-v_m flex gap_s">
+    <div>
+      <h3 class="text_l bo-b_xs pa-b_xs">Examples</h3>
+      <ul class="columns cols-6 cols-4-t cols-2-p">
+        
+        <li>
+          <a href="/examples/components" class="block-link pa_xs">Components</a>
+        </li>
+        
+        <li>
+          <a href="/examples/layout" class="block-link pa_xs">Layout</a>
+        </li>
+        
+        <li>
+          <a href="/examples/css-grid" class="block-link pa_xs">CSS Grid</a>
+        </li>
+        
+        <li>
+          <a href="/examples/flexbox" class="block-link pa_xs">Flexbox</a>
+        </li>
+        
+        <li>
+          <a href="/examples/columns" class="block-link pa_xs">Columns</a>
+        </li>
+        
+        <li>
+          <a href="/examples/forms" class="block-link pa_xs">Forms</a>
+        </li>
+        
+        <li>
+          <a href="/examples/utilities" class="block-link pa_xs">Utilities</a>
+        </li>
+        
+        <li>
+          <a href="/examples/typography" class="block-link pa_xs active">Typography</a>
+        </li>
+        
+        <li>
+          <a href="/examples/colors" class="block-link pa_xs">Colors</a>
+        </li>
+        
+        <li>
+          <a href="/examples/theming" class="block-link pa_xs">Theming</a>
+        </li>
+        
+        <li>
+          <a href="/examples/table" class="block-link pa_xs">Tables</a>
+        </li>
+        
+        <li>
+          <a href="/examples/real-world" class="block-link pa_xs">Real world</a>
+        </li>
+        
+     </ul>
+   </div>
+  </nav>
+</div>
+
+    <section class="pa-h_l span-auto">
+      
+      <h1 class="text-black text-hero_m read_xxl ma-t_m">
+        Web design is 95% typography
+      </h1>
+      
+      
+
+      
+      
+
+
+<div class="ma-t_m ma-h_l- pa-h_l pa-v_m inverted pos-rel">
+  <ul class="row-list columns cols-4 cols-2-p gap_px read_xl ma-v_s">
+    
+    
+    <li><a href="#text-sizes" class="block-link">Text sizes</a></li>
+    
+    
+    
+    <li><a href="#hero-text-sizes" class="block-link">Hero text sizes</a></li>
+    
+    
+    
+    <li><a href="#text-size-containers" class="block-link">Text size containers</a></li>
+    
+    
+    
+    <li><a href="#read-widths" class="block-link">Read widths</a></li>
+    
+    
+    
+    <li><a href="#code" class="block-link">Code</a></li>
+    
+    
+    
+    <li><a href="#syntax-highlighting" class="block-link">Syntax highlighting</a></li>
+    
+    
+    
+    <li><a href="#anchors" class="block-link">Anchors</a></li>
+    
+    
+    
+    <li><a href="#text-helpers" class="block-link">Text helpers</a></li>
+    
+    
+    
+    <li><a href="#link" class="block-link">Link</a></li>
+    
+    
+    
+    <li><a href="#article" class="block-link">Article</a></li>
+    
+    
+  </ul>
+  <div class="mini-info text_s text-bold pa-l_l pa-r_s pos-tl">On this page</div>
+</div>
+      </section>
+
+    <main class="pa-h_l">
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="text-sizes" class="ma-b_s">
+      Text sizes
+      <a class="anchor" href="#text-sizes"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Type sizes are defined in a modular scale. The base is “1 rem”. From there it get’s smaller and bigger. There are text-size classes that are matching the headlines font-sizes. With CSS vars you can customize the ‘base’ and the ‘ratio’. All text on smaller screens get’s smaller.</p>
+
+    </div>
+    
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>.text_{size}</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//text-sizes.scss" class="link">text-sizes.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-text-sizes ma-h_l- pa-h_l pa-v_l">
+    <table class="table">
+  <tr class="inverted">
+    <th>HTML tag</th>
+    <th>CSS class</th>
+  </tr>
+  <tr>
+    <td><h1>h1</h1></td>
+    <td class="text_xxxl">text_xxxl</td>
+  </tr>
+  <tr>
+    <td><h2>h2</h2></td>
+    <td class="text_xxl">text_xxl</td>
+  </tr>
+  <tr>
+    <td><h3>h3</h3></td>
+    <td class="text_xl">text_xl</td>
+  </tr>
+  <tr>
+    <td><h4>h4</h4></td>
+    <td class="text_l">text_l</td>
+  </tr>
+  <tr>
+    <td>h5, p, td, div …</td>
+    <td class="text_m">text_m</td>
+  </tr>
+  <tr>
+    <td><small>small</small></td>
+    <td class="text_s">text_s</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td class="text_xs">text_xs</td>
+  </tr>
+</table>
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"inverted"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;th&gt;</span>HTML tag<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;th&gt;</span>CSS class<span class="nt">&lt;/th&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;&lt;h1&gt;</span>h1<span class="nt">&lt;/h1&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text_xxxl"</span><span class="nt">&gt;</span>text_xxxl<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;&lt;h2&gt;</span>h2<span class="nt">&lt;/h2&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text_xxl"</span><span class="nt">&gt;</span>text_xxl<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;&lt;h3&gt;</span>h3<span class="nt">&lt;/h3&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text_xl"</span><span class="nt">&gt;</span>text_xl<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;&lt;h4&gt;</span>h4<span class="nt">&lt;/h4&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text_l"</span><span class="nt">&gt;</span>text_l<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;</span>h5, p, td, div …<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text_m"</span><span class="nt">&gt;</span>text_m<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;&lt;small&gt;</span>small<span class="nt">&lt;/small&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text_s"</span><span class="nt">&gt;</span>text_s<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text_xs"</span><span class="nt">&gt;</span>text_xs<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="hero-text-sizes" class="ma-b_s">
+      Hero text sizes
+      <a class="anchor" href="#hero-text-sizes"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Here is some extra large hero text for the marketing genius in you. These hero text sizes are calculated, adding a viewport-size to a base size, so the size changes dynanmically with the browser window.</p>
+
+    </div>
+    
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>text-hero_{size}</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//text-size-hero.scss" class="link">text-size-hero.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-hero-text-sizes ma-h_l- pa-h_l pa-v_l">
+    <div class="text-hero_l">Hero l</div>
+<div class="text-hero_m">Hero m</div>
+<hr class="ma-v_m">
+<h1>Headline 1</h1>
+<h2>Headline 2</h2>
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-hero_l"</span><span class="nt">&gt;</span>Hero l<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-hero_m"</span><span class="nt">&gt;</span>Hero m<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"ma-v_m"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;h1&gt;</span>Headline 1<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>Headline 2<span class="nt">&lt;/h2&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="text-size-containers" class="ma-b_s">
+      Text size containers
+      <a class="anchor" href="#text-size-containers"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Add a resize-all-text-class on a parent conainer element to scale all text within there. So all differently sized text within there get’s bigger or smaller, from your headlines, to individual text-size-classes.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>Size needs to be given and can be: <code class="highlighter-rouge">s</code>, <code class="highlighter-rouge">l</code> or <code class="highlighter-rouge">xl</code>.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>.text-all_{size}</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//typography.scss" class="link">typography.scss</a></code>
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//text-sizes.scss" class="link">text-sizes.scss</a></code>
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//flex.scss" class="link">flex.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-text-size-containers ma-h_l- pa-h_l pa-v_l">
+    <div class="grid gap_s collapse-p">
+  <div class="text-clip span-3 span-6-t">
+    <h4 class="bo-b_xs pa_s inverted text-mono">.text-all_s</h4>
+    <div class="text-all_s pa_s bg-0">
+      <div class="text_xxxl">text_xxxl</div>
+      <div class="text_xxl">text_xxl</div>
+      <div class="text_xl">text_xl</div>
+      <div class="text_l">text_l</div>
+      <div class="text_m">text_m</div>
+      <div class="text_s">text_s</div>
+      <div class="text_xs">text_xs</div>
+    </div>
+  </div>
+  <div class="text-clip span-3 span-6-t">
+    <h4 class="bo-b_xs pa_s inverted text-mono text-thin ma-no">Default</h4>
+    <div class="text-all_default pa_s bg-3">
+      <div class="text_xxxl">text_xxxl</div>
+      <div class="text_xxl">text_xxl</div>
+      <div class="text_xl">text_xl</div>
+      <div class="text_l">text_l</div>
+      <div class="text_m">text_m</div>
+      <div class="text_s">text_s</div>
+      <div class="text_xs">text_xs</div>
+    </div>
+  </div>
+  <div class="text-clip span-3 span-6-t">
+    <h4 class="bo-b_xs pa_s inverted text-mono">.text-all_l</h4>
+    <div class="text-all_l pa_s bg-0">
+      <div class="text_xxxl">text_xxxl</div>
+      <div class="text_xxl">text_xxl</div>
+      <div class="text_xl">text_xl</div>
+      <div class="text_l">text_l</div>
+      <div class="text_m">text_m</div>
+      <div class="text_s">text_s</div>
+      <div class="text_xs">text_xs</div>
+    </div>
+  </div>
+  <div class="text-clip span-3 span-6-t">
+    <h4 class="bo-b_xs pa_s inverted text-mono">.text-all_xl</h4>
+    <div class="text-all_xl pa_s bg-0">
+      <div class="text_xxxl">text_xxxl</div>
+      <div class="text_xxl">text_xxl</div>
+      <div class="text_xl">text_xl</div>
+      <div class="text_l">text_l</div>
+      <div class="text_m">text_m</div>
+      <div class="text_s">text_s</div>
+      <div class="text_xs">text_xs</div>
+    </div>
+  </div>
+</div>
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid gap_s collapse-p"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-clip span-3 span-6-t"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"bo-b_xs pa_s inverted text-mono"</span><span class="nt">&gt;</span>.text-all_s<span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-all_s pa_s bg-0"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_xxxl"</span><span class="nt">&gt;</span>text_xxxl<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_xxl"</span><span class="nt">&gt;</span>text_xxl<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_xl"</span><span class="nt">&gt;</span>text_xl<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_l"</span><span class="nt">&gt;</span>text_l<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_m"</span><span class="nt">&gt;</span>text_m<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_s"</span><span class="nt">&gt;</span>text_s<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_xs"</span><span class="nt">&gt;</span>text_xs<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-clip span-3 span-6-t"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"bo-b_xs pa_s inverted text-mono text-thin ma-no"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-all_default pa_s bg-3"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_xxxl"</span><span class="nt">&gt;</span>text_xxxl<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_xxl"</span><span class="nt">&gt;</span>text_xxl<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_xl"</span><span class="nt">&gt;</span>text_xl<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_l"</span><span class="nt">&gt;</span>text_l<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_m"</span><span class="nt">&gt;</span>text_m<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_s"</span><span class="nt">&gt;</span>text_s<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_xs"</span><span class="nt">&gt;</span>text_xs<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-clip span-3 span-6-t"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"bo-b_xs pa_s inverted text-mono"</span><span class="nt">&gt;</span>.text-all_l<span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-all_l pa_s bg-0"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_xxxl"</span><span class="nt">&gt;</span>text_xxxl<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_xxl"</span><span class="nt">&gt;</span>text_xxl<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_xl"</span><span class="nt">&gt;</span>text_xl<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_l"</span><span class="nt">&gt;</span>text_l<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_m"</span><span class="nt">&gt;</span>text_m<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_s"</span><span class="nt">&gt;</span>text_s<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_xs"</span><span class="nt">&gt;</span>text_xs<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-clip span-3 span-6-t"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"bo-b_xs pa_s inverted text-mono"</span><span class="nt">&gt;</span>.text-all_xl<span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-all_xl pa_s bg-0"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_xxxl"</span><span class="nt">&gt;</span>text_xxxl<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_xxl"</span><span class="nt">&gt;</span>text_xxl<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_xl"</span><span class="nt">&gt;</span>text_xl<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_l"</span><span class="nt">&gt;</span>text_l<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_m"</span><span class="nt">&gt;</span>text_m<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_s"</span><span class="nt">&gt;</span>text_s<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_xs"</span><span class="nt">&gt;</span>text_xs<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="read-widths" class="ma-b_s">
+      Read widths
+      <a class="anchor" href="#read-widths"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>I don’t know about you. But I think Wikipedia is a terrible reading experience on a desktop browser — the text lines are too long. Something between 45-75 characters is widely regarded as a satisfactory length per line. The text-length helper classes are keeping this in an aesthetic balance.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>The read-width class name is matching the text-size class name. Usually use <code class="highlighter-rouge">read_l</code> in combination with <code class="highlighter-rouge">.text_l</code>. Appearance can differ from typeface to typeface.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>.read_{size}</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//typography.scss" class="link">typography.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-read-widths ma-h_l- pa-h_l pa-v_l">
+    
+
+<p class="pa-v_m text_s read_s">I am Posdnous; I be the new generation of slaves; Here to make papes to buy a record exec rakes; The pile of revenue I create.</p>
+<p class="pa-v_m text_m read_m">I am Posdnous; I be the new generation of slaves; Here to make papes to buy a record exec rakes; The pile of revenue I create.</p>
+<p class="pa-v_m text_l read_l">I am Posdnous; I be the new generation of slaves; Here to make papes to buy a record exec rakes; The pile of revenue I create.</p>
+<p class="pa-v_m text_xl read_xl">I am Posdnous; I be the new generation of slaves; Here to make papes to buy a record exec rakes; The pile of revenue I create.</p>
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"pa-v_m text_s read_s"</span><span class="nt">&gt;</span>I am Posdnous; I be the new generation of slaves; Here to make papes to buy a record exec rakes; The pile of revenue I create.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"pa-v_m text_m read_m"</span><span class="nt">&gt;</span>I am Posdnous; I be the new generation of slaves; Here to make papes to buy a record exec rakes; The pile of revenue I create.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"pa-v_m text_l read_l"</span><span class="nt">&gt;</span>I am Posdnous; I be the new generation of slaves; Here to make papes to buy a record exec rakes; The pile of revenue I create.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"pa-v_m text_xl read_xl"</span><span class="nt">&gt;</span>I am Posdnous; I be the new generation of slaves; Here to make papes to buy a record exec rakes; The pile of revenue I create.<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="code" class="ma-b_s">
+      Code
+      <a class="anchor" href="#code"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>There is some opinionated styling for standard <code class="highlighter-rouge">&lt;code&gt;</code> and <code class="highlighter-rouge">&lt;pre&gt;</code> code blocks going on.</p>
+
+    </div>
+    
+    
+
+    <div class="ma-v_m">
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//codetype.scss" class="link">codetype.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-code ma-h_l- pa-h_l pa-v_l">
+    <div class="read_l">
+  <p class="ma-b_s">
+    For inline code examples use the HTML <code>&lt;code&gt;</code> tag.
+  </p>
+  <pre><code>For blocks of code use &lt;code&gt; wrapped in a &lt;pre&gt; block.</code></pre>
+</div>
+
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"read_l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"ma-b_s"</span><span class="nt">&gt;</span>
+    For inline code examples use the HTML <span class="nt">&lt;code&gt;</span><span class="ni">&amp;lt;</span>code<span class="ni">&amp;gt;</span><span class="nt">&lt;/code&gt;</span> tag.
+  <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;pre&gt;&lt;code&gt;</span>For blocks of code use <span class="ni">&amp;lt;</span>code<span class="ni">&amp;gt;</span> wrapped in a <span class="ni">&amp;lt;</span>pre<span class="ni">&amp;gt;</span> block.<span class="nt">&lt;/code&gt;&lt;/pre&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="syntax-highlighting" class="ma-b_s">
+      Syntax highlighting
+      <a class="anchor" href="#syntax-highlighting"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Here is a built-in code coloring theme that likely works for your preferred syntax highlighter engine.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>Just place a code element inside a pre block. span classes will styled. The highlighting magic itself — wrapping code in spans of different classes — is not included. Teutonic only provides the necessary CSS for styling code block. The syntax highlighting engines here are only included for demonstration.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>pre > code</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//codetype.scss" class="link">codetype.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-syntax-highlighting ma-h_l-">
+    <div class="grid gap_s collapse-t pa_s">
+  <div class="span-4">
+    <h4 class="pa-b_xs bo-b_xs text-clip">Highlight.js</h4>
+<pre><code id="hljsWrap">function factorial(n) {
+  if ((n === 0) || (n === 1))
+    return 1;
+  else
+    return (n * factorial(n - 1));
+}</code></pre>
+  </div>
+  <div class="span-4 rouge">
+    <h4 class="pa-b_xs bo-b_xs text-clip">Rouge <span class="amp">&amp;</span> Pygment</h4>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">function</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">((</span><span class="n">n</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">n</span> <span class="o">===</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">else</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">));</span>
+<span class="p">}</span></code></pre></figure>
+  </div>
+  <div class="span-4">
+    <h4 class="pa-b_xs bo-b_xs text-clip">Prism.js</h4>
+<pre><code id="prismWrap" class="language-javascript">function factorial(n) {
+  if ((n === 0) || (n === 1))
+    return 1;
+  else
+    return (n * factorial(n - 1));
+}</code></pre>
+  </div>
+</div>
+
+<!-- Render code with different syntax highlighters for demo -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/prism.min.js" data-manual></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script>
+  var hljsWrap = document.getElementById('hljsWrap');
+  var prismWrap = document.getElementById('prismWrap');
+  hljs.highlightBlock(hljsWrap);
+  Prism.highlightElement(prismWrap);
+</script>
+    
+  </div>
+
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="anchors" class="ma-b_s">
+      Anchors
+      <a class="anchor" href="#anchors"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Helper class for text heavy pages to easily jump to deeplinks, aka hashlinks. A headline with an ID can have a visual anchor which adds a “¶” character. Linked targets are highlighted. It works for headlines and any other block elements. Just like on the pages here you can create a Table Of Contents navigation.</p>
+
+    </div>
+    
+    
+
+    <div class="ma-v_m">
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//anchor.scss" class="link">anchor.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-anchors ma-h_l- pa-h_l pa-v_l">
+    <div class="read_m">
+  <div class="ma-b_s text_s">
+    <a href="#anchor-headline" class="button text-clip pa_xs">&darr; Link to anchor headline</a>
+    <a href="#anchor-block" class="button text-clip pa_xs">&darr; Link to anchor block</a>
+  </div>
+
+  <h3 id="anchor-headline">
+    An anchored headline
+    <a href="#anchor-headline" class="anchor"></a>
+  </h3>
+  <p id="anchor-block" class="ma-t_s">
+    When hovering the headline above, you'll see a reverse <a href="http://www.shadycharacters.co.uk/series/the-pilcrow/">Pilcrow</a> character that also links itself, so you can click and then share a deeplink.
+  </p>
+</div>
+
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"read_m"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ma-b_s text_s"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#anchor-headline"</span> <span class="na">class=</span><span class="s">"button text-clip pa_xs"</span><span class="nt">&gt;</span><span class="ni">&amp;darr;</span> Link to anchor headline<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#anchor-block"</span> <span class="na">class=</span><span class="s">"button text-clip pa_xs"</span><span class="nt">&gt;</span><span class="ni">&amp;darr;</span> Link to anchor block<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"anchor-headline"</span><span class="nt">&gt;</span>
+    An anchored headline
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#anchor-headline"</span> <span class="na">class=</span><span class="s">"anchor"</span><span class="nt">&gt;&lt;/a&gt;</span>
+  <span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"anchor-block"</span> <span class="na">class=</span><span class="s">"ma-t_s"</span><span class="nt">&gt;</span>
+    When hovering the headline above, you'll see a reverse <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.shadycharacters.co.uk/series/the-pilcrow/"</span><span class="nt">&gt;</span>Pilcrow<span class="nt">&lt;/a&gt;</span> character that also links itself, so you can click and then share a deeplink.
+  <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="text-helpers" class="ma-b_s">
+      Text helpers
+      <a class="anchor" href="#text-helpers"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Additonal helpers to make your live working with text easier and to control stuff like: alignment, font-family, weight and overflow.</p>
+
+    </div>
+    
+    
+
+    <div class="ma-v_m">
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//typography.scss" class="link">typography.scss</a></code>
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//text-helpers.scss" class="link">text-helpers.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-text-helpers ma-h_l- pa-h_l pa-v_l">
+    <div class="text-all_l">
+  <h4 class="ma-b_xs">
+    Weight
+  </h4>
+  <div class="text-bold">
+    <code>.text-bold</code> makes text fat.
+  </div>
+  <div class="text-thin ma-t_s">
+    <code>.text-thin</code> makes text slim. Might not apply to all typefaces.
+  </div>
+
+  <h4 class="ma-t_m ma-b_xs">
+    Overflow
+  </h4>
+  <div class="text-clip">
+    <code>.text-clip</code> will NOT wrap over multiple lines but instead stay in one line and text-clip off with an elpisis. Most useful when in boxes or menus.
+  </div>
+  <div class="text-keep ma-t_s m-l-s- box" style="width:220px">
+    <code>.text-keep</code> stays together no matter what.
+  </div>
+  <div class="text-hyphen ma-t_s">
+    <code>.text-hyphen</code> will hyphenate. so that supercalifragilisticexpialidocious and honorificabilitudinitatibus and subdermatoglyphic are good to go.
+  </div>
+
+  <hr class="ma-t_l ma-b_xs">
+  <div class="m-b-l text_s">
+    &uarr; This is a horizontal ruler, by the way.
+  </div>
+
+  <h4 class="ma-t_m ma-b_xs">
+    Font families
+  </h4>
+  <div class="text-sans">
+    <code>.text-sans</code> will use the sans serif font.
+  </div>
+  <div class="text-serif ma-t_s">
+    <code>.text-serif</code> will use the serif font.
+  </div>
+  <div class="text-mono ma-t_s">
+    <code>.text-mono</code> will use the monospaced font.
+  </div>
+  <h4 class="ma-t_m ma-b_xs">
+    Inline elements
+  </h4>
+  <div>
+    Mark the <mark>important parts</mark> within your text with the HTML element <code>&lt;mark&gt;</code>. <br>
+    Use the <code>&lt;abbr&gt;</code> element to give some hint for <abbr title="QWERTY is a keyboard design for Latin-script alphabets.">QWERTY</abbr> words.
+  </div>
+  <h4 class="ma-t_m ma-b_xs">
+    Text selection
+  </h4>
+  <div class="text-select-all">
+    <code>.text-select-all</code>: select all text in this line with ONE click.
+  </div>
+  <div class="text-select-no ma-t_s">
+    <code>.text-select-no</code>: this text can't be selected.
+  </div>
+  <div class="text-point-no ma-t_s">
+    <code>.text-point-no</code>: no pointer events allowed. Similar to the one above but different.
+  </div>
+  <h4 class="ma-t_m ma-b_xs">
+    Alignment
+  </h4>
+  <div>
+    Usually text is left aligned.
+  </div>
+  <div class="text-center pa-t_xs ma-v_xs bo-t_px">
+    <code>.text-center</code> stays in the middle.
+  </div>
+  <div class="text-right pa-t_xs ma-v_xs bo-t_px">
+    <code>.text-right</code> is right aligned.
+  </div>
+</div>
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-all_l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ma-b_xs"</span><span class="nt">&gt;</span>
+    Weight
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-bold"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;code&gt;</span>.text-bold<span class="nt">&lt;/code&gt;</span> makes text fat.
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-thin ma-t_s"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;code&gt;</span>.text-thin<span class="nt">&lt;/code&gt;</span> makes text slim. Might not apply to all typefaces.
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ma-t_m ma-b_xs"</span><span class="nt">&gt;</span>
+    Overflow
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-clip"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;code&gt;</span>.text-clip<span class="nt">&lt;/code&gt;</span> will NOT wrap over multiple lines but instead stay in one line and text-clip off with an elpisis. Most useful when in boxes or menus.
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-keep ma-t_s m-l-s- box"</span> <span class="na">style=</span><span class="s">"width:220px"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;code&gt;</span>.text-keep<span class="nt">&lt;/code&gt;</span> stays together no matter what.
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-hyphen ma-t_s"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;code&gt;</span>.text-hyphen<span class="nt">&lt;/code&gt;</span> will hyphenate. so that supercalifragilisticexpialidocious and honorificabilitudinitatibus and subdermatoglyphic are good to go.
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"ma-t_l ma-b_xs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"m-b-l text_s"</span><span class="nt">&gt;</span>
+    <span class="ni">&amp;uarr;</span> This is a horizontal ruler, by the way.
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ma-t_m ma-b_xs"</span><span class="nt">&gt;</span>
+    Font families
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-sans"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;code&gt;</span>.text-sans<span class="nt">&lt;/code&gt;</span> will use the sans serif font.
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-serif ma-t_s"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;code&gt;</span>.text-serif<span class="nt">&lt;/code&gt;</span> will use the serif font.
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-mono ma-t_s"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;code&gt;</span>.text-mono<span class="nt">&lt;/code&gt;</span> will use the monospaced font.
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ma-t_m ma-b_xs"</span><span class="nt">&gt;</span>
+    Inline elements
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    Mark the <span class="nt">&lt;mark&gt;</span>important parts<span class="nt">&lt;/mark&gt;</span> within your text with the HTML element <span class="nt">&lt;code&gt;</span><span class="ni">&amp;lt;</span>mark<span class="ni">&amp;gt;</span><span class="nt">&lt;/code&gt;</span>. <span class="nt">&lt;br&gt;</span>
+    Use the <span class="nt">&lt;code&gt;</span><span class="ni">&amp;lt;</span>abbr<span class="ni">&amp;gt;</span><span class="nt">&lt;/code&gt;</span> element to give some hint for <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">"QWERTY is a keyboard design for Latin-script alphabets."</span><span class="nt">&gt;</span>QWERTY<span class="nt">&lt;/abbr&gt;</span> words.
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ma-t_m ma-b_xs"</span><span class="nt">&gt;</span>
+    Text selection
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-select-all"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;code&gt;</span>.text-select-all<span class="nt">&lt;/code&gt;</span>: select all text in this line with ONE click.
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-select-no ma-t_s"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;code&gt;</span>.text-select-no<span class="nt">&lt;/code&gt;</span>: this text can't be selected.
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-point-no ma-t_s"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;code&gt;</span>.text-point-no<span class="nt">&lt;/code&gt;</span>: no pointer events allowed. Similar to the one above but different.
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ma-t_m ma-b_xs"</span><span class="nt">&gt;</span>
+    Alignment
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    Usually text is left aligned.
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-center pa-t_xs ma-v_xs bo-t_px"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;code&gt;</span>.text-center<span class="nt">&lt;/code&gt;</span> stays in the middle.
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-right pa-t_xs ma-v_xs bo-t_px"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;code&gt;</span>.text-right<span class="nt">&lt;/code&gt;</span> is right aligned.
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="link" class="ma-b_s">
+      Link
+      <a class="anchor" href="#link"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>The <code class="highlighter-rouge">.link</code> class sets some default behaviour for links. It’s like an optional reset. Most importantly, it uses the prime color instead of the browser default blue. It’s optional, so you need to add the class, unless used in context, like in an <a href="#article">article</a>. Beside the <code class="highlighter-rouge">:hover</code> state, <code class="highlighter-rouge">:visited</code> will also be styled, so your users know where they have been already.</p>
+
+    </div>
+    
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>.link</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//link.scss" class="link">link.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-link ma-h_l- pa-h_l pa-v_l">
+    <a href="#link" class="link">I link</a>.
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#link"</span> <span class="na">class=</span><span class="s">"link"</span><span class="nt">&gt;</span>I link<span class="nt">&lt;/a&gt;</span>.</code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="article" class="ma-b_s">
+      Article
+      <a class="anchor" href="#article"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>This is a single wrapper class to handle WYSIWYG or Markdown generated content, where only HTML tags are available and no CSS classes can be set. Use it for articles, blog posts, docs …</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>PRO TIP: Combining the <code class="highlighter-rouge">.article</code> class with <a href="#text-size-containers">text size containers</a> and <a href="#read-widths">read widths</a> enables different sizes of articles.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>.article</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//article.scss" class="link">article.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-article ma-h_l-">
+    
+
+<div class="bg-0 ma-l_m">
+  <article class="article read_l pa-h_m pa-v_m">
+    <!--
+![](https://i.imgflip.com/1zjawi.jpg "made at imgflip.com")
+-->
+
+<p>The <code class="highlighter-rouge">.article</code> wrapper class gives you reading-optimized styling for articles and blog posts. It’s made for <strong>Markdown</strong> generated content like from <a href="https://jekyllrb.com/">Jekyll</a> or <a href="https://getgrav.org/">Grav</a>, but it will also work with any CMS. —<em>Inside here:</em></p>
+
+<ol>
+  <li>Text is optimized for readability</li>
+  <li>Headlines have more spacing</li>
+</ol>
+
+<ul>
+  <li>Lists have a hanging punctuation
+    <ul>
+      <li>Nested lists work as well</li>
+    </ul>
+  </li>
+</ul>
+
+<p><code class="highlighter-rouge">p</code>, <code class="highlighter-rouge">ol</code>, <code class="highlighter-rouge">ol</code>, <code class="highlighter-rouge">dl</code>, <code class="highlighter-rouge">table</code>, <code class="highlighter-rouge">blockquote</code>, <code class="highlighter-rouge">a</code>, <code class="highlighter-rouge">img</code>, <code class="highlighter-rouge">hr</code>, <code class="highlighter-rouge">pre</code>, <code class="highlighter-rouge">code</code>, <code class="highlighter-rouge">i</code> — all work well</p>
+
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th>Tables</th>
+      <th style="text-align: center">Are</th>
+      <th style="text-align: right">Cool</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>col 3 is</td>
+      <td style="text-align: center">right-aligned</td>
+      <td style="text-align: right">$1600</td>
+    </tr>
+    <tr>
+      <td>col 2 is</td>
+      <td style="text-align: center">centered</td>
+      <td style="text-align: right">$12</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="h1-headline-level-1">h1: Headline level 1</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi vitae dicta amet nobis porro laudantium accusantium, velit minima vel, aliquam veniam atque perferendis maxime earum autem dolor, dolore fugit iure?</p>
+
+<blockquote>
+  <p>Pasting code from the Internet into production code is like chewing gum found in the street.</p>
+</blockquote>
+
+<h2 id="h2-headline-level-2">h2: Headline level 2</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque odio assumenda, veritatis tempora enim nemo ipsum quidem, porro et voluptate animi minus ad commodi architecto recusandae eveniet, accusamus rem. Dolor!</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Never execute:
+$ rmf *
+</code></pre></div></div>
+
+<h3 id="h3-headline-level-3-this-is-a-slightly-longer-headline-to-demonstrate-that-this-also-looks-good">h3: Headline level 3 This is a slightly longer headline to demonstrate that this also looks good</h3>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores molestias dolore eaque recusandae, tempora iusto consequuntur sint consectetur, quisquam cumque ducimus, voluptates. Mollitia dolores explicabo quibusdam magnam asperiores accusamus, cumque.</p>
+
+<h4 id="h4-headline-level-4-this-is-a-slightly-longer-headline-to-demonstrate-that-this-also-looks-good">h4: Headline level 4 This is a slightly longer headline to demonstrate that this also looks good</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores molestias dolore eaque recusandae, tempora iusto consequuntur sint consectetur, quisquam cumque ducimus, voluptates. Mollitia dolores explicabo quibusdam magnam asperiores accusamus, cumque.</p>
+
+<h5 id="h5-headline-level-5-this-is-a-slightly-longer-headline-to-demonstrate-that-this-also-looks-good">h5: Headline level 5 This is a slightly longer headline to demonstrate that this also looks good</h5>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores molestias dolore eaque recusandae, tempora iusto consequuntur sint consectetur, quisquam cumque ducimus, voluptates. Mollitia dolores explicabo quibusdam magnam asperiores accusamus, cumque.</p>
+
+<p><em>That’s all she wrote.</em></p>
+
+  </article>
+</div>
+    
+  </div>
+
+
+
+</article>
+
+      
+    </main>
+
+    <footer class="pa-h_l pa-v_m text_s span-auto">
+  <nav class="flex">
+    <div>
+        <b>Teutonic CSS</b> v0.8.6<br>
+        by <a href="https://twitter.com/frank_laemmer" class="link">Frank Lämmer</a> at <a class="fortrabbit link" href="https://www.fortrabbit.com">fortrabbit</a><br>
+        licensed under <a class="link" href="">MIT</a>
+    </div>
+    <a class="ma-l-auto span-auto link flex-end" href="https://github.com/fortrabbit/teutonic-css/">GitHub ›</a>
+  </nav>
+</footer>
+    
+  </body>
+</html>
+<!-- You have reached the end of the internet  -->

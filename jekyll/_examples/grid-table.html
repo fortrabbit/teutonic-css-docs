@@ -1,0 +1,54 @@
+---
+
+title:    Table grid
+category: css-grid
+order:    100
+hide:     no
+
+scss-files:
+  - 'grid'
+  - 'grid-spans'
+
+description: >
+  Don't feel cheap. CSS table layout is back! 
+
+details: >
+  The grid needs to have an actual height, otherwise the effect is barely visible. In this example I have cheated by filling up the empty cells with boxes.
+
+data: 
+  boxes:
+    - "start-1 end-3 start-y-1 end-y-5"
+    - "start-3 end-5 start-y-1 end-y-5"
+    - "start-2 end-9 start-y-5 end-y-7"
+    - "start-6 end-13 start-y-1 end-y-4"
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+
+---
+
+{% assign letters = site.data.alphabet %}
+
+<div class="grid gap_s">
+  {%- for box in page.data.boxes %}
+  <div class="box text-clip text-mono bg-{{ letters[forloop.index] }}{% if box != '' %} {{ box }}{% endif %}">{% if box != '' %}{{ box }}{% else %}&nbsp;{% endif %}</div>
+  {%- endfor %}
+</div>

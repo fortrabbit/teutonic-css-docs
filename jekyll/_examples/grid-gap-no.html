@@ -1,0 +1,43 @@
+---
+title:     No gap
+category:  css-grid
+order:     3
+hide:      no
+syntax:    .grid.gap-no
+
+description: >
+  The `.gap-no` is a unique to Teutonic CSS. It gives you a border-collapsed look. Here you see how it in combination with the CSS grid.
+
+
+details: >
+  The gap-no class also works standalone (vertically stacked), as well as with the Flexbox grid and the CSS columns.
+
+scss-files:
+  - 'gap-no'
+  - 'grid'
+
+data: 
+  box-widths:
+    - span-2
+    - span-2
+    - span-2
+    - span-2
+    - span-2
+    - span-2
+    - span-3
+    - span-3
+    - span-3
+    - span-3
+
+---
+
+{% assign letters = site.data.alphabet %}
+
+<h4 class="flex wrap-no">
+  <span>No gutter</span>
+  <span class="span-auto text-thin text-mono">.grid.gap-no</span>
+</h4>
+<div class="grid gap-no ma-t_s">
+  {% for box-width in page.data.box-widths %}<div class="{{ box-width }} box text-clip text-mono bg-{{ letters[forloop.index] }}">&nbsp;</div>
+  {% endfor %}
+</div>

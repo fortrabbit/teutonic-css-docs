@@ -1,0 +1,110 @@
+---
+
+title:    Align content
+category: flexbox
+order:    25
+hide:     no
+syntax:   .content-{alignment}
+
+description: >
+  Use the Flexbox content alignment helper class to position ALL childs on the **main axis**. Note, this has no effect when the flexbox has only a single line. It needs to wrap over multiple lines. This will set the CSS property `align-content`, see the [MDN page](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content).
+
+details: >
+  This one of the puzzling Flexbox features. Only when those boxes create two lines, the property will apply.
+
+scss-files:
+  - 'flex-align-content'
+
+---
+
+<h4 class="text-mono ma-b_xs">.content-end</h4>
+<div class="bg-0 pa_s text-mono">
+  <div class="flex wrap gap-no content-end min-height_xl">
+    <div class="bg-d box span-auto">.box.auto</div>
+    <div class="bg-e box span-auto">.box.auto</div>
+    <div class="bg-f box span-auto">.box.auto</div>
+    <div class="bg-g box span-auto">.box.auto</div>
+    <div class="bg-h box span-auto">.box.auto</div>
+    <div class="bg-i box span-auto">.box.auto</div>
+    <div class="bg-j box span-auto">.box.auto</div>
+    <div class="bg-k box span-auto">.box.auto</div>
+    <div class="bg-l box span-auto">.box.auto</div>
+    <div class="bg-m box span-auto">.box.auto</div>
+    <div class="bg-n box span-auto">.box.auto</div>
+    <div class="bg-o box span-auto">.box.auto</div>
+    <div class="bg-p box span-auto">.box.auto</div>
+    <div class="bg-q box span-auto">.box.auto</div>
+  </div>
+</div>
+<p class="ma-t_xs text_s">
+  &uarr; Items are placed on the end.
+</p>
+
+<h4 class="text-mono ma-t_m ma-b_xs">.content-center</h4>
+<div class="bg-0 pa_s text-mono">
+  <div class="flex wrap gap-no content-center min-height_xl">
+    <div class="bg-d box span-auto">.box.auto</div>
+    <div class="bg-e box span-auto">.box.auto</div>
+    <div class="bg-f box span-auto">.box.auto</div>
+    <div class="bg-g box span-auto">.box.auto</div>
+    <div class="bg-h box span-auto">.box.auto</div>
+    <div class="bg-i box span-auto">.box.auto</div>
+    <div class="bg-j box span-auto">.box.auto</div>
+    <div class="bg-k box span-auto">.box.auto</div>
+    <div class="bg-l box span-auto">.box.auto</div>
+    <div class="bg-m box span-auto">.box.auto</div>
+    <div class="bg-n box span-auto">.box.auto</div>
+    <div class="bg-o box span-auto">.box.auto</div>
+    <div class="bg-p box span-auto">.box.auto</div>
+    <div class="bg-q box span-auto">.box.auto</div>
+  </div>
+</div>
+<p class="ma-t_xs text_s">
+  &uarr; Items are placed in the middle.
+</p>
+
+<h4 class="text-mono ma-t_m ma-b_xs">.content-between</h4>
+<div class="bg-0 pa_s text-mono">
+  <div class="flex wrap gap-no content-between min-height_xl">
+    <div class="bg-d box span-auto">.box.auto</div>
+    <div class="bg-e box span-auto">.box.auto</div>
+    <div class="bg-f box span-auto">.box.auto</div>
+    <div class="bg-g box span-auto">.box.auto</div>
+    <div class="bg-h box span-auto">.box.auto</div>
+    <div class="bg-i box span-auto">.box.auto</div>
+    <div class="bg-j box span-auto">.box.auto</div>
+    <div class="bg-k box span-auto">.box.auto</div>
+    <div class="bg-l box span-auto">.box.auto</div>
+    <div class="bg-m box span-auto">.box.auto</div>
+    <div class="bg-n box span-auto">.box.auto</div>
+    <div class="bg-o box span-auto">.box.auto</div>
+    <div class="bg-p box span-auto">.box.auto</div>
+    <div class="bg-q box span-auto">.box.auto</div>
+  </div>
+</div>
+<p class="ma-t_xs text_s">
+  &uarr; Items are placed in between, starting at start, ending at end.
+</p>
+
+<h4 class="text-mono ma-t_m ma-b_xs">.content-around</h4>
+<div class="bg-0 pa_s text-mono">
+  <div class="flex wrap gap-no content-around min-height_xl">
+    <div class="bg-d box span-auto">.box.auto</div>
+    <div class="bg-e box span-auto">.box.auto</div>
+    <div class="bg-f box span-auto">.box.auto</div>
+    <div class="bg-g box span-auto">.box.auto</div>
+    <div class="bg-h box span-auto">.box.auto</div>
+    <div class="bg-i box span-auto">.box.auto</div>
+    <div class="bg-j box span-auto">.box.auto</div>
+    <div class="bg-k box span-auto">.box.auto</div>
+    <div class="bg-l box span-auto">.box.auto</div>
+    <div class="bg-m box span-auto">.box.auto</div>
+    <div class="bg-n box span-auto">.box.auto</div>
+    <div class="bg-o box span-auto">.box.auto</div>
+    <div class="bg-p box span-auto">.box.auto</div>
+    <div class="bg-q box span-auto">.box.auto</div>
+  </div>
+</div>
+<p class="ma-t_xs text_s">
+  &uarr; Items are played around with some space left on start and end.
+</p>

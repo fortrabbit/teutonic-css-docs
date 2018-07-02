@@ -1,0 +1,29 @@
+---
+title:    Numeric stepper
+category: real-world
+order:    6
+
+scss-files:
+  - 'flex'
+  - 'forms'
+  - 'padding'
+  - 'read-widths'
+
+---
+
+<div class="flex wrap-no gap-no read_s">
+  <button class="span-auto pa_m button" id="num-minus">-</button>
+  <input class="input pa_m" type="number" value="42" id="num-value">
+  <button class="span-auto pa_m button" id="num-plus">+</button>
+</div>
+<script>
+  // Numeric stepper demo
+  // Don't copy this for demo only
+  var numPlus = document.getElementById('num-plus');
+  var numMinus = document.getElementById('num-minus');
+  var numValue = document.getElementById('num-value');
+  function countUp() { numValue.stepUp(1); }
+  function countDown() { numValue.stepDown(1); }
+  numPlus.addEventListener('click', countUp, false);
+  numMinus.addEventListener('click', countDown, false);
+</script>

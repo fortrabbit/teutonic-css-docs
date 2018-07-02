@@ -1,0 +1,51 @@
+---
+title:     Wrapping
+category:  flexbox
+hide:      no
+order:     23
+
+description: >
+   Childs of `.flex` will wrap over multiple rows. The childs of `.flex.wrap-no` will always stay in one line. Resize your browser window to see this in action.
+
+scss-files:
+  - 'flex'
+  - 'gap'
+
+---
+
+<h3 class="bo-b_xs pa-b_xs flex">
+  <span>Wrap</span>
+  <span class="span-auto text-thin text-mono">.flex</span>
+</h3>
+<div class="flex gap-no">
+  <div class="box bg-a">We</div>
+  <div class="box bg-b">just</div>
+  <div class="box bg-c">wrap</div>
+  <div class="box bg-d">around</div>
+  <div class="box bg-e">in</div>
+  <div class="box bg-f">multiple</div>
+  <div class="box bg-g">lines</div>
+  <div class="box bg-h">whenever</div>
+  <div class="box bg-i">the</div>
+  <div class="box bg-j">viewport</div>
+  <div class="box bg-k">has</div>
+  <div class="box bg-l">not</div>
+  <div class="box bg-m">enough</div>
+  <div class="box bg-n">space.</div>
+</div>
+<h3 class="ma-t_l bo-b_xs pa-b_xs flex">
+  <span>No wrap</span>
+  <span class="span-auto text-thin text-mono">.flex.wrap-no</span>
+</h3>
+<div class="flex wrap-no gap-no">
+  <div class="box text-clip bg-a">We</div>
+  <div class="box text-clip bg-b">stay</div>
+  <div class="box text-clip bg-c">together</div>
+  <div class="box text-clip bg-d">in</div>
+  <div class="box text-clip bg-e">one</div>
+  <div class="box text-clip bg-f">line</div>
+  <div class="box text-clip bg-g">no</div>
+  <div class="box text-clip bg-h">matter</div>
+  <div class="box text-clip bg-i">what</div>
+  <div class="box text-clip bg-j">viewport.</div>
+</div>

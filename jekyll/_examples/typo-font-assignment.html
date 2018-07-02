@@ -1,0 +1,43 @@
+---
+
+title:      Font assignment
+category:   theming
+order:      3
+hide:       no
+
+description: >
+  There are three typeface CSS variables: `--font-standard` (div), `--font-body` (p) and `--font-headline` (h1). The standard Teutonic theme here uses a serif typeface for paragraphs and the sans-serif font of your Operating System for anything else. You can assign all to use the same font, or three different ones by changing the CSS Vars.
+
+details: >
+  Various standard web safe font-stacks are included in the orignal SCSS files. You can also load web fonts from Google fonts or alike and assign theme here. The example here shows how override font-face with CSS vars.
+
+css-vars:
+  - selector: .docs-font-face-example
+    vars:
+      - "--font-body:     serif"
+      - "--font-headline: fantasy"
+      - "--font-standard: serif"
+
+scss-files:
+  - 'typeface-vars'
+
+---
+
+<div class="flex gap_l text-all_l">
+  <div>
+    <h3 class="bo-b_xs pa-b_xs">Default</h3>
+    <div class="ma-t_s">
+      <h5>Headlines</h5>
+      <p>Paragraphs and lists.</p>
+      <div>Anything else.</div>
+    </div>
+  </div>
+  <div>
+    <h3 class="bo-b_xs pa-b_xs">Modified</h3>
+    <div class="docs-font-face-example ma-t_s">
+      <h5>Headlines</h5>
+      <p>Paragraphs and lists.</p>
+      <div>Anything else.</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+---
+
+title:     Generic avatars
+category:  real-world
+sub-cat:   interface
+order:     120
+hide:      no
+
+description: >
+  When you don't have a Gravatar or uploaded icon at hand, use can use pseudo icon. Based on first letter (or number) of your users name. This component example combines multiple Teutonic methods.
+
+scss-files:
+  - 'fixed-size'
+  - 'border'
+  - 'colors-alphabet'
+  - 'flex'
+  - 'flex-helpers'
+  - 'columns'
+
+---
+
+{% assign letters = site.data.spelling-alphabet %}
+
+<h3 class="bo-b_xs pa-b_xs">Buchstabier-Alphabet</h3>
+<div class="columns gap-no cols-4 cols-2-t collapse-p">
+  {%- for letter in letters %}
+  <div class="flex wrap-no ma-b_xs pa-v_s bo-t_px">
+    <div class="span-auto pa-l_xs">
+      <div class="bg-{{ letter[0] | downcase }} flex ra-circle bo_px width_l height_l">
+        <div class="span-auto self-center ma-h-auto type_s text-serif text-bold text_xl">{{ letter[0] | upcase }}</div>
+      </div>
+    </div>
+    <div class="ma-l_s text-clip flex">
+      <div class="span-auto self-center">{{ letter[1] }}</div>
+    </div>
+  </div>
+  {%- endfor %}
+</div>

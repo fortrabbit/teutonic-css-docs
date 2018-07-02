@@ -1,0 +1,53 @@
+
+    <pre class="ma-v_s"><code class="p_s">CSS is awesome</code></pre>
+    <div class="grid gap-no ma-b_m">
+      <div class="span-4 box text-mono text-clip">div.box</div>
+      <div class="span-4 box text-mono active arrow">.active</div>
+      <a href="#" class="span-4 box text-mono text-clip">
+        a.box
+        <div class="mini-info shown">mini-info</div>
+      </a>
+    </div>
+    <div class="gap-no ma-v_s">
+      <div class="progress-box">
+        <div>progress</div>
+        <progress max="10" value="5" class="progress"></progress>
+      </div>
+      {% comment %}
+      <div class="meter-box">
+        <div>meter</div>
+        <meter class="meter" value="30" min="0" low="10" optimum="50" high="90" max="100"></meter>
+      </div>
+      {% endcomment %}
+    </div>
+    <div class="gap-no">
+      <input type="text" class="input text-mono" value="input:text">
+      <div class="search-box">
+        <input type="search" class="input" placeholder="search">
+      </div>
+      <textarea class="textarea">textarea.textarea</textarea>
+      <input type="text" class="input text-mono" value="input:text:disabled" disabled>
+      <input type="email" class="input text-mono" value="input:invalid">
+      <div class="flex wrap-no gap-no">
+        <label class="box flex wrap-no span-half">
+          <input type="checkbox" class="checkbox">
+          <div class="ma-l_xs text-mono">check</div>
+        </label>
+        <label class="box flex wrap-no span-half">
+          <input type="radio" class="radio">
+          <div class="ma-l_xs text-mono">radio</div>
+        </label>
+      </div>
+      <div class="form-box">
+        <label class="mini-label text-mono">form-box</label>
+        <select class="select text-mono">
+          <option>select</option>
+        </select>
+      </div>
+      <div class="grid gap_xs ma-t_s">
+        <button class="span-6 text-clip button prime">button.prime</button>
+        <button class="span-6 text-clip button">button</button>
+        <button disabled class="span-6 text-clip button prime">button.prime:disabled</button>
+        <button disabled class="span-6 text-clip button">button:disabled</button>
+      </div>
+    </div>

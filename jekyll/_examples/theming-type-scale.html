@@ -1,0 +1,53 @@
+---
+
+title:      Type scale
+category:   theming
+order:      3
+hideCode:   yes
+
+scss-files:
+  - 'scale-vars'
+
+description: >
+  
+---
+
+<!-- TODO: write the intro here! -->
+
+<div class="grid gap_s collapse-p">
+  <div class="span-6">
+    <h4 class="bo-b_xs pa-b_xs">Text base</h4>
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_s">:root {
+  --text-base: 1em;
+}
+</style>
+    <p class="ma-t_s read_l">
+      &uarr; This is the base font size for the <code>--text-m</code> variable. It's used for all standard elements like <code>div</code> or <code>p</code> without size applied. Please stick to the <code>em</code> unit here. <code>1em</code> should match <code>16px</code> on desktop size. Edit this value only slightly as it has a big impact, something between <code>.8em</code> and <code>1.2em</code> is good.
+    </p>
+  </div>
+  <div class="span-6">
+    <h4 class="bo-b_xs pa-b_xs">Text ratio</h4>
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_s">:root {
+  --text-ratio: 1.25;
+}
+</style>
+    <p class="ma-t_s read_l">
+      &uarr; This defines the propotion by which the modular scale is calculated. Please edit this only slighty: Use a value higher than 1 and — for aesthetic reasons — lower  than 1.7.
+    </p>
+  </div>
+</div>
+
+<h4 class="bo-b_xs pa-b_xs ma-t_m" id="text-scale-calculation">Text scale calculation</h4>
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_s">:root {
+  --text-xxxl : calc(var(--text-ratio) * var(--text-xxl));
+  --text-xxl  : calc(var(--text-ratio) * var(--text-xl));
+  --text-xl   : calc(var(--text-ratio) * var(--text-l));
+  --text-l    : calc(var(--text-ratio) * var(--text-m));
+  --text-m    : var(--text-base);
+  --text-s    : calc(var(--text-m)     / var(--text-ratio));
+  --text-xs   : calc(var(--text-s)     / var(--text-ratio));
+}
+</style>
+<p class="ma-t_s read_l">
+  &uarr; This is how the font-sizes are getting calculated using the <code>--text-base</code> and <code>--text-ratio</code>. The base is in the lower part, from there it grows and shrinks.
+</p>

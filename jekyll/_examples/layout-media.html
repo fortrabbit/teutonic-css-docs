@@ -1,0 +1,39 @@
+---
+title:      Media
+category:   layout
+order:      10
+syntax:     .media
+
+description: |
+  Here is the basic media container. It's size is defined by the outer layout and the media itself. Images without a set height and width will be resposnive, occupying 100% of the width and taking as much height, as needed.
+
+scss-files:
+  - 'media'
+
+data:
+
+---
+
+{%- assign quotes = site.data.quotes -%}
+{%- assign min = 1 -%}
+{%- assign max = 188 -%}
+{%- assign diff = max | minus: min -%}
+{%- assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min -%}
+
+<div class="grid gap_s collapse-p">
+  <div class="span-6">
+    <figure class="media">
+      <img src="//picsum.photos/800/450/?random" alt="Photo via picsum.photos">
+      <div class="text-mono mini-info">Image</div>
+    </figure>
+  </div>
+  <div class="span-6">
+    <figure class="media">
+      <blockquote class="text-serif text-italic pa_m">
+        <p class="text_xl">{{ quotes[randomNumber].text }}</p>
+        <p class="text_s ma-t_s">—{{ quotes[randomNumber].author }}</p>
+      </blockquote>
+      <div class="text-mono mini-info">Text</div>
+    </figure>
+  </div>
+</div>

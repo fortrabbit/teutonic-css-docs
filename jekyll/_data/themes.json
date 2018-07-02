@@ -1,0 +1,14 @@
+[
+  {
+    "name"    : "fortrabbit",
+    "cssFile" : "fortrabbit.css"
+  },
+  {
+    "name"    : "flowerpower",
+    "cssFile" : "flowerpower.css"
+  },
+  {
+    "name"    : "inverted",
+    "cssFile" : "inverted.css"
+  }
+] 

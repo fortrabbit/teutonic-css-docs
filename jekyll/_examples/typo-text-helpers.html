@@ -1,0 +1,88 @@
+---
+
+title:    Text helpers
+category: typography
+order:    30
+
+description: >
+  Additonal helpers to make your live working with text easier and to control stuff like: alignment, font-family, weight and overflow.
+
+scss-files:
+  - 'typography'
+  - 'text-helpers'
+
+---
+
+<div class="text-all_l">
+  <h4 class="ma-b_xs">
+    Weight
+  </h4>
+  <div class="text-bold">
+    <code>.text-bold</code> makes text fat.
+  </div>
+  <div class="text-thin ma-t_s">
+    <code>.text-thin</code> makes text slim. Might not apply to all typefaces.
+  </div>
+
+  <h4 class="ma-t_m ma-b_xs">
+    Overflow
+  </h4>
+  <div class="text-clip">
+    <code>.text-clip</code> will NOT wrap over multiple lines but instead stay in one line and text-clip off with an elpisis. Most useful when in boxes or menus.
+  </div>
+  <div class="text-keep ma-t_s m-l-s- box" style="width:220px">
+    <code>.text-keep</code> stays together no matter what.
+  </div>
+  <div class="text-hyphen ma-t_s">
+    <code>.text-hyphen</code> will hyphenate. so that supercalifragilisticexpialidocious and honorificabilitudinitatibus and subdermatoglyphic are good to go.
+  </div>
+
+  <hr class="ma-t_l ma-b_xs">
+  <div class="m-b-l text_s">
+    &uarr; This is a horizontal ruler, by the way.
+  </div>
+
+  <h4 class="ma-t_m ma-b_xs">
+    Font families
+  </h4>
+  <div class="text-sans">
+    <code>.text-sans</code> will use the sans serif font.
+  </div>
+  <div class="text-serif ma-t_s">
+    <code>.text-serif</code> will use the serif font.
+  </div>
+  <div class="text-mono ma-t_s">
+    <code>.text-mono</code> will use the monospaced font.
+  </div>
+  <h4 class="ma-t_m ma-b_xs">
+    Inline elements
+  </h4>
+  <div>
+    Mark the <mark>important parts</mark> within your text with the HTML element <code>&lt;mark&gt;</code>. <br>
+    Use the <code>&lt;abbr&gt;</code> element to give some hint for <abbr title="QWERTY is a keyboard design for Latin-script alphabets.">QWERTY</abbr> words.
+  </div>
+  <h4 class="ma-t_m ma-b_xs">
+    Text selection
+  </h4>
+  <div class="text-select-all">
+    <code>.text-select-all</code>: select all text in this line with ONE click.
+  </div>
+  <div class="text-select-no ma-t_s">
+    <code>.text-select-no</code>: this text can't be selected.
+  </div>
+  <div class="text-point-no ma-t_s">
+    <code>.text-point-no</code>: no pointer events allowed. Similar to the one above but different.
+  </div>
+  <h4 class="ma-t_m ma-b_xs">
+    Alignment
+  </h4>
+  <div>
+    Usually text is left aligned.
+  </div>
+  <div class="text-center pa-t_xs ma-v_xs bo-t_px">
+    <code>.text-center</code> stays in the middle.
+  </div>
+  <div class="text-right pa-t_xs ma-v_xs bo-t_px">
+    <code>.text-right</code> is right aligned.
+  </div>
+</div>

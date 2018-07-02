@@ -1,0 +1,62 @@
+---
+
+title:    Tinted
+category: colors
+order:    10
+syntax:   .tinted-{color}
+hideCode: yes
+
+description: >
+  **Paint the town.** The `.tinted` class will tint the text color, border color and some magic extras with the predefined states `warn`, `success`, `danger` and `prime` or your own custom color variable. Basically everything that was blackish before will become colorish.
+
+details: >
+  The example below is just a test-case. There are many cool use cases for this, like for theming, customization or form validation. This is a local theme, the effective space is scoped by the container holding the class. It can be combined with [tinted background](#tinted-background). See the [form validation example](/examples/real-world#form-error).
+
+css-vars:
+  - selector: .tinted-custom
+    vars:
+      - "--color: hsl(30,100%,50%)"
+
+
+scss-files:
+  - 'tinited'
+
+data:
+  classes:
+    - 'No Class' : 'blackish'
+    - Danger     : 'redish'
+    - Warn       : 'yellowish'
+    - Success    : 'greenish'
+    - Prime      : 'purpleish'
+    - Custom     : 'different'
+
+---
+
+<div class="grid gap_s collapse-p">
+  {%- for entry in page.data.classes %}
+  {%- assign index = forloop.index %}
+  {%- for class in entry %}
+  {%- assign classname = class[0] | downcase %}
+  {%- assign color     = class[1] %}
+  <div class="span-4 span-6-t tinted-{{ classname }}">
+    <h4 class="pa-b_xs bo-b_s ma-b_s">
+      {{ class[0] }}
+      <span class="text-thin">is <mark>{{ color }}</mark></span>
+    </h4>
+    {%- include examples/form-test.html %}
+    <table class="table dense ma-t_s">
+      <tr>
+        <td>table</td>
+        <td>check</td>
+        <td class="text-right">1</td>
+      </tr>
+      <tr>
+        <td>table</td>
+        <td>check</td>
+        <td class="text-right">2</td>
+      </tr>
+    </table>
+  </div>
+  {%- endfor %}
+  {%- endfor %}
+</div>

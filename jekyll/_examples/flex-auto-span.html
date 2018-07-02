@@ -1,0 +1,21 @@
+---
+
+title:    Auto span
+category: flexbox
+order:    3
+hide:     no
+
+description: >
+  As seen above, flex childs fill up the available space by their number and contents. The span class `.span-auto` makes a flex child container only as big as it's contents.
+
+scss-files:
+  - 'flex'
+  - 'flex-helpers'
+
+---
+
+<div class="flex gap_s">
+  <div><div class="box bg-1 text-mono text-clip">no span class</div></div>
+  <div><div class="box bg-1 text-mono text-clip">no span class</div></div>
+  <div class="span-auto"><div class="box bg-warn-3 text-mono text-bold text-clip">span-auto</div></div>
+</div>

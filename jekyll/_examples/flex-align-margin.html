@@ -1,0 +1,42 @@
+---
+
+title:    Align margin
+category: flexbox
+order:    30
+hide:     no
+syntax:   .ma{-direction?}-auto
+
+description: >
+  With the auto margin helper classes you can align items in a Flexbox on the main axis.
+
+details: >
+  Someday, there will be a `justify-self` property in Flexbox to make this a little more semantic and less hacky. Don't get confused by the other alignment methods here.
+
+scss-files:
+  - 'flex'
+  - 'margin'
+
+---
+
+<h3>Flexbox row</h3>
+<div class="bg-0 pa_s ma-t_xs flex">
+  <div data-tooltip="margin-horizontal-auto" class="span-auto bg-j box ma-h-auto text-mono">ma-h-auto</div>
+</div>
+<div class="bg-0 pa_s ma-t_xs flex">
+  <div class="box span-auto bg-a text-mono text-clip">no extra class</div>
+  <div data-tooltip="margin-left-auto" class="span-auto bg-j box ma-l-auto text-mono">ma-l-auto</div>
+</div>
+<p class="ma-t_xs text_s">
+  &uarr; Useful for horizontal navigations.
+</p>
+
+<h3 class="ma-t_m">Flexbox column</h3>
+<div class="grid gap_s">
+  <div class="span-6 bg-0 pa_s flex column height_xl">
+    <div data-tooltip="margin-vertical-auto" class="span-auto bg-j box ma-v-auto text-mono text-center">ma-v-auto</div>
+  </div>
+  <div class="span-6 bg-0 pa_s flex column height_xl">
+    <div class="box span-auto bg-a text-mono text-clip">no extra class</div>
+    <div data-tooltip="margin-top-auto" class="span-auto bg-j box ma-t-auto text-mono text-center">ma-t-auto</div>
+  </div>
+</div>

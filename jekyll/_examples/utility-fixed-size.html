@@ -1,0 +1,72 @@
+---
+
+title:     Fixed sizes
+category:  utilities
+order:     100
+hide:      no
+syntax:    size_{size}
+
+description: >
+  Here are a few "fixed" size helper classes, width, height and both directions. Standard spacing sizes are in use.
+
+details: >
+  Available sizes: `s`, `m`, `l`, `xl`. The sizes are REM based. So they will get a bit smaller on tablet and phone breakpoints. Those classes are also available as min-sizes, like `min-size_{size}`. Also have a look at the [read widths](/examples/typography#read-widths). 
+
+scss-files:
+  - 'size'
+
+data:
+  fixed-sizes:
+    - xl
+    - l
+    - m
+    - s
+
+---
+
+
+{%- assign letters = site.data.alphabet -%}
+
+
+<div class="flex gap_m">
+  <div class="span-auto">
+    <h4 class="ma-b_xs">Width and height</h4>
+    <div class="flex gap_xs">
+      {%- for size in page.data.fixed-sizes %}
+      <div class="span-auto">
+        <div data-tooltip="size_{{ size }}" class="size_{{ size }} pos-rel bo_px bg-{{ letters[forloop.index] }}"></div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+  <div class="span-auto">
+    <h4 class="ma-b_xs">Height</h4>
+    <div class="flex gap_xs">
+      {%- for size in page.data.fixed-sizes %}
+      <div class="span-auto">
+        <div data-tooltip="height_{{ size }}" class="height_{{ size }} width_m pos-rel bo_px bg-{{ letters[forloop.index] }}"></div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+  <div class="span-auto">
+    <h4 class="ma-b_xs">Width</h4>
+    <div class="flex gap_xs">
+      {%- for size in page.data.fixed-sizes %}
+      <div class="span-full">
+        <div data-tooltip="width_{{ size }}" class="width_{{ size }} height_m pos-rel bo_px bg-{{ letters[forloop.index] }}"></div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</div>
+
+{% comment %}
+<h4 class="ma-b_xs ma-t_s">Read widths</h4>
+<div class="flex gap_xs">
+  <div class="span-full"><div data-tooltip="read_l" class="read_s height_m pos-rel bo_px bg-a"></div></div>
+  <div class="span-full"><div data-tooltip="read_l" class="read_m height_m pos-rel bo_px bg-b"></div></div>
+  <div class="span-full"><div data-tooltip="read_l" class="read_l height_m pos-rel bo_px bg-c"></div></div>
+  <div class="span-full"><div data-tooltip="read_l" class="read_xl height_m pos-rel bo_px bg-d"></div></div>
+</div>
+{% endcomment %}

@@ -1,0 +1,38 @@
+---
+title:    Nesting
+category: flexbox
+order:    20
+hide:     no
+
+description: >
+  You can put a flexbox into a flexbox into a flexbox into a flexbox. BUT the markup here is a nesty. Please consider [CSS grid nesting](/examples/css-grid#nesting).
+
+scss-files:
+  - 'flex'
+  - 'box'
+
+---
+
+<div class="flex gap_m">
+  {%- for num in (1..2) %}
+  <div class="span-half">
+    <div class="box bg-a">
+      <div class="flex gap_s">
+        {%- for num2 in (1..2) %}
+        <div class="span-half">
+          <div class="box bg-d">
+            <div class="flex gap_s">
+              {%- for num3 in (1..2) %}
+              <div class="span-half">
+                <div class="box bg-l"></div>
+              </div>
+              {%- endfor %}
+            </div>
+          </div>
+        </div>
+      {%- endfor %}
+      </div>
+    </div>
+  </div>
+  {%- endfor %}
+</div>

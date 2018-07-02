@@ -1,0 +1,2058 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Colors - Teutonic CSS</title>
+  <meta name="description" content="Enjoy a fresh look. Customize at ease.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Twitter -->
+  <meta name="twitter:site" content="frank_laemmer">
+  <meta name="twitter:creator" content="frank_laemmer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Teutonic CSS">
+  <meta name="twitter:description" content="Enjoy a fresh look. Customize at ease.">
+  <meta name="twitter:image" content="">
+  
+  <!-- Facebook -->
+  <meta property="og:url" content="http://localhost:4000">
+  <meta property="og:title" content="Teutonic CSS">
+  <meta property="og:description" content="Enjoy a fresh look. Customize at ease.">
+  <meta property="og:image" content="">
+  <meta property="og:image:secure_url" content="TODO">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  
+  <link rel="stylesheet" href="/css/teutonic.css">
+  
+  <link rel="stylesheet" href="/css/teutonic-docs.css">
+
+  
+</head>
+
+<div class="docs-hide-old pa_m bg-warn-3 text_l span-auto">
+  OOOOPS. Your browser seems to be too old for this. Please update your browser.
+</div>
+
+  <body>
+    
+    
+    
+
+    <header class="flex wrap-no gap_xs ma-t_m">
+  <div class="span-auto">
+    <a href="/" class="pa_s pa-l_l block bo-t_px bo-r_px bo-b_px text-bold docs-teutonic-link">
+      Teutonic CSS
+    </a>
+  </div>
+
+  
+
+  <div class="span-auto ma-l-auto">
+    <a href="/usage" class="button prime ma-r_l">Use it</a>
+  </div>
+</header>
+    
+<div class="span-auto">
+  <!-- MS Edge:  ↓  pa_l doesm't work for some stange reason -->
+  <nav class="pa-h_l pa-v_m flex gap_s">
+    <div>
+      <h3 class="text_l bo-b_xs pa-b_xs">Examples</h3>
+      <ul class="columns cols-6 cols-4-t cols-2-p">
+        
+        <li>
+          <a href="/examples/components" class="block-link pa_xs">Components</a>
+        </li>
+        
+        <li>
+          <a href="/examples/layout" class="block-link pa_xs">Layout</a>
+        </li>
+        
+        <li>
+          <a href="/examples/css-grid" class="block-link pa_xs">CSS Grid</a>
+        </li>
+        
+        <li>
+          <a href="/examples/flexbox" class="block-link pa_xs">Flexbox</a>
+        </li>
+        
+        <li>
+          <a href="/examples/columns" class="block-link pa_xs">Columns</a>
+        </li>
+        
+        <li>
+          <a href="/examples/forms" class="block-link pa_xs">Forms</a>
+        </li>
+        
+        <li>
+          <a href="/examples/utilities" class="block-link pa_xs">Utilities</a>
+        </li>
+        
+        <li>
+          <a href="/examples/typography" class="block-link pa_xs">Typography</a>
+        </li>
+        
+        <li>
+          <a href="/examples/colors" class="block-link pa_xs active">Colors</a>
+        </li>
+        
+        <li>
+          <a href="/examples/theming" class="block-link pa_xs">Theming</a>
+        </li>
+        
+        <li>
+          <a href="/examples/table" class="block-link pa_xs">Tables</a>
+        </li>
+        
+        <li>
+          <a href="/examples/real-world" class="block-link pa_xs">Real world</a>
+        </li>
+        
+     </ul>
+   </div>
+  </nav>
+</div>
+
+    <section class="pa-h_l span-auto">
+      
+      <h1 class="text-black text-hero_m read_xxl ma-t_m">
+        Branding and emotion
+      </h1>
+      
+      
+
+      
+      
+
+
+<div class="ma-t_m ma-h_l- pa-h_l pa-v_m inverted pos-rel">
+  <ul class="row-list columns cols-4 cols-2-p gap_px read_xl ma-v_s">
+    
+    
+    <li><a href="#main-colors" class="block-link">Main colors</a></li>
+    
+    
+    
+    <li><a href="#hoverable" class="block-link">Hoverable</a></li>
+    
+    
+    
+    
+    
+    <li><a href="#shades" class="block-link">Shades</a></li>
+    
+    
+    
+    <li><a href="#tinted" class="block-link">Tinted</a></li>
+    
+    
+    
+    <li><a href="#tinted-background" class="block-link">Tinted background</a></li>
+    
+    
+    
+    <li><a href="#inverted" class="block-link">Inverted</a></li>
+    
+    
+    
+    <li><a href="#alphabet-colors" class="block-link">Alphabet colors</a></li>
+    
+    
+  </ul>
+  <div class="mini-info text_s text-bold pa-l_l pa-r_s pos-tl">On this page</div>
+</div>
+      </section>
+
+    <main class="pa-h_l">
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="main-colors" class="ma-b_s">
+      Main colors
+      <a class="anchor" href="#main-colors"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Here are the main interface colors. There are only five sets, with five colors each. And there is a background class to use them.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>See how to <a href="/examples/theming#coloring">theme the colors over here</a>.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>.bg-{state}-{level}</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//color-map.scss" class="link">color-map.scss</a></code>
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//color-vars.scss" class="link">color-vars.scss</a></code>
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//ui-bg-colors.scss" class="link">ui-bg-colors.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-main-colors ma-h_l- pa-h_l pa-v_l">
+    
+
+<div class="grid-auto collapse-p" style="--grid-auto-min: 11rem;">
+  <div>
+    <h4>Main</h4>
+    <div class="gap-no ma-t_xs">
+      <div class="box height_l text-clip bg-main-1">
+        <div class="mini-info">.bg-main-1</div>
+      </div>
+      <div class="box height_l text-clip bg-main-2">
+        <div class="mini-info">.bg-main-2</div>
+      </div>
+      <div class="box height_l text-clip bg-main-3">
+        <div class="mini-info">.bg-main-3</div>
+      </div>
+      <div class="box height_l text-clip bg-main-4">
+        <div class="mini-info">.bg-main-4</div>
+      </div>
+      <div class="box height_l text-clip bg-main-5">
+        <div class="mini-info">.bg-main-5</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h4>Prime</h4>
+    <div class="gap-no ma-t_xs">
+      <div class="box height_l text-clip bg-prime-1">
+        <div class="mini-info">.bg-prime-1</div>
+      </div>
+      <div class="box height_l text-clip bg-prime-2">
+        <div class="mini-info">.bg-prime-2</div>
+      </div>
+      <div class="box height_l text-clip bg-prime-3">
+        <div class="mini-info">.bg-prime-3</div>
+      </div>
+      <div class="box height_l text-clip bg-prime-4">
+        <div class="mini-info">.bg-prime-4</div>
+      </div>
+      <div class="box height_l text-clip bg-prime-5">
+        <div class="mini-info">.bg-prime-5</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h4>Warn</h4>
+    <div class="gap-no ma-t_xs">
+      <div class="box height_l text-clip bg-warn-1">
+        <div class="mini-info">.bg-warn-1</div>
+      </div>
+      <div class="box height_l text-clip bg-warn-2">
+        <div class="mini-info">.bg-warn-2</div>
+      </div>
+      <div class="box height_l text-clip bg-warn-3">
+        <div class="mini-info">.bg-warn-3</div>
+      </div>
+      <div class="box height_l text-clip bg-warn-4">
+        <div class="mini-info">.bg-warn-4</div>
+      </div>
+      <div class="box height_l text-clip bg-warn-5">
+        <div class="mini-info">.bg-warn-5</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h4>Danger</h4>
+    <div class="gap-no ma-t_xs">
+      <div class="box height_l text-clip bg-danger-1">
+        <div class="mini-info">.bg-danger-1</div>
+      </div>
+      <div class="box height_l text-clip bg-danger-2">
+        <div class="mini-info">.bg-danger-2</div>
+      </div>
+      <div class="box height_l text-clip bg-danger-3">
+        <div class="mini-info">.bg-danger-3</div>
+      </div>
+      <div class="box height_l text-clip bg-danger-4">
+        <div class="mini-info">.bg-danger-4</div>
+      </div>
+      <div class="box height_l text-clip bg-danger-5">
+        <div class="mini-info">.bg-danger-5</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h4>Success</h4>
+    <div class="gap-no ma-t_xs">
+      <div class="box height_l text-clip bg-success-1">
+        <div class="mini-info">.bg-success-1</div>
+      </div>
+      <div class="box height_l text-clip bg-success-2">
+        <div class="mini-info">.bg-success-2</div>
+      </div>
+      <div class="box height_l text-clip bg-success-3">
+        <div class="mini-info">.bg-success-3</div>
+      </div>
+      <div class="box height_l text-clip bg-success-4">
+        <div class="mini-info">.bg-success-4</div>
+      </div>
+      <div class="box height_l text-clip bg-success-5">
+        <div class="mini-info">.bg-success-5</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  </div>
+
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="hoverable" class="ma-b_s">
+      Hoverable
+      <a class="anchor" href="#hoverable"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Like above, but this time the color boxes will become darker when the mouse pointer is <code class="highlighter-rouge">:hover</code> or the element is in <code class="highlighter-rouge">:focus</code>.</p>
+
+    </div>
+    
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>.bg-{state}-{level}-h</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//ui-bg-colors-h.scss" class="link">ui-bg-colors-h.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-hoverable ma-h_l- pa-h_l pa-v_l">
+    
+
+<div class="grid-auto min_m collapse-p">
+  <div>
+    <div class="gap-no ma-t_xs text-mono">
+      <div class="box height_l text-clip text-mono bg-main-1-h">
+        <div class="mini-info">.bg-main-1-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-main-2-h">
+        <div class="mini-info">.bg-main-2-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-main-3-h">
+        <div class="mini-info">.bg-main-3-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-main-4-h">
+        <div class="mini-info">.bg-main-4-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-main-5-h">
+        <div class="mini-info">.bg-main-5-h</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="gap-no ma-t_xs text-mono">
+      <div class="box height_l text-clip text-mono bg-prime-1-h">
+        <div class="mini-info">.bg-prime-1-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-prime-2-h">
+        <div class="mini-info">.bg-prime-2-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-prime-3-h">
+        <div class="mini-info">.bg-prime-3-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-prime-4-h">
+        <div class="mini-info">.bg-prime-4-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-prime-5-h">
+        <div class="mini-info">.bg-prime-5-h</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="gap-no ma-t_xs text-mono">
+      <div class="box height_l text-clip text-mono bg-warn-1-h">
+        <div class="mini-info">.bg-warn-1-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-warn-2-h">
+        <div class="mini-info">.bg-warn-2-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-warn-3-h">
+        <div class="mini-info">.bg-warn-3-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-warn-4-h">
+        <div class="mini-info">.bg-warn-4-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-warn-5-h">
+        <div class="mini-info">.bg-warn-5-h</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="gap-no ma-t_xs text-mono">
+      <div class="box height_l text-clip text-mono bg-danger-1-h">
+        <div class="mini-info">.bg-danger-1-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-danger-2-h">
+        <div class="mini-info">.bg-danger-2-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-danger-3-h">
+        <div class="mini-info">.bg-danger-3-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-danger-4-h">
+        <div class="mini-info">.bg-danger-4-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-danger-5-h">
+        <div class="mini-info">.bg-danger-5-h</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="gap-no ma-t_xs text-mono">
+      <div class="box height_l text-clip text-mono bg-success-1-h">
+        <div class="mini-info">.bg-success-1-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-success-2-h">
+        <div class="mini-info">.bg-success-2-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-success-3-h">
+        <div class="mini-info">.bg-success-3-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-success-4-h">
+        <div class="mini-info">.bg-success-4-h</div>
+      </div>
+      <div class="box height_l text-clip text-mono bg-success-5-h">
+        <div class="mini-info">.bg-success-5-h</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  </div>
+
+
+
+</article>
+
+      
+        
+
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="shades" class="ma-b_s">
+      Shades
+      <a class="anchor" href="#shades"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Here are two light and two dark semi transparent shades.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>The shades are used in various places, like for placeholder text, skeuomorphic effetcs and stripes. Per default, the shade color is slightly tinted as the main color.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>.bg-{state}-{level}</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//color-map.scss" class="link">color-map.scss</a></code>
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//color-vars.scss" class="link">color-vars.scss</a></code>
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//color-shades.scss" class="link">color-shades.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-shades ma-h_l- pa-h_l pa-v_l">
+    
+
+
+<div class="box height_l text-clip docs-checker-bg">
+  <div class="mini-info pos-c">Neutral 50% gray checkers for reference</div>
+</div>
+
+<div class="grid-auto collapse-p" style="--grid-auto-min: 14rem;">
+  <div>
+    <div class="gap_s ma-t_s">
+      <div class="box height_l text-clip docs-checker-bg">
+        <div class="docs-bg-shade bg-shadow-1"></div>
+        <div class="mini-info">.bg-shadow-1</div>
+      </div>
+      <div class="box height_l text-clip docs-checker-bg">
+        <div class="docs-bg-shade bg-shadow-2"></div>
+        <div class="mini-info">.bg-shadow-2</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="gap_s ma-t_s">
+      <div class="box height_l text-clip docs-checker-bg">
+        <div class="docs-bg-shade bg-highlight-1"></div>
+        <div class="mini-info">.bg-highlight-1</div>
+      </div>
+      <div class="box height_l text-clip docs-checker-bg">
+        <div class="docs-bg-shade bg-highlight-2"></div>
+        <div class="mini-info">.bg-highlight-2</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  </div>
+
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="tinted" class="ma-b_s">
+      Tinted
+      <a class="anchor" href="#tinted"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p><strong>Paint the town.</strong> The <code class="highlighter-rouge">.tinted</code> class will tint the text color, border color and some magic extras with the predefined states <code class="highlighter-rouge">warn</code>, <code class="highlighter-rouge">success</code>, <code class="highlighter-rouge">danger</code> and <code class="highlighter-rouge">prime</code> or your own custom color variable. Basically everything that was blackish before will become colorish.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>The example below is just a test-case. There are many cool use cases for this, like for theming, customization or form validation. This is a local theme, the effective space is scoped by the container holding the class. It can be combined with <a href="#tinted-background">tinted background</a>. See the <a href="/examples/real-world#form-error">form validation example</a>.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>.tinted-{color}</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//tinited.scss" class="link">tinited.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-tinted ma-h_l- pa-h_l pa-v_l">
+    <div class="grid gap_s collapse-p">
+  <div class="span-4 span-6-t tinted-no class">
+    <h4 class="pa-b_xs bo-b_s ma-b_s">
+      No Class
+      <span class="text-thin">is <mark>blackish</mark></span>
+    </h4>
+    <pre class="ma-v_s"><code class="p_s">CSS is awesome</code></pre>
+    <div class="grid gap-no ma-b_m">
+      <div class="span-4 box text-mono text-clip">div.box</div>
+      <div class="span-4 box text-mono active arrow">.active</div>
+      <a href="#" class="span-4 box text-mono text-clip">
+        a.box
+        <div class="mini-info shown">mini-info</div>
+      </a>
+    </div>
+    <div class="gap-no ma-v_s">
+      <div class="progress-box">
+        <div>progress</div>
+        <progress max="10" value="5" class="progress"></progress>
+      </div>
+      
+    </div>
+    <div class="gap-no">
+      <input type="text" class="input text-mono" value="input:text">
+      <div class="search-box">
+        <input type="search" class="input" placeholder="search">
+      </div>
+      <textarea class="textarea">textarea.textarea</textarea>
+      <input type="text" class="input text-mono" value="input:text:disabled" disabled>
+      <input type="email" class="input text-mono" value="input:invalid">
+      <div class="flex wrap-no gap-no">
+        <label class="box flex wrap-no span-half">
+          <input type="checkbox" class="checkbox">
+          <div class="ma-l_xs text-mono">check</div>
+        </label>
+        <label class="box flex wrap-no span-half">
+          <input type="radio" class="radio">
+          <div class="ma-l_xs text-mono">radio</div>
+        </label>
+      </div>
+      <div class="form-box">
+        <label class="mini-label text-mono">form-box</label>
+        <select class="select text-mono">
+          <option>select</option>
+        </select>
+      </div>
+      <div class="grid gap_xs ma-t_s">
+        <button class="span-6 text-clip button prime">button.prime</button>
+        <button class="span-6 text-clip button">button</button>
+        <button disabled class="span-6 text-clip button prime">button.prime:disabled</button>
+        <button disabled class="span-6 text-clip button">button:disabled</button>
+      </div>
+    </div>
+    <table class="table dense ma-t_s">
+      <tr>
+        <td>table</td>
+        <td>check</td>
+        <td class="text-right">1</td>
+      </tr>
+      <tr>
+        <td>table</td>
+        <td>check</td>
+        <td class="text-right">2</td>
+      </tr>
+    </table>
+  </div>
+  <div class="span-4 span-6-t tinted-danger">
+    <h4 class="pa-b_xs bo-b_s ma-b_s">
+      Danger
+      <span class="text-thin">is <mark>redish</mark></span>
+    </h4>
+    <pre class="ma-v_s"><code class="p_s">CSS is awesome</code></pre>
+    <div class="grid gap-no ma-b_m">
+      <div class="span-4 box text-mono text-clip">div.box</div>
+      <div class="span-4 box text-mono active arrow">.active</div>
+      <a href="#" class="span-4 box text-mono text-clip">
+        a.box
+        <div class="mini-info shown">mini-info</div>
+      </a>
+    </div>
+    <div class="gap-no ma-v_s">
+      <div class="progress-box">
+        <div>progress</div>
+        <progress max="10" value="5" class="progress"></progress>
+      </div>
+      
+    </div>
+    <div class="gap-no">
+      <input type="text" class="input text-mono" value="input:text">
+      <div class="search-box">
+        <input type="search" class="input" placeholder="search">
+      </div>
+      <textarea class="textarea">textarea.textarea</textarea>
+      <input type="text" class="input text-mono" value="input:text:disabled" disabled>
+      <input type="email" class="input text-mono" value="input:invalid">
+      <div class="flex wrap-no gap-no">
+        <label class="box flex wrap-no span-half">
+          <input type="checkbox" class="checkbox">
+          <div class="ma-l_xs text-mono">check</div>
+        </label>
+        <label class="box flex wrap-no span-half">
+          <input type="radio" class="radio">
+          <div class="ma-l_xs text-mono">radio</div>
+        </label>
+      </div>
+      <div class="form-box">
+        <label class="mini-label text-mono">form-box</label>
+        <select class="select text-mono">
+          <option>select</option>
+        </select>
+      </div>
+      <div class="grid gap_xs ma-t_s">
+        <button class="span-6 text-clip button prime">button.prime</button>
+        <button class="span-6 text-clip button">button</button>
+        <button disabled class="span-6 text-clip button prime">button.prime:disabled</button>
+        <button disabled class="span-6 text-clip button">button:disabled</button>
+      </div>
+    </div>
+    <table class="table dense ma-t_s">
+      <tr>
+        <td>table</td>
+        <td>check</td>
+        <td class="text-right">1</td>
+      </tr>
+      <tr>
+        <td>table</td>
+        <td>check</td>
+        <td class="text-right">2</td>
+      </tr>
+    </table>
+  </div>
+  <div class="span-4 span-6-t tinted-warn">
+    <h4 class="pa-b_xs bo-b_s ma-b_s">
+      Warn
+      <span class="text-thin">is <mark>yellowish</mark></span>
+    </h4>
+    <pre class="ma-v_s"><code class="p_s">CSS is awesome</code></pre>
+    <div class="grid gap-no ma-b_m">
+      <div class="span-4 box text-mono text-clip">div.box</div>
+      <div class="span-4 box text-mono active arrow">.active</div>
+      <a href="#" class="span-4 box text-mono text-clip">
+        a.box
+        <div class="mini-info shown">mini-info</div>
+      </a>
+    </div>
+    <div class="gap-no ma-v_s">
+      <div class="progress-box">
+        <div>progress</div>
+        <progress max="10" value="5" class="progress"></progress>
+      </div>
+      
+    </div>
+    <div class="gap-no">
+      <input type="text" class="input text-mono" value="input:text">
+      <div class="search-box">
+        <input type="search" class="input" placeholder="search">
+      </div>
+      <textarea class="textarea">textarea.textarea</textarea>
+      <input type="text" class="input text-mono" value="input:text:disabled" disabled>
+      <input type="email" class="input text-mono" value="input:invalid">
+      <div class="flex wrap-no gap-no">
+        <label class="box flex wrap-no span-half">
+          <input type="checkbox" class="checkbox">
+          <div class="ma-l_xs text-mono">check</div>
+        </label>
+        <label class="box flex wrap-no span-half">
+          <input type="radio" class="radio">
+          <div class="ma-l_xs text-mono">radio</div>
+        </label>
+      </div>
+      <div class="form-box">
+        <label class="mini-label text-mono">form-box</label>
+        <select class="select text-mono">
+          <option>select</option>
+        </select>
+      </div>
+      <div class="grid gap_xs ma-t_s">
+        <button class="span-6 text-clip button prime">button.prime</button>
+        <button class="span-6 text-clip button">button</button>
+        <button disabled class="span-6 text-clip button prime">button.prime:disabled</button>
+        <button disabled class="span-6 text-clip button">button:disabled</button>
+      </div>
+    </div>
+    <table class="table dense ma-t_s">
+      <tr>
+        <td>table</td>
+        <td>check</td>
+        <td class="text-right">1</td>
+      </tr>
+      <tr>
+        <td>table</td>
+        <td>check</td>
+        <td class="text-right">2</td>
+      </tr>
+    </table>
+  </div>
+  <div class="span-4 span-6-t tinted-success">
+    <h4 class="pa-b_xs bo-b_s ma-b_s">
+      Success
+      <span class="text-thin">is <mark>greenish</mark></span>
+    </h4>
+    <pre class="ma-v_s"><code class="p_s">CSS is awesome</code></pre>
+    <div class="grid gap-no ma-b_m">
+      <div class="span-4 box text-mono text-clip">div.box</div>
+      <div class="span-4 box text-mono active arrow">.active</div>
+      <a href="#" class="span-4 box text-mono text-clip">
+        a.box
+        <div class="mini-info shown">mini-info</div>
+      </a>
+    </div>
+    <div class="gap-no ma-v_s">
+      <div class="progress-box">
+        <div>progress</div>
+        <progress max="10" value="5" class="progress"></progress>
+      </div>
+      
+    </div>
+    <div class="gap-no">
+      <input type="text" class="input text-mono" value="input:text">
+      <div class="search-box">
+        <input type="search" class="input" placeholder="search">
+      </div>
+      <textarea class="textarea">textarea.textarea</textarea>
+      <input type="text" class="input text-mono" value="input:text:disabled" disabled>
+      <input type="email" class="input text-mono" value="input:invalid">
+      <div class="flex wrap-no gap-no">
+        <label class="box flex wrap-no span-half">
+          <input type="checkbox" class="checkbox">
+          <div class="ma-l_xs text-mono">check</div>
+        </label>
+        <label class="box flex wrap-no span-half">
+          <input type="radio" class="radio">
+          <div class="ma-l_xs text-mono">radio</div>
+        </label>
+      </div>
+      <div class="form-box">
+        <label class="mini-label text-mono">form-box</label>
+        <select class="select text-mono">
+          <option>select</option>
+        </select>
+      </div>
+      <div class="grid gap_xs ma-t_s">
+        <button class="span-6 text-clip button prime">button.prime</button>
+        <button class="span-6 text-clip button">button</button>
+        <button disabled class="span-6 text-clip button prime">button.prime:disabled</button>
+        <button disabled class="span-6 text-clip button">button:disabled</button>
+      </div>
+    </div>
+    <table class="table dense ma-t_s">
+      <tr>
+        <td>table</td>
+        <td>check</td>
+        <td class="text-right">1</td>
+      </tr>
+      <tr>
+        <td>table</td>
+        <td>check</td>
+        <td class="text-right">2</td>
+      </tr>
+    </table>
+  </div>
+  <div class="span-4 span-6-t tinted-prime">
+    <h4 class="pa-b_xs bo-b_s ma-b_s">
+      Prime
+      <span class="text-thin">is <mark>purpleish</mark></span>
+    </h4>
+    <pre class="ma-v_s"><code class="p_s">CSS is awesome</code></pre>
+    <div class="grid gap-no ma-b_m">
+      <div class="span-4 box text-mono text-clip">div.box</div>
+      <div class="span-4 box text-mono active arrow">.active</div>
+      <a href="#" class="span-4 box text-mono text-clip">
+        a.box
+        <div class="mini-info shown">mini-info</div>
+      </a>
+    </div>
+    <div class="gap-no ma-v_s">
+      <div class="progress-box">
+        <div>progress</div>
+        <progress max="10" value="5" class="progress"></progress>
+      </div>
+      
+    </div>
+    <div class="gap-no">
+      <input type="text" class="input text-mono" value="input:text">
+      <div class="search-box">
+        <input type="search" class="input" placeholder="search">
+      </div>
+      <textarea class="textarea">textarea.textarea</textarea>
+      <input type="text" class="input text-mono" value="input:text:disabled" disabled>
+      <input type="email" class="input text-mono" value="input:invalid">
+      <div class="flex wrap-no gap-no">
+        <label class="box flex wrap-no span-half">
+          <input type="checkbox" class="checkbox">
+          <div class="ma-l_xs text-mono">check</div>
+        </label>
+        <label class="box flex wrap-no span-half">
+          <input type="radio" class="radio">
+          <div class="ma-l_xs text-mono">radio</div>
+        </label>
+      </div>
+      <div class="form-box">
+        <label class="mini-label text-mono">form-box</label>
+        <select class="select text-mono">
+          <option>select</option>
+        </select>
+      </div>
+      <div class="grid gap_xs ma-t_s">
+        <button class="span-6 text-clip button prime">button.prime</button>
+        <button class="span-6 text-clip button">button</button>
+        <button disabled class="span-6 text-clip button prime">button.prime:disabled</button>
+        <button disabled class="span-6 text-clip button">button:disabled</button>
+      </div>
+    </div>
+    <table class="table dense ma-t_s">
+      <tr>
+        <td>table</td>
+        <td>check</td>
+        <td class="text-right">1</td>
+      </tr>
+      <tr>
+        <td>table</td>
+        <td>check</td>
+        <td class="text-right">2</td>
+      </tr>
+    </table>
+  </div>
+  <div class="span-4 span-6-t tinted-custom">
+    <h4 class="pa-b_xs bo-b_s ma-b_s">
+      Custom
+      <span class="text-thin">is <mark>different</mark></span>
+    </h4>
+    <pre class="ma-v_s"><code class="p_s">CSS is awesome</code></pre>
+    <div class="grid gap-no ma-b_m">
+      <div class="span-4 box text-mono text-clip">div.box</div>
+      <div class="span-4 box text-mono active arrow">.active</div>
+      <a href="#" class="span-4 box text-mono text-clip">
+        a.box
+        <div class="mini-info shown">mini-info</div>
+      </a>
+    </div>
+    <div class="gap-no ma-v_s">
+      <div class="progress-box">
+        <div>progress</div>
+        <progress max="10" value="5" class="progress"></progress>
+      </div>
+      
+    </div>
+    <div class="gap-no">
+      <input type="text" class="input text-mono" value="input:text">
+      <div class="search-box">
+        <input type="search" class="input" placeholder="search">
+      </div>
+      <textarea class="textarea">textarea.textarea</textarea>
+      <input type="text" class="input text-mono" value="input:text:disabled" disabled>
+      <input type="email" class="input text-mono" value="input:invalid">
+      <div class="flex wrap-no gap-no">
+        <label class="box flex wrap-no span-half">
+          <input type="checkbox" class="checkbox">
+          <div class="ma-l_xs text-mono">check</div>
+        </label>
+        <label class="box flex wrap-no span-half">
+          <input type="radio" class="radio">
+          <div class="ma-l_xs text-mono">radio</div>
+        </label>
+      </div>
+      <div class="form-box">
+        <label class="mini-label text-mono">form-box</label>
+        <select class="select text-mono">
+          <option>select</option>
+        </select>
+      </div>
+      <div class="grid gap_xs ma-t_s">
+        <button class="span-6 text-clip button prime">button.prime</button>
+        <button class="span-6 text-clip button">button</button>
+        <button disabled class="span-6 text-clip button prime">button.prime:disabled</button>
+        <button disabled class="span-6 text-clip button">button:disabled</button>
+      </div>
+    </div>
+    <table class="table dense ma-t_s">
+      <tr>
+        <td>table</td>
+        <td>check</td>
+        <td class="text-right">1</td>
+      </tr>
+      <tr>
+        <td>table</td>
+        <td>check</td>
+        <td class="text-right">2</td>
+      </tr>
+    </table>
+  </div>
+</div>
+    
+    <div class="docs-css-edit-container bs_s">
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_m">.tinted-custom {
+  --color: hsl(30,100%,50%);
+}
+</style>
+</div>
+    
+  </div>
+
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="tinted-background" class="ma-b_s">
+      Tinted background
+      <a class="anchor" href="#tinted-background"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p><strong>Paint the town again.</strong> With this wrapper you’ll modify the background color and some magic extras with the predefined states <code class="highlighter-rouge">warn</code>, <code class="highlighter-rouge">success</code> and <code class="highlighter-rouge">danger</code> or your own colors.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>The tinted background class will only color child elements, that already have a background color. To alter the background color of an element directly use the <a href="/examples/interface#background-colors">background color class</a>.  This can be combined with <a href="#colored">colored text and borders</a>. See the <a href="/examples/real-world#form-error">form validation example</a>. When applied to a whole container, like in the example below, everything will be tinted in a mono-colored way. To match all states (hover, disabled …), five color variables need to be set. Keep an eye on paint performance when working with tinted images.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>.tinted-bg-{color}</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//tinted.scss" class="link">tinted.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-tinted-background ma-h_l- pa-h_l pa-v_l">
+    
+
+<div class="grid gap_s collapse-p">
+  <div class="span-4 span-6-t">
+    <h5 class="pa-b_xs bo-b_s text-clip">
+      No Class
+      <span class="text-thin">is <mark>standard</mark></span>
+      
+    </h5>
+    <figure class="media bo_px ma-v_xs">
+      <img src="//picsum.photos/500/200/?random" alt="Photo via picsum.photos">
+      <div class="text-mono mini-info">standard image</div>
+    </figure>
+    <pre class="ma-v_s"><code class="p_s">CSS is awesome</code></pre>
+    <div class="grid gap-no ma-b_m">
+      <div class="span-4 box text-mono text-clip">div.box</div>
+      <div class="span-4 box text-mono active arrow">.active</div>
+      <a href="#" class="span-4 box text-mono text-clip">
+        a.box
+        <div class="mini-info shown">mini-info</div>
+      </a>
+    </div>
+    <div class="gap-no ma-v_s">
+      <div class="progress-box">
+        <div>progress</div>
+        <progress max="10" value="5" class="progress"></progress>
+      </div>
+      
+    </div>
+    <div class="gap-no">
+      <input type="text" class="input text-mono" value="input:text">
+      <div class="search-box">
+        <input type="search" class="input" placeholder="search">
+      </div>
+      <textarea class="textarea">textarea.textarea</textarea>
+      <input type="text" class="input text-mono" value="input:text:disabled" disabled>
+      <input type="email" class="input text-mono" value="input:invalid">
+      <div class="flex wrap-no gap-no">
+        <label class="box flex wrap-no span-half">
+          <input type="checkbox" class="checkbox">
+          <div class="ma-l_xs text-mono">check</div>
+        </label>
+        <label class="box flex wrap-no span-half">
+          <input type="radio" class="radio">
+          <div class="ma-l_xs text-mono">radio</div>
+        </label>
+      </div>
+      <div class="form-box">
+        <label class="mini-label text-mono">form-box</label>
+        <select class="select text-mono">
+          <option>select</option>
+        </select>
+      </div>
+      <div class="grid gap_xs ma-t_s">
+        <button class="span-6 text-clip button prime">button.prime</button>
+        <button class="span-6 text-clip button">button</button>
+        <button disabled class="span-6 text-clip button prime">button.prime:disabled</button>
+        <button disabled class="span-6 text-clip button">button:disabled</button>
+      </div>
+    </div>
+  </div>
+  <div class="span-4 span-6-t tinted-bg-danger">
+    <h5 class="pa-b_xs bo-b_s text-clip">
+      Danger
+      <span class="text-thin">is <mark>redish</mark></span>
+      <span class="text-mono text_s">.tinted-bg-danger</span>
+    </h5>
+    <figure class="media bo_px ma-v_xs">
+      <img src="//picsum.photos/500/200/?random" alt="Photo via picsum.photos">
+      <div class="text-mono mini-info">redish image</div>
+    </figure>
+    <pre class="ma-v_s"><code class="p_s">CSS is awesome</code></pre>
+    <div class="grid gap-no ma-b_m">
+      <div class="span-4 box text-mono text-clip">div.box</div>
+      <div class="span-4 box text-mono active arrow">.active</div>
+      <a href="#" class="span-4 box text-mono text-clip">
+        a.box
+        <div class="mini-info shown">mini-info</div>
+      </a>
+    </div>
+    <div class="gap-no ma-v_s">
+      <div class="progress-box">
+        <div>progress</div>
+        <progress max="10" value="5" class="progress"></progress>
+      </div>
+      
+    </div>
+    <div class="gap-no">
+      <input type="text" class="input text-mono" value="input:text">
+      <div class="search-box">
+        <input type="search" class="input" placeholder="search">
+      </div>
+      <textarea class="textarea">textarea.textarea</textarea>
+      <input type="text" class="input text-mono" value="input:text:disabled" disabled>
+      <input type="email" class="input text-mono" value="input:invalid">
+      <div class="flex wrap-no gap-no">
+        <label class="box flex wrap-no span-half">
+          <input type="checkbox" class="checkbox">
+          <div class="ma-l_xs text-mono">check</div>
+        </label>
+        <label class="box flex wrap-no span-half">
+          <input type="radio" class="radio">
+          <div class="ma-l_xs text-mono">radio</div>
+        </label>
+      </div>
+      <div class="form-box">
+        <label class="mini-label text-mono">form-box</label>
+        <select class="select text-mono">
+          <option>select</option>
+        </select>
+      </div>
+      <div class="grid gap_xs ma-t_s">
+        <button class="span-6 text-clip button prime">button.prime</button>
+        <button class="span-6 text-clip button">button</button>
+        <button disabled class="span-6 text-clip button prime">button.prime:disabled</button>
+        <button disabled class="span-6 text-clip button">button:disabled</button>
+      </div>
+    </div>
+  </div>
+  <div class="span-4 span-6-t tinted-bg-warn">
+    <h5 class="pa-b_xs bo-b_s text-clip">
+      Warn
+      <span class="text-thin">is <mark>yellowish</mark></span>
+      <span class="text-mono text_s">.tinted-bg-warn</span>
+    </h5>
+    <figure class="media bo_px ma-v_xs">
+      <img src="//picsum.photos/500/200/?random" alt="Photo via picsum.photos">
+      <div class="text-mono mini-info">yellowish image</div>
+    </figure>
+    <pre class="ma-v_s"><code class="p_s">CSS is awesome</code></pre>
+    <div class="grid gap-no ma-b_m">
+      <div class="span-4 box text-mono text-clip">div.box</div>
+      <div class="span-4 box text-mono active arrow">.active</div>
+      <a href="#" class="span-4 box text-mono text-clip">
+        a.box
+        <div class="mini-info shown">mini-info</div>
+      </a>
+    </div>
+    <div class="gap-no ma-v_s">
+      <div class="progress-box">
+        <div>progress</div>
+        <progress max="10" value="5" class="progress"></progress>
+      </div>
+      
+    </div>
+    <div class="gap-no">
+      <input type="text" class="input text-mono" value="input:text">
+      <div class="search-box">
+        <input type="search" class="input" placeholder="search">
+      </div>
+      <textarea class="textarea">textarea.textarea</textarea>
+      <input type="text" class="input text-mono" value="input:text:disabled" disabled>
+      <input type="email" class="input text-mono" value="input:invalid">
+      <div class="flex wrap-no gap-no">
+        <label class="box flex wrap-no span-half">
+          <input type="checkbox" class="checkbox">
+          <div class="ma-l_xs text-mono">check</div>
+        </label>
+        <label class="box flex wrap-no span-half">
+          <input type="radio" class="radio">
+          <div class="ma-l_xs text-mono">radio</div>
+        </label>
+      </div>
+      <div class="form-box">
+        <label class="mini-label text-mono">form-box</label>
+        <select class="select text-mono">
+          <option>select</option>
+        </select>
+      </div>
+      <div class="grid gap_xs ma-t_s">
+        <button class="span-6 text-clip button prime">button.prime</button>
+        <button class="span-6 text-clip button">button</button>
+        <button disabled class="span-6 text-clip button prime">button.prime:disabled</button>
+        <button disabled class="span-6 text-clip button">button:disabled</button>
+      </div>
+    </div>
+  </div>
+  <div class="span-4 span-6-t tinted-bg-success">
+    <h5 class="pa-b_xs bo-b_s text-clip">
+      Success
+      <span class="text-thin">is <mark>greenish</mark></span>
+      <span class="text-mono text_s">.tinted-bg-success</span>
+    </h5>
+    <figure class="media bo_px ma-v_xs">
+      <img src="//picsum.photos/500/200/?random" alt="Photo via picsum.photos">
+      <div class="text-mono mini-info">greenish image</div>
+    </figure>
+    <pre class="ma-v_s"><code class="p_s">CSS is awesome</code></pre>
+    <div class="grid gap-no ma-b_m">
+      <div class="span-4 box text-mono text-clip">div.box</div>
+      <div class="span-4 box text-mono active arrow">.active</div>
+      <a href="#" class="span-4 box text-mono text-clip">
+        a.box
+        <div class="mini-info shown">mini-info</div>
+      </a>
+    </div>
+    <div class="gap-no ma-v_s">
+      <div class="progress-box">
+        <div>progress</div>
+        <progress max="10" value="5" class="progress"></progress>
+      </div>
+      
+    </div>
+    <div class="gap-no">
+      <input type="text" class="input text-mono" value="input:text">
+      <div class="search-box">
+        <input type="search" class="input" placeholder="search">
+      </div>
+      <textarea class="textarea">textarea.textarea</textarea>
+      <input type="text" class="input text-mono" value="input:text:disabled" disabled>
+      <input type="email" class="input text-mono" value="input:invalid">
+      <div class="flex wrap-no gap-no">
+        <label class="box flex wrap-no span-half">
+          <input type="checkbox" class="checkbox">
+          <div class="ma-l_xs text-mono">check</div>
+        </label>
+        <label class="box flex wrap-no span-half">
+          <input type="radio" class="radio">
+          <div class="ma-l_xs text-mono">radio</div>
+        </label>
+      </div>
+      <div class="form-box">
+        <label class="mini-label text-mono">form-box</label>
+        <select class="select text-mono">
+          <option>select</option>
+        </select>
+      </div>
+      <div class="grid gap_xs ma-t_s">
+        <button class="span-6 text-clip button prime">button.prime</button>
+        <button class="span-6 text-clip button">button</button>
+        <button disabled class="span-6 text-clip button prime">button.prime:disabled</button>
+        <button disabled class="span-6 text-clip button">button:disabled</button>
+      </div>
+    </div>
+  </div>
+  <div class="span-4 span-6-t tinted-bg-custom">
+    <h5 class="pa-b_xs bo-b_s text-clip">
+      Custom
+      <span class="text-thin">is <mark>different</mark></span>
+      <span class="text-mono text_s">.tinted-bg-custom</span>
+    </h5>
+    <figure class="media bo_px ma-v_xs">
+      <img src="//picsum.photos/500/200/?random" alt="Photo via picsum.photos">
+      <div class="text-mono mini-info">different image</div>
+    </figure>
+    <pre class="ma-v_s"><code class="p_s">CSS is awesome</code></pre>
+    <div class="grid gap-no ma-b_m">
+      <div class="span-4 box text-mono text-clip">div.box</div>
+      <div class="span-4 box text-mono active arrow">.active</div>
+      <a href="#" class="span-4 box text-mono text-clip">
+        a.box
+        <div class="mini-info shown">mini-info</div>
+      </a>
+    </div>
+    <div class="gap-no ma-v_s">
+      <div class="progress-box">
+        <div>progress</div>
+        <progress max="10" value="5" class="progress"></progress>
+      </div>
+      
+    </div>
+    <div class="gap-no">
+      <input type="text" class="input text-mono" value="input:text">
+      <div class="search-box">
+        <input type="search" class="input" placeholder="search">
+      </div>
+      <textarea class="textarea">textarea.textarea</textarea>
+      <input type="text" class="input text-mono" value="input:text:disabled" disabled>
+      <input type="email" class="input text-mono" value="input:invalid">
+      <div class="flex wrap-no gap-no">
+        <label class="box flex wrap-no span-half">
+          <input type="checkbox" class="checkbox">
+          <div class="ma-l_xs text-mono">check</div>
+        </label>
+        <label class="box flex wrap-no span-half">
+          <input type="radio" class="radio">
+          <div class="ma-l_xs text-mono">radio</div>
+        </label>
+      </div>
+      <div class="form-box">
+        <label class="mini-label text-mono">form-box</label>
+        <select class="select text-mono">
+          <option>select</option>
+        </select>
+      </div>
+      <div class="grid gap_xs ma-t_s">
+        <button class="span-6 text-clip button prime">button.prime</button>
+        <button class="span-6 text-clip button">button</button>
+        <button disabled class="span-6 text-clip button prime">button.prime:disabled</button>
+        <button disabled class="span-6 text-clip button">button:disabled</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <div class="docs-css-edit-container bs_s">
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_m">.tinted-bg-custom {
+  --color-bg-1: hsl(330,100%,90%);
+  --color-bg-2: hsl(330,100%,80%);
+  --color-bg-3: hsl(330,100%,70%);
+  --color-bg-4: hsl(330,100%,60%);
+  --color-bg-5: hsl(330,100%,50%);
+}
+</style>
+</div>
+    
+  </div>
+
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="inverted" class="ma-b_s">
+      Inverted
+      <a class="anchor" href="#inverted"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Apply this to a container to flip all the colors &gt; light will become dark, dark will be light.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>.inverted</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//inverted.scss" class="link">inverted.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-inverted ma-h_l-">
+    
+
+<div class="grid collapse-t gap-no">
+  <div class="span-6 pa_l inverted">
+    <h2 class="pa-b_xs bo-b_s ma-b_s">
+      Inverted
+      <span class="text-thin">is whitish on <mark>blackish</mark></span>
+    </h2>
+        
+    <pre class="ma-v_s"><code class="p_s">CSS is awesome</code></pre>
+    <div class="grid gap-no ma-b_m">
+      <div class="span-4 box text-mono text-clip">div.box</div>
+      <div class="span-4 box text-mono active arrow">.active</div>
+      <a href="#" class="span-4 box text-mono text-clip">
+        a.box
+        <div class="mini-info shown">mini-info</div>
+      </a>
+    </div>
+    <div class="gap-no ma-v_s">
+      <div class="progress-box">
+        <div>progress</div>
+        <progress max="10" value="5" class="progress"></progress>
+      </div>
+      
+    </div>
+    <div class="gap-no">
+      <input type="text" class="input text-mono" value="input:text">
+      <div class="search-box">
+        <input type="search" class="input" placeholder="search">
+      </div>
+      <textarea class="textarea">textarea.textarea</textarea>
+      <input type="text" class="input text-mono" value="input:text:disabled" disabled>
+      <input type="email" class="input text-mono" value="input:invalid">
+      <div class="flex wrap-no gap-no">
+        <label class="box flex wrap-no span-half">
+          <input type="checkbox" class="checkbox">
+          <div class="ma-l_xs text-mono">check</div>
+        </label>
+        <label class="box flex wrap-no span-half">
+          <input type="radio" class="radio">
+          <div class="ma-l_xs text-mono">radio</div>
+        </label>
+      </div>
+      <div class="form-box">
+        <label class="mini-label text-mono">form-box</label>
+        <select class="select text-mono">
+          <option>select</option>
+        </select>
+      </div>
+      <div class="grid gap_xs ma-t_s">
+        <button class="span-6 text-clip button prime">button.prime</button>
+        <button class="span-6 text-clip button">button</button>
+        <button disabled class="span-6 text-clip button prime">button.prime:disabled</button>
+        <button disabled class="span-6 text-clip button">button:disabled</button>
+      </div>
+    </div>
+    <div class="gap-no ma-t_s">
+      <div class="meter-box">
+        <div>meter</div>
+        <meter class="meter" value="30" min="0" low="10" optimum="50" high="90" max="100"></meter>
+      </div>
+      <div class="range-box">
+        <input type="range" name="range" id="range" class="range" min="0" max="10" value="4">
+      </div>
+    </div>
+    <h4 class="ma-t_l ma-b_xs">Local theming</h4>
+    <form class="gap-no">
+  <div class="form-box tinted-danger tinted-bg-danger">
+    <label for="email" class="mini-label">Enter your e-mail</label>
+    <input type="email" name="email" class="input" placeholder="your@email.com" required value="djtrump@trumporg.com">
+    <div class="mini-info shown">Already in use</div>
+  </div>
+  <div class="form-box bg-danger tinted-warn tinted-bg-warn">
+    <label for="password" class="mini-label">Choose a safe password</label>
+    <input type="password" name="password" class="input bg-warn" placeholder="•••••••••" required min="6" value="aaaaaaaa">
+    <div class="mini-info shown">Weak password</div>
+  </div>
+  <label class="box bg-danger tinted-danger tinted-bg-danger">
+    <input type="checkbox" name="terms" class="checkbox" required>
+    Accept the <a href="#" class="link">terms and conditions</a>
+  </label>
+  <button disabled class="button block prime" type="submit">Sign up &rarr;</button>
+</form>
+
+    <div class="grid gap-no ma-v_s">
+      <div class="box striped span-6">
+        striped
+      </div>
+      <div class="box loading span-6">
+        loading
+      </div>
+    </div>
+    <article class="article ma-t_l">
+      <!--
+![](https://i.imgflip.com/1zjawi.jpg "made at imgflip.com")
+-->
+
+<p>The <code class="highlighter-rouge">.article</code> wrapper class gives you reading-optimized styling for articles and blog posts. It’s made for <strong>Markdown</strong> generated content like from <a href="https://jekyllrb.com/">Jekyll</a> or <a href="https://getgrav.org/">Grav</a>, but it will also work with any CMS. —<em>Inside here:</em></p>
+
+<ol>
+  <li>Text is optimized for readability</li>
+  <li>Headlines have more spacing</li>
+</ol>
+
+<ul>
+  <li>Lists have a hanging punctuation
+    <ul>
+      <li>Nested lists work as well</li>
+    </ul>
+  </li>
+</ul>
+
+<p><code class="highlighter-rouge">p</code>, <code class="highlighter-rouge">ol</code>, <code class="highlighter-rouge">ol</code>, <code class="highlighter-rouge">dl</code>, <code class="highlighter-rouge">table</code>, <code class="highlighter-rouge">blockquote</code>, <code class="highlighter-rouge">a</code>, <code class="highlighter-rouge">img</code>, <code class="highlighter-rouge">hr</code>, <code class="highlighter-rouge">pre</code>, <code class="highlighter-rouge">code</code>, <code class="highlighter-rouge">i</code> — all work well</p>
+
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th>Tables</th>
+      <th style="text-align: center">Are</th>
+      <th style="text-align: right">Cool</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>col 3 is</td>
+      <td style="text-align: center">right-aligned</td>
+      <td style="text-align: right">$1600</td>
+    </tr>
+    <tr>
+      <td>col 2 is</td>
+      <td style="text-align: center">centered</td>
+      <td style="text-align: right">$12</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="h1-headline-level-1">h1: Headline level 1</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi vitae dicta amet nobis porro laudantium accusantium, velit minima vel, aliquam veniam atque perferendis maxime earum autem dolor, dolore fugit iure?</p>
+
+<blockquote>
+  <p>Pasting code from the Internet into production code is like chewing gum found in the street.</p>
+</blockquote>
+
+<h2 id="h2-headline-level-2">h2: Headline level 2</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque odio assumenda, veritatis tempora enim nemo ipsum quidem, porro et voluptate animi minus ad commodi architecto recusandae eveniet, accusamus rem. Dolor!</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Never execute:
+$ rmf *
+</code></pre></div></div>
+
+<h3 id="h3-headline-level-3-this-is-a-slightly-longer-headline-to-demonstrate-that-this-also-looks-good">h3: Headline level 3 This is a slightly longer headline to demonstrate that this also looks good</h3>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores molestias dolore eaque recusandae, tempora iusto consequuntur sint consectetur, quisquam cumque ducimus, voluptates. Mollitia dolores explicabo quibusdam magnam asperiores accusamus, cumque.</p>
+
+<h4 id="h4-headline-level-4-this-is-a-slightly-longer-headline-to-demonstrate-that-this-also-looks-good">h4: Headline level 4 This is a slightly longer headline to demonstrate that this also looks good</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores molestias dolore eaque recusandae, tempora iusto consequuntur sint consectetur, quisquam cumque ducimus, voluptates. Mollitia dolores explicabo quibusdam magnam asperiores accusamus, cumque.</p>
+
+<h5 id="h5-headline-level-5-this-is-a-slightly-longer-headline-to-demonstrate-that-this-also-looks-good">h5: Headline level 5 This is a slightly longer headline to demonstrate that this also looks good</h5>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores molestias dolore eaque recusandae, tempora iusto consequuntur sint consectetur, quisquam cumque ducimus, voluptates. Mollitia dolores explicabo quibusdam magnam asperiores accusamus, cumque.</p>
+
+<p><em>That’s all she wrote.</em></p>
+
+    </article>
+  </div>
+  <div class="span-6 pa_l">
+    <h2 class="pa-b_xs bo-b_s ma-b_s">
+      Normal
+      <span class="text-thin">is blackish on <mark>whitish</mark></span>
+    </h2>
+        
+    <pre class="ma-v_s"><code class="p_s">CSS is awesome</code></pre>
+    <div class="grid gap-no ma-b_m">
+      <div class="span-4 box text-mono text-clip">div.box</div>
+      <div class="span-4 box text-mono active arrow">.active</div>
+      <a href="#" class="span-4 box text-mono text-clip">
+        a.box
+        <div class="mini-info shown">mini-info</div>
+      </a>
+    </div>
+    <div class="gap-no ma-v_s">
+      <div class="progress-box">
+        <div>progress</div>
+        <progress max="10" value="5" class="progress"></progress>
+      </div>
+      
+    </div>
+    <div class="gap-no">
+      <input type="text" class="input text-mono" value="input:text">
+      <div class="search-box">
+        <input type="search" class="input" placeholder="search">
+      </div>
+      <textarea class="textarea">textarea.textarea</textarea>
+      <input type="text" class="input text-mono" value="input:text:disabled" disabled>
+      <input type="email" class="input text-mono" value="input:invalid">
+      <div class="flex wrap-no gap-no">
+        <label class="box flex wrap-no span-half">
+          <input type="checkbox" class="checkbox">
+          <div class="ma-l_xs text-mono">check</div>
+        </label>
+        <label class="box flex wrap-no span-half">
+          <input type="radio" class="radio">
+          <div class="ma-l_xs text-mono">radio</div>
+        </label>
+      </div>
+      <div class="form-box">
+        <label class="mini-label text-mono">form-box</label>
+        <select class="select text-mono">
+          <option>select</option>
+        </select>
+      </div>
+      <div class="grid gap_xs ma-t_s">
+        <button class="span-6 text-clip button prime">button.prime</button>
+        <button class="span-6 text-clip button">button</button>
+        <button disabled class="span-6 text-clip button prime">button.prime:disabled</button>
+        <button disabled class="span-6 text-clip button">button:disabled</button>
+      </div>
+    </div>
+    <div class="gap-no ma-t_s">
+      <div class="meter-box">
+        <div>meter</div>
+        <meter class="meter" value="30" min="0" low="10" optimum="50" high="90" max="100"></meter>
+      </div>
+      <div class="range-box">
+        <input type="range" name="range" id="range" class="range" min="0" max="10" value="4">
+      </div>
+    </div>
+    <h4 class="ma-t_l ma-b_xs">Local theming</h4>
+    <form class="gap-no">
+  <div class="form-box tinted-danger tinted-bg-danger">
+    <label for="email" class="mini-label">Enter your e-mail</label>
+    <input type="email" name="email" class="input" placeholder="your@email.com" required value="djtrump@trumporg.com">
+    <div class="mini-info shown">Already in use</div>
+  </div>
+  <div class="form-box bg-danger tinted-warn tinted-bg-warn">
+    <label for="password" class="mini-label">Choose a safe password</label>
+    <input type="password" name="password" class="input bg-warn" placeholder="•••••••••" required min="6" value="aaaaaaaa">
+    <div class="mini-info shown">Weak password</div>
+  </div>
+  <label class="box bg-danger tinted-danger tinted-bg-danger">
+    <input type="checkbox" name="terms" class="checkbox" required>
+    Accept the <a href="#" class="link">terms and conditions</a>
+  </label>
+  <button disabled class="button block prime" type="submit">Sign up &rarr;</button>
+</form>
+
+    <div class="grid gap-no ma-v_s">
+      <div class="box striped span-6">
+        striped
+      </div>
+      <div class="box loading span-6">
+        loading
+      </div>
+    </div>
+    <article class="article ma-t_l">
+      <!--
+![](https://i.imgflip.com/1zjawi.jpg "made at imgflip.com")
+-->
+
+<p>The <code class="highlighter-rouge">.article</code> wrapper class gives you reading-optimized styling for articles and blog posts. It’s made for <strong>Markdown</strong> generated content like from <a href="https://jekyllrb.com/">Jekyll</a> or <a href="https://getgrav.org/">Grav</a>, but it will also work with any CMS. —<em>Inside here:</em></p>
+
+<ol>
+  <li>Text is optimized for readability</li>
+  <li>Headlines have more spacing</li>
+</ol>
+
+<ul>
+  <li>Lists have a hanging punctuation
+    <ul>
+      <li>Nested lists work as well</li>
+    </ul>
+  </li>
+</ul>
+
+<p><code class="highlighter-rouge">p</code>, <code class="highlighter-rouge">ol</code>, <code class="highlighter-rouge">ol</code>, <code class="highlighter-rouge">dl</code>, <code class="highlighter-rouge">table</code>, <code class="highlighter-rouge">blockquote</code>, <code class="highlighter-rouge">a</code>, <code class="highlighter-rouge">img</code>, <code class="highlighter-rouge">hr</code>, <code class="highlighter-rouge">pre</code>, <code class="highlighter-rouge">code</code>, <code class="highlighter-rouge">i</code> — all work well</p>
+
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th>Tables</th>
+      <th style="text-align: center">Are</th>
+      <th style="text-align: right">Cool</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>col 3 is</td>
+      <td style="text-align: center">right-aligned</td>
+      <td style="text-align: right">$1600</td>
+    </tr>
+    <tr>
+      <td>col 2 is</td>
+      <td style="text-align: center">centered</td>
+      <td style="text-align: right">$12</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="h1-headline-level-1">h1: Headline level 1</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi vitae dicta amet nobis porro laudantium accusantium, velit minima vel, aliquam veniam atque perferendis maxime earum autem dolor, dolore fugit iure?</p>
+
+<blockquote>
+  <p>Pasting code from the Internet into production code is like chewing gum found in the street.</p>
+</blockquote>
+
+<h2 id="h2-headline-level-2">h2: Headline level 2</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque odio assumenda, veritatis tempora enim nemo ipsum quidem, porro et voluptate animi minus ad commodi architecto recusandae eveniet, accusamus rem. Dolor!</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Never execute:
+$ rmf *
+</code></pre></div></div>
+
+<h3 id="h3-headline-level-3-this-is-a-slightly-longer-headline-to-demonstrate-that-this-also-looks-good">h3: Headline level 3 This is a slightly longer headline to demonstrate that this also looks good</h3>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores molestias dolore eaque recusandae, tempora iusto consequuntur sint consectetur, quisquam cumque ducimus, voluptates. Mollitia dolores explicabo quibusdam magnam asperiores accusamus, cumque.</p>
+
+<h4 id="h4-headline-level-4-this-is-a-slightly-longer-headline-to-demonstrate-that-this-also-looks-good">h4: Headline level 4 This is a slightly longer headline to demonstrate that this also looks good</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores molestias dolore eaque recusandae, tempora iusto consequuntur sint consectetur, quisquam cumque ducimus, voluptates. Mollitia dolores explicabo quibusdam magnam asperiores accusamus, cumque.</p>
+
+<h5 id="h5-headline-level-5-this-is-a-slightly-longer-headline-to-demonstrate-that-this-also-looks-good">h5: Headline level 5 This is a slightly longer headline to demonstrate that this also looks good</h5>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores molestias dolore eaque recusandae, tempora iusto consequuntur sint consectetur, quisquam cumque ducimus, voluptates. Mollitia dolores explicabo quibusdam magnam asperiores accusamus, cumque.</p>
+
+<p><em>That’s all she wrote.</em></p>
+
+    </article>
+  </div>
+</div>
+    
+  </div>
+
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="alphabet-colors" class="ma-b_s">
+      Alphabet colors
+      <a class="anchor" href="#alphabet-colors"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Here is an additional shaded color spectrum. Use cases are: “heat tables”, “generic avatars”, “zebra stripes” and possibly much more. Other than the <a href="/examples/colors">core interface colors</a>, these colors are ready-made and not accessible as CSS Vars, so they can only be modified in the SCSS files.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>Use <code class="highlighter-rouge">.bg-</code> for background-color and than any small latin character or number (^a-z0-9). These colors also have no <code class="highlighter-rouge">:hover</code> sate.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>.bg-{color}</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//colors-alphabet.scss" class="link">colors-alphabet.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-alphabet-colors ma-h_l- pa-h_l pa-v_l">
+    
+
+<div class="columns gap-no cols-4 cols-2-p">
+  
+  <div class="box text-mono bg-a">
+    bg-a
+    <div class="mini-info">Anton</div>
+  </div>
+  
+  <div class="box text-mono bg-b">
+    bg-b
+    <div class="mini-info">Berta</div>
+  </div>
+  
+  <div class="box text-mono bg-c">
+    bg-c
+    <div class="mini-info">Cäsar</div>
+  </div>
+  
+  <div class="box text-mono bg-d">
+    bg-d
+    <div class="mini-info">Dora</div>
+  </div>
+  
+  <div class="box text-mono bg-e">
+    bg-e
+    <div class="mini-info">Emil</div>
+  </div>
+  
+  <div class="box text-mono bg-f">
+    bg-f
+    <div class="mini-info">Friedrich</div>
+  </div>
+  
+  <div class="box text-mono bg-g">
+    bg-g
+    <div class="mini-info">Gustav</div>
+  </div>
+  
+  <div class="box text-mono bg-h">
+    bg-h
+    <div class="mini-info">Heinrich</div>
+  </div>
+  
+  <div class="box text-mono bg-i">
+    bg-i
+    <div class="mini-info">Ida</div>
+  </div>
+  
+  <div class="box text-mono bg-j">
+    bg-j
+    <div class="mini-info">Joseph</div>
+  </div>
+  
+  <div class="box text-mono bg-k">
+    bg-k
+    <div class="mini-info">Kaufmann</div>
+  </div>
+  
+  <div class="box text-mono bg-l">
+    bg-l
+    <div class="mini-info">Ludwig</div>
+  </div>
+  
+  <div class="box text-mono bg-m">
+    bg-m
+    <div class="mini-info">Martha</div>
+  </div>
+  
+  <div class="box text-mono bg-n">
+    bg-n
+    <div class="mini-info">Nordpol</div>
+  </div>
+  
+  <div class="box text-mono bg-o">
+    bg-o
+    <div class="mini-info">Otto</div>
+  </div>
+  
+  <div class="box text-mono bg-p">
+    bg-p
+    <div class="mini-info">Paula</div>
+  </div>
+  
+  <div class="box text-mono bg-q">
+    bg-q
+    <div class="mini-info">Quelle</div>
+  </div>
+  
+  <div class="box text-mono bg-r">
+    bg-r
+    <div class="mini-info">Richard</div>
+  </div>
+  
+  <div class="box text-mono bg-s">
+    bg-s
+    <div class="mini-info">Samuel</div>
+  </div>
+  
+  <div class="box text-mono bg-t">
+    bg-t
+    <div class="mini-info">Theodor</div>
+  </div>
+  
+  <div class="box text-mono bg-u">
+    bg-u
+    <div class="mini-info">Ulrich</div>
+  </div>
+  
+  <div class="box text-mono bg-v">
+    bg-v
+    <div class="mini-info">Viktor</div>
+  </div>
+  
+  <div class="box text-mono bg-w">
+    bg-w
+    <div class="mini-info">Wilhelm</div>
+  </div>
+  
+  <div class="box text-mono bg-x">
+    bg-x
+    <div class="mini-info">Xanthippe</div>
+  </div>
+  
+  <div class="box text-mono bg-y">
+    bg-y
+    <div class="mini-info">Ypsilon</div>
+  </div>
+  
+  <div class="box text-mono bg-z">
+    bg-z
+    <div class="mini-info">Zacharias</div>
+  </div>
+  
+  <div class="box text-mono bg-0">
+    bg-0
+    <div class="mini-info">Zero</div>
+  </div>
+  
+  <div class="box text-mono bg-1">
+    bg-1
+    <div class="mini-info">One</div>
+  </div>
+  
+  <div class="box text-mono bg-2">
+    bg-2
+    <div class="mini-info">Two</div>
+  </div>
+  
+  <div class="box text-mono bg-3">
+    bg-3
+    <div class="mini-info">Three</div>
+  </div>
+  
+  <div class="box text-mono bg-4">
+    bg-4
+    <div class="mini-info">Four</div>
+  </div>
+  
+  <div class="box text-mono bg-5">
+    bg-5
+    <div class="mini-info">Five</div>
+  </div>
+  
+  <div class="box text-mono bg-6">
+    bg-6
+    <div class="mini-info">Six</div>
+  </div>
+  
+  <div class="box text-mono bg-7">
+    bg-7
+    <div class="mini-info">Seven</div>
+  </div>
+  
+  <div class="box text-mono bg-8">
+    bg-8
+    <div class="mini-info">Eight</div>
+  </div>
+  
+  <div class="box text-mono bg-9">
+    bg-9
+    <div class="mini-info">Nine</div>
+  </div>
+  
+</div>
+    
+  </div>
+
+
+
+</article>
+
+      
+    </main>
+
+    <footer class="pa-h_l pa-v_m text_s span-auto">
+  <nav class="flex">
+    <div>
+        <b>Teutonic CSS</b> v0.8.6<br>
+        by <a href="https://twitter.com/frank_laemmer" class="link">Frank Lämmer</a> at <a class="fortrabbit link" href="https://www.fortrabbit.com">fortrabbit</a><br>
+        licensed under <a class="link" href="">MIT</a>
+    </div>
+    <a class="ma-l-auto span-auto link flex-end" href="https://github.com/fortrabbit/teutonic-css/">GitHub ›</a>
+  </nav>
+</footer>
+    
+  </body>
+</html>
+<!-- You have reached the end of the internet  -->

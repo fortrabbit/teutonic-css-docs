@@ -1,0 +1,43 @@
+---
+
+title:        Border colors
+category:     colors
+hide:         yes
+hideCode:     no
+syntax:       .bo-{state}-{level}
+order:        3
+fullscreen:   true
+
+description: >
+  Border colors for the rest of us.
+
+
+scss-files:
+  - 'color-map'
+  - 'color-vars'
+  - 'border-colors'
+
+---
+
+<!-- 
+  TODO: 
+    Reconsider this. It's too close to tinted styles!
+    or throw away!
+-->
+
+{%- assign colors = site.data.colors  %}
+
+<div class="bg-2 pa_l">
+  <div class="grid-auto collapse-p"  style="--grid-auto-min: 9rem;">
+    {%- for group in colors %}
+    <div>
+      <h4>{{ group.title }}</h4>
+      <div class="gap_s ma-t_xs">
+        {%- for color in group.colors %}
+        <div class="box pa_s text-clip text-mono bo-{{ group.title | downcase }}-{{ forloop.index }}"><div>bo-{{ group.title | downcase }}-{{ forloop.index }}</div></div>
+        {%- endfor %}
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+</div>

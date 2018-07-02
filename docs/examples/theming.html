@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Theming - Teutonic CSS</title>
+  <meta name="description" content="Enjoy a fresh look. Customize at ease.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Twitter -->
+  <meta name="twitter:site" content="frank_laemmer">
+  <meta name="twitter:creator" content="frank_laemmer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Teutonic CSS">
+  <meta name="twitter:description" content="Enjoy a fresh look. Customize at ease.">
+  <meta name="twitter:image" content="">
+  
+  <!-- Facebook -->
+  <meta property="og:url" content="http://localhost:4000">
+  <meta property="og:title" content="Teutonic CSS">
+  <meta property="og:description" content="Enjoy a fresh look. Customize at ease.">
+  <meta property="og:image" content="">
+  <meta property="og:image:secure_url" content="TODO">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  
+  <link rel="stylesheet" href="/css/teutonic.css">
+  
+  <link rel="stylesheet" href="/css/teutonic-docs.css">
+
+  
+</head>
+
+<div class="docs-hide-old pa_m bg-warn-3 text_l span-auto">
+  OOOOPS. Your browser seems to be too old for this. Please update your browser.
+</div>
+
+  <body>
+    
+    
+    
+
+    <header class="flex wrap-no gap_xs ma-t_m">
+  <div class="span-auto">
+    <a href="/" class="pa_s pa-l_l block bo-t_px bo-r_px bo-b_px text-bold docs-teutonic-link">
+      Teutonic CSS
+    </a>
+  </div>
+
+  
+
+  <div class="span-auto ma-l-auto">
+    <a href="/usage" class="button prime ma-r_l">Use it</a>
+  </div>
+</header>
+    
+<div class="span-auto">
+  <!-- MS Edge:  ↓  pa_l doesm't work for some stange reason -->
+  <nav class="pa-h_l pa-v_m flex gap_s">
+    <div>
+      <h3 class="text_l bo-b_xs pa-b_xs">Examples</h3>
+      <ul class="columns cols-6 cols-4-t cols-2-p">
+        
+        <li>
+          <a href="/examples/components" class="block-link pa_xs">Components</a>
+        </li>
+        
+        <li>
+          <a href="/examples/layout" class="block-link pa_xs">Layout</a>
+        </li>
+        
+        <li>
+          <a href="/examples/css-grid" class="block-link pa_xs">CSS Grid</a>
+        </li>
+        
+        <li>
+          <a href="/examples/flexbox" class="block-link pa_xs">Flexbox</a>
+        </li>
+        
+        <li>
+          <a href="/examples/columns" class="block-link pa_xs">Columns</a>
+        </li>
+        
+        <li>
+          <a href="/examples/forms" class="block-link pa_xs">Forms</a>
+        </li>
+        
+        <li>
+          <a href="/examples/utilities" class="block-link pa_xs">Utilities</a>
+        </li>
+        
+        <li>
+          <a href="/examples/typography" class="block-link pa_xs">Typography</a>
+        </li>
+        
+        <li>
+          <a href="/examples/colors" class="block-link pa_xs">Colors</a>
+        </li>
+        
+        <li>
+          <a href="/examples/theming" class="block-link pa_xs active">Theming</a>
+        </li>
+        
+        <li>
+          <a href="/examples/table" class="block-link pa_xs">Tables</a>
+        </li>
+        
+        <li>
+          <a href="/examples/real-world" class="block-link pa_xs">Real world</a>
+        </li>
+        
+     </ul>
+   </div>
+  </nav>
+</div>
+
+    <section class="pa-h_l span-auto">
+      
+      <h1 class="text-black text-hero_m read_xxl ma-t_m">
+        Make it yours
+      </h1>
+      
+      
+      <div class="text_xl read_xl ma-t_m">
+        <p>Alter CSS Vars to customize the look and feel.</p>
+
+      </div>
+      
+
+      
+      <div class="text_l read_xl ma-t_s">
+        <p>The examples here are interactive — type within the <code class="highlighter-rouge">edit this</code> areas, so they will update the browser window for immediate feedback. Don’t fortget to check out the <a href="/usage">usage guides</a>.</p>
+
+      </div>
+      
+      
+
+
+<div class="ma-t_m ma-h_l- pa-h_l pa-v_m inverted pos-rel">
+  <ul class="row-list columns cols-4 cols-2-p gap_px read_xl ma-v_s">
+    
+    
+    <li><a href="#coloring" class="block-link">Coloring</a></li>
+    
+    
+    
+    <li><a href="#space-scale" class="block-link">Space scale</a></li>
+    
+    
+    
+    <li><a href="#type-scale" class="block-link">Type scale</a></li>
+    
+    
+    
+    <li><a href="#font-assignment" class="block-link">Font assignment</a></li>
+    
+    
+  </ul>
+  <div class="mini-info text_s text-bold pa-l_l pa-r_s pos-tl">On this page</div>
+</div>
+      </section>
+
+    <main class="pa-h_l">
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="coloring" class="ma-b_s">
+      Coloring
+      <a class="anchor" href="#coloring"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>The main UI colors are exposed as CSS variables.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>All shades are set in HSL in the original scss files, but unfortunately converted by SASS to HEX values.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>.bg-{state}-{level}</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//color-map.scss" class="link">color-map.scss</a></code>
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//color-vars.scss" class="link">color-vars.scss</a></code>
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//ui-bg-colors.scss" class="link">ui-bg-colors.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-coloring ma-h_l- pa-h_l pa-v_l">
+    
+
+<div class="grid-auto collapse-p" style="--grid-auto-min: 18rem;">
+  <div>
+    <h4>Main</h4>
+    <div class="flex gap-no ma-t_xs">
+      <div class="box pa_m text-clip text-mono bg-main-1"></div>
+      <div class="box pa_m text-clip text-mono bg-main-2"></div>
+      <div class="box pa_m text-clip text-mono bg-main-3"></div>
+      <div class="box pa_m text-clip text-mono bg-main-4"></div>
+      <div class="box pa_m text-clip text-mono bg-main-5"></div>
+    </div>
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_s">:root {
+  --main-1: hsl( 65, 12%, 95%);
+  --main-2: hsl( 65, 12%, 90%);
+  --main-3: hsl( 65, 12%, 55%);
+  --main-4: hsl( 65, 12%, 25%);
+  --main-5: hsl( 65, 12%, 15%);
+}
+</style>
+  </div>
+  <div>
+    <h4>Prime</h4>
+    <div class="flex gap-no ma-t_xs">
+      <div class="box pa_m text-clip text-mono bg-prime-1"></div>
+      <div class="box pa_m text-clip text-mono bg-prime-2"></div>
+      <div class="box pa_m text-clip text-mono bg-prime-3"></div>
+      <div class="box pa_m text-clip text-mono bg-prime-4"></div>
+      <div class="box pa_m text-clip text-mono bg-prime-5"></div>
+    </div>
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_s">:root {
+  --prime-1: hsl(250, 30%, 95%);
+  --prime-2: hsl(250, 60%, 90%);
+  --prime-3: hsl(250, 99%, 70%);
+  --prime-4: hsl(250, 80%, 45%);
+  --prime-5: hsl(250, 60%, 30%);
+}
+</style>
+  </div>
+  <div>
+    <h4>Warn</h4>
+    <div class="flex gap-no ma-t_xs">
+      <div class="box pa_m text-clip text-mono bg-warn-1"></div>
+      <div class="box pa_m text-clip text-mono bg-warn-2"></div>
+      <div class="box pa_m text-clip text-mono bg-warn-3"></div>
+      <div class="box pa_m text-clip text-mono bg-warn-4"></div>
+      <div class="box pa_m text-clip text-mono bg-warn-5"></div>
+    </div>
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_s">:root {
+  --warn-1: hsl( 55, 70%, 90%);
+  --warn-2: hsl( 55, 60%, 75%);
+  --warn-3: hsl( 55, 99%, 45%);
+  --warn-4: hsl( 55, 80%, 30%);
+  --warn-5: hsl( 55, 60%, 20%);
+}
+</style>
+  </div>
+  <div>
+    <h4>Danger</h4>
+    <div class="flex gap-no ma-t_xs">
+      <div class="box pa_m text-clip text-mono bg-danger-1"></div>
+      <div class="box pa_m text-clip text-mono bg-danger-2"></div>
+      <div class="box pa_m text-clip text-mono bg-danger-3"></div>
+      <div class="box pa_m text-clip text-mono bg-danger-4"></div>
+      <div class="box pa_m text-clip text-mono bg-danger-5"></div>
+    </div>
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_s">:root {
+  --danger-1: hsl( 30, 80%, 95%);
+  --danger-2: hsl( 28, 60%, 84%);
+  --danger-3: hsl( 30, 99%, 60%);
+  --danger-4: hsl(  0, 80%, 30%);
+  --danger-5: hsl(  0, 60%, 25%);
+}
+</style>
+  </div>
+  <div>
+    <h4>Success</h4>
+    <div class="flex gap-no ma-t_xs">
+      <div class="box pa_m text-clip text-mono bg-success-1"></div>
+      <div class="box pa_m text-clip text-mono bg-success-2"></div>
+      <div class="box pa_m text-clip text-mono bg-success-3"></div>
+      <div class="box pa_m text-clip text-mono bg-success-4"></div>
+      <div class="box pa_m text-clip text-mono bg-success-5"></div>
+    </div>
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_s">:root {
+  --success-1: hsl(110, 50%, 95%);
+  --success-2: hsl(110, 60%, 90%);
+  --success-3: hsl(110, 99%, 50%);
+  --success-4: hsl(100, 80%, 30%);
+  --success-5: hsl( 90, 60%, 20%);
+}
+</style>
+  </div>
+</div>
+
+    
+  </div>
+
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="space-scale" class="ma-b_s">
+      Space scale
+      <a class="anchor" href="#space-scale"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Teutonic uses modular scale for sizing things. Sizes grow exponential not linear: smaller sizes have smaller steps and larger sizes have larger steps in between. The beauty is that you basically only need two values to control everyting: The starting point (base) and the multiplier (ratio). See the “Modular scale calculation” below to understand how it works. You can also skip the calculation part completly or in parts by aligning your own values to the vars directly.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>See <a href="http://alistapart.com/article/more-meaningful-typography">this A-List-Apart article</a> to dive deeper into modular scale and some historical background. Teutonic has two modular scale spaces: One for spacing, which defines all the margins and paddings (this here) and one for typography (below). They basically work in the same way. In the original SCSS file you will find a switch to define how the calculation is done: <code class="highlighter-rouge">$css-calc:true</code>. Wuth the default set, the browser will do the calculations (which is some heavy lifting but works well). Also by default way, you can control the modular scale output by modifying the values directly. With css-calc set to false, SCSS will do the calc for you, less lifting in the browser, but harder to adjust later on.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//scale-vars.scss" class="link">scale-vars.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-space-scale ma-h_l- pa-h_l pa-v_l">
+    <div class="grid gap_s collapse-p">
+  <div class="span-6">
+    <h4 class="bo-b_xs pa-b_xs">Space base</h4>
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_s">:root {
+  --space-base: .25rem;
+}
+</style>
+    <p class="ma-t_s read_l">
+      &uarr; This is the smallest starting point from where it grows bigger. Something between <code>.1rem</code> and <code>.4rem</code> looks good.
+    </p>
+  </div>
+  <div class="span-6">
+    <h4 class="bo-b_xs pa-b_xs">Space ratio</h4>
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_s">:root {
+  --space-ratio: 2.5;
+}
+</style>
+    <p class="ma-t_s read_l">
+      &uarr; This is the multiplier defining how fast the space base should grow. Something between <code>1.5</code> and <code>3</code> looks good.
+    </p>
+  </div>
+</div>
+
+<h4 class="bo-b_xs pa-b_xs ma-t_m" id="space-scale-calculation">Space scale calculation</h4>
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_s">:root {
+  --space-xs  : var(--space-base);
+  --space-s   : calc(var(--space-ratio) * var(--space-xs));
+  --space-m   : calc(var(--space-ratio) * var(--space-s) );
+  --space-l   : calc(var(--space-ratio) * var(--space-m) );
+  --space-xl  : calc(var(--space-ratio) * var(--space-l) );
+  --space-xxl : calc(var(--space-ratio) * var(--space-xl));
+}
+</style>
+<p class="ma-t_s read_l">
+  &uarr; This is how the space sizes are getting calculated in the browser using the <code>--space-base</code> and <code>--space-ratio</code>. It starts with the smallest value and get's bigger, from small step to larger steps. Using the modular scale is optional, you can also assign your own values to the variables from <code>--space-xs</code> to <code>--space-xxl</code> directly.
+</p>
+    
+  </div>
+
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="type-scale" class="ma-b_s">
+      Type scale
+      <a class="anchor" href="#type-scale"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      
+
+    </div>
+    
+    
+
+    <div class="ma-v_m">
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//scale-vars.scss" class="link">scale-vars.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-type-scale ma-h_l- pa-h_l pa-v_l">
+    <!-- TODO: write the intro here! -->
+
+<div class="grid gap_s collapse-p">
+  <div class="span-6">
+    <h4 class="bo-b_xs pa-b_xs">Text base</h4>
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_s">:root {
+  --text-base: 1em;
+}
+</style>
+    <p class="ma-t_s read_l">
+      &uarr; This is the base font size for the <code>--text-m</code> variable. It's used for all standard elements like <code>div</code> or <code>p</code> without size applied. Please stick to the <code>em</code> unit here. <code>1em</code> should match <code>16px</code> on desktop size. Edit this value only slightly as it has a big impact, something between <code>.8em</code> and <code>1.2em</code> is good.
+    </p>
+  </div>
+  <div class="span-6">
+    <h4 class="bo-b_xs pa-b_xs">Text ratio</h4>
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_s">:root {
+  --text-ratio: 1.25;
+}
+</style>
+    <p class="ma-t_s read_l">
+      &uarr; This defines the propotion by which the modular scale is calculated. Please edit this only slighty: Use a value higher than 1 and — for aesthetic reasons — lower  than 1.7.
+    </p>
+  </div>
+</div>
+
+<h4 class="bo-b_xs pa-b_xs ma-t_m" id="text-scale-calculation">Text scale calculation</h4>
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_s">:root {
+  --text-xxxl : calc(var(--text-ratio) * var(--text-xxl));
+  --text-xxl  : calc(var(--text-ratio) * var(--text-xl));
+  --text-xl   : calc(var(--text-ratio) * var(--text-l));
+  --text-l    : calc(var(--text-ratio) * var(--text-m));
+  --text-m    : var(--text-base);
+  --text-s    : calc(var(--text-m)     / var(--text-ratio));
+  --text-xs   : calc(var(--text-s)     / var(--text-ratio));
+}
+</style>
+<p class="ma-t_s read_l">
+  &uarr; This is how the font-sizes are getting calculated using the <code>--text-base</code> and <code>--text-ratio</code>. The base is in the lower part, from there it grows and shrinks.
+</p>
+
+    
+  </div>
+
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="font-assignment" class="ma-b_s">
+      Font assignment
+      <a class="anchor" href="#font-assignment"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>There are three typeface CSS variables: <code class="highlighter-rouge">--font-standard</code> (div), <code class="highlighter-rouge">--font-body</code> (p) and <code class="highlighter-rouge">--font-headline</code> (h1). The standard Teutonic theme here uses a serif typeface for paragraphs and the sans-serif font of your Operating System for anything else. You can assign all to use the same font, or three different ones by changing the CSS Vars.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>Various standard web safe font-stacks are included in the orignal SCSS files. You can also load web fonts from Google fonts or alike and assign theme here. The example here shows how override font-face with CSS vars.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//typeface-vars.scss" class="link">typeface-vars.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-font-assignment ma-h_l- pa-h_l pa-v_l">
+    <div class="flex gap_l text-all_l">
+  <div>
+    <h3 class="bo-b_xs pa-b_xs">Default</h3>
+    <div class="ma-t_s">
+      <h5>Headlines</h5>
+      <p>Paragraphs and lists.</p>
+      <div>Anything else.</div>
+    </div>
+  </div>
+  <div>
+    <h3 class="bo-b_xs pa-b_xs">Modified</h3>
+    <div class="docs-font-face-example ma-t_s">
+      <h5>Headlines</h5>
+      <p>Paragraphs and lists.</p>
+      <div>Anything else.</div>
+    </div>
+  </div>
+</div>
+    
+    <div class="docs-css-edit-container bs_s">
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_m">.docs-font-face-example {
+  --font-body:     serif;
+  --font-headline: fantasy;
+  --font-standard: serif;
+}
+</style>
+</div>
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex gap_l text-all_l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"bo-b_xs pa-b_xs"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ma-t_s"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h5&gt;</span>Headlines<span class="nt">&lt;/h5&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Paragraphs and lists.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;div&gt;</span>Anything else.<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"bo-b_xs pa-b_xs"</span><span class="nt">&gt;</span>Modified<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"docs-font-face-example ma-t_s"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h5&gt;</span>Headlines<span class="nt">&lt;/h5&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Paragraphs and lists.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;div&gt;</span>Anything else.<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+    </main>
+
+    <footer class="pa-h_l pa-v_m text_s span-auto">
+  <nav class="flex">
+    <div>
+        <b>Teutonic CSS</b> v0.8.6<br>
+        by <a href="https://twitter.com/frank_laemmer" class="link">Frank Lämmer</a> at <a class="fortrabbit link" href="https://www.fortrabbit.com">fortrabbit</a><br>
+        licensed under <a class="link" href="">MIT</a>
+    </div>
+    <a class="ma-l-auto span-auto link flex-end" href="https://github.com/fortrabbit/teutonic-css/">GitHub ›</a>
+  </nav>
+</footer>
+    
+  </body>
+</html>
+<!-- You have reached the end of the internet  -->

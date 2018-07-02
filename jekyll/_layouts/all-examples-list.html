@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include templates/head.html %}
+  <body>
+    {% include templates/header-navigation.html %}
+    <main class="pa-h_m ma-b-auto">
+      {% assign categories = site.data.example-categories %}
+      <div class="ma-v_l">
+        <h1>All Teutonic CSS examples on one page</h1>
+      {%- for category in categories %}
+      <h3 class="ma-t_m pa-b_xs bo-b_xs">
+        <a href="/examples/{{ category.id }}" class="link">{{ category.title }}</a>
+      </h3>
+      {% assign examples = site.examples | where:"category", category.id | sort: "order", "last" %}
+      <ul class="row-list columns cols-2 collap gap-no ma-t_px-">
+        {% for example in examples %}
+        {% unless example.hide %}
+        <li>
+          <a href="{{ category.id }}#{{ example.title | slugify }}" class="block">{{ example.title }}</a></li>
+        {% endunless %}
+        {% endfor %}
+      </ul>
+      {%- endfor %}
+      </div>
+    </main>
+    {% include templates/footer.html %}
+    {% include templates/foot.html %}
+  </body>
+</html>
+<!-- You have reached the end of the internet  -->

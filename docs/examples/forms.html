@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Forms - Teutonic CSS</title>
+  <meta name="description" content="Enjoy a fresh look. Customize at ease.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Twitter -->
+  <meta name="twitter:site" content="frank_laemmer">
+  <meta name="twitter:creator" content="frank_laemmer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Teutonic CSS">
+  <meta name="twitter:description" content="Enjoy a fresh look. Customize at ease.">
+  <meta name="twitter:image" content="">
+  
+  <!-- Facebook -->
+  <meta property="og:url" content="http://localhost:4000">
+  <meta property="og:title" content="Teutonic CSS">
+  <meta property="og:description" content="Enjoy a fresh look. Customize at ease.">
+  <meta property="og:image" content="">
+  <meta property="og:image:secure_url" content="TODO">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  
+  <link rel="stylesheet" href="/css/teutonic.css">
+  
+  <link rel="stylesheet" href="/css/teutonic-docs.css">
+
+  
+</head>
+
+<div class="docs-hide-old pa_m bg-warn-3 text_l span-auto">
+  OOOOPS. Your browser seems to be too old for this. Please update your browser.
+</div>
+
+  <body>
+    
+    
+    
+
+    <header class="flex wrap-no gap_xs ma-t_m">
+  <div class="span-auto">
+    <a href="/" class="pa_s pa-l_l block bo-t_px bo-r_px bo-b_px text-bold docs-teutonic-link">
+      Teutonic CSS
+    </a>
+  </div>
+
+  
+
+  <div class="span-auto ma-l-auto">
+    <a href="/usage" class="button prime ma-r_l">Use it</a>
+  </div>
+</header>
+    
+<div class="span-auto">
+  <!-- MS Edge:  ↓  pa_l doesm't work for some stange reason -->
+  <nav class="pa-h_l pa-v_m flex gap_s">
+    <div>
+      <h3 class="text_l bo-b_xs pa-b_xs">Examples</h3>
+      <ul class="columns cols-6 cols-4-t cols-2-p">
+        
+        <li>
+          <a href="/examples/components" class="block-link pa_xs">Components</a>
+        </li>
+        
+        <li>
+          <a href="/examples/layout" class="block-link pa_xs">Layout</a>
+        </li>
+        
+        <li>
+          <a href="/examples/css-grid" class="block-link pa_xs">CSS Grid</a>
+        </li>
+        
+        <li>
+          <a href="/examples/flexbox" class="block-link pa_xs">Flexbox</a>
+        </li>
+        
+        <li>
+          <a href="/examples/columns" class="block-link pa_xs">Columns</a>
+        </li>
+        
+        <li>
+          <a href="/examples/forms" class="block-link pa_xs active">Forms</a>
+        </li>
+        
+        <li>
+          <a href="/examples/utilities" class="block-link pa_xs">Utilities</a>
+        </li>
+        
+        <li>
+          <a href="/examples/typography" class="block-link pa_xs">Typography</a>
+        </li>
+        
+        <li>
+          <a href="/examples/colors" class="block-link pa_xs">Colors</a>
+        </li>
+        
+        <li>
+          <a href="/examples/theming" class="block-link pa_xs">Theming</a>
+        </li>
+        
+        <li>
+          <a href="/examples/table" class="block-link pa_xs">Tables</a>
+        </li>
+        
+        <li>
+          <a href="/examples/real-world" class="block-link pa_xs">Real world</a>
+        </li>
+        
+     </ul>
+   </div>
+  </nav>
+</div>
+
+    <section class="pa-h_l span-auto">
+      
+      <h1 class="text-black text-hero_m read_xxl ma-t_m">
+        Styled HTML5 form elements
+      </h1>
+      
+      
+      <div class="text_xl read_xl ma-t_m">
+        <p>Forms are a corner stone of any interactive web application. Here is a consitent yet familar look across Operating Systems and browsers while respecting standards.</p>
+
+      </div>
+      
+
+      
+      <div class="text_l read_xl ma-t_s">
+        <p>The aim here is not pixel-perfection. It’s about dealing with standard elements with as little intervention, extra markup and classes as possible. Teutonic CSS does not apply the form styles directly, instead all elements are styled with a class named like the element itself: <code class="highlighter-rouge">select.select</code>,<code class="highlighter-rouge">textarea.textarea</code> …</p>
+
+      </div>
+      
+      
+
+
+<div class="ma-t_m ma-h_l- pa-h_l pa-v_m inverted pos-rel">
+  <ul class="row-list columns cols-4 cols-2-p gap_px read_xl ma-v_s">
+    
+    
+    <li><a href="#input" class="block-link">Input</a></li>
+    
+    
+    
+    <li><a href="#select" class="block-link">Select</a></li>
+    
+    
+    
+    <li><a href="#invalid-input" class="block-link">Invalid input</a></li>
+    
+    
+    
+    <li><a href="#radio" class="block-link">Radio</a></li>
+    
+    
+    
+    <li><a href="#checkbox" class="block-link">Checkbox</a></li>
+    
+    
+    
+    <li><a href="#date" class="block-link">Date</a></li>
+    
+    
+    
+    <li><a href="#time" class="block-link">Time</a></li>
+    
+    
+    
+    <li><a href="#textarea" class="block-link">Textarea</a></li>
+    
+    
+    
+    <li><a href="#search" class="block-link">Search</a></li>
+    
+    
+    
+    <li><a href="#file" class="block-link">File</a></li>
+    
+    
+    
+    <li><a href="#range" class="block-link">Range</a></li>
+    
+    
+    
+    <li><a href="#progress" class="block-link">Progress</a></li>
+    
+    
+    
+    <li><a href="#meter" class="block-link">Meter</a></li>
+    
+    
+    
+    <li><a href="#color" class="block-link">Color</a></li>
+    
+    
+    
+    <li><a href="#form-box" class="block-link">Form box</a></li>
+    
+    
+    
+    <li><a href="#disabled" class="block-link">Disabled</a></li>
+    
+    
+  </ul>
+  <div class="mini-info text_s text-bold pa-l_l pa-r_s pos-tl">On this page</div>
+</div>
+      </section>
+
+    <main class="pa-h_l">
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="input" class="ma-b_s">
+      Input
+      <a class="anchor" href="#input"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Here are all the different textish input elements. Browser support and styling varies, but that’s ok.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>This example also shows how to align labels to the input fields using Flexbox with a breakpoint on tablet size.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>input.input</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//forms.scss" class="link">forms.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-input ma-h_l- pa-h_l pa-v_l">
+    <div class="read_l">
+  <div class="flex wrap-no gap-no collapse-t">
+  <label for="e-text" class="span-third span-full-t text-clip box">Text</label>
+  <input class="input" type="text" id="e-text" placeholder="Just text">
+</div>
+<div class="flex wrap-no gap-no collapse-t">
+  <label for="e-fav-fruit" class="span-third span-full-t text-clip box">Text with datalist</label>
+    <input class="input" type="text" list="fruits" id="e-fav-fruit" placeholder="data-list example">
+    <datalist id="fruits">
+      <option value="Apple">
+      <option value="Orange">
+      <option value="Peach">
+      <option value="Melon">
+      <option value="Strawberry">
+    </datalist>
+</div>
+<div class="flex wrap-no gap-no collapse-t">
+  <label for="e-text-readonly" class="span-third span-full-t text-clip box">Text:readonly</label>
+  <input class="input" type="text" id="e-text-readonly" value="Only to read." readonly>
+</div>
+<div class="flex wrap-no gap-no collapse-t">
+  <label for="e-text-disabled" class="span-third span-full-t text-clip box">Text:disabled</label>
+  <input class="input" type="text" id="e-text-disabled" value="Disabled." disabled>
+</div>
+<div class="flex wrap-no gap-no collapse-t">
+  <label for="e-password" class="span-third span-full-t text-clip box">Password</label>
+  <input class="input" type="password" id="e-password" placeholder="•••••••••••">
+</div>
+<div class="flex wrap-no gap-no collapse-t">
+  <label for="e-email" class="required span-third span-full-t text-clip box">Email</label>
+  <input class="input" type="email" id="e-email" name="email" required>
+</div>
+<div class="flex wrap-no gap-no collapse-t">
+  <label for="e-number" class="span-third span-full-t text-clip box">Number</label>
+  <input class="input" type="number" name="number" id="e-number" value="42">
+</div>
+<div class="flex wrap-no gap-no collapse-t">
+  <label for="e-tel" class="span-third span-full-t text-clip box">Tel</label>
+  <input class="input" type="tel" name="tel" id="e-tel">
+</div>
+<div class="flex wrap-no gap-no collapse-t">
+  <label for="e-url" class="span-third span-full-t text-clip box">URL</label>
+  <input class="input" type="url" name="url" id="e-url" placeholder="https://www.fortrabbit.com">
+</div>
+</div>
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"read_l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex wrap-no gap-no collapse-t"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"e-text"</span> <span class="na">class=</span><span class="s">"span-third span-full-t text-clip box"</span><span class="nt">&gt;</span>Text<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"e-text"</span> <span class="na">placeholder=</span><span class="s">"Just text"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex wrap-no gap-no collapse-t"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"e-fav-fruit"</span> <span class="na">class=</span><span class="s">"span-third span-full-t text-clip box"</span><span class="nt">&gt;</span>Text with datalist<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">list=</span><span class="s">"fruits"</span> <span class="na">id=</span><span class="s">"e-fav-fruit"</span> <span class="na">placeholder=</span><span class="s">"data-list example"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;datalist</span> <span class="na">id=</span><span class="s">"fruits"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Apple"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Orange"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Peach"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Melon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Strawberry"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/datalist&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex wrap-no gap-no collapse-t"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"e-text-readonly"</span> <span class="na">class=</span><span class="s">"span-third span-full-t text-clip box"</span><span class="nt">&gt;</span>Text:readonly<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"e-text-readonly"</span> <span class="na">value=</span><span class="s">"Only to read."</span> <span class="na">readonly</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex wrap-no gap-no collapse-t"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"e-text-disabled"</span> <span class="na">class=</span><span class="s">"span-third span-full-t text-clip box"</span><span class="nt">&gt;</span>Text:disabled<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"e-text-disabled"</span> <span class="na">value=</span><span class="s">"Disabled."</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex wrap-no gap-no collapse-t"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"e-password"</span> <span class="na">class=</span><span class="s">"span-third span-full-t text-clip box"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">id=</span><span class="s">"e-password"</span> <span class="na">placeholder=</span><span class="s">"•••••••••••"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex wrap-no gap-no collapse-t"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"e-email"</span> <span class="na">class=</span><span class="s">"required span-third span-full-t text-clip box"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">id=</span><span class="s">"e-email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">required</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex wrap-no gap-no collapse-t"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"e-number"</span> <span class="na">class=</span><span class="s">"span-third span-full-t text-clip box"</span><span class="nt">&gt;</span>Number<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">name=</span><span class="s">"number"</span> <span class="na">id=</span><span class="s">"e-number"</span> <span class="na">value=</span><span class="s">"42"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex wrap-no gap-no collapse-t"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"e-tel"</span> <span class="na">class=</span><span class="s">"span-third span-full-t text-clip box"</span><span class="nt">&gt;</span>Tel<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">type=</span><span class="s">"tel"</span> <span class="na">name=</span><span class="s">"tel"</span> <span class="na">id=</span><span class="s">"e-tel"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex wrap-no gap-no collapse-t"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"e-url"</span> <span class="na">class=</span><span class="s">"span-third span-full-t text-clip box"</span><span class="nt">&gt;</span>URL<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">type=</span><span class="s">"url"</span> <span class="na">name=</span><span class="s">"url"</span> <span class="na">id=</span><span class="s">"e-url"</span> <span class="na">placeholder=</span><span class="s">"https://www.fortrabbit.com"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="select" class="ma-b_s">
+      Select
+      <a class="anchor" href="#select"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      
+
+    </div>
+    
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>select.select</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//select.scss" class="link">select.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-select ma-h_l- pa-h_l pa-v_l">
+    <select class="select read_m">
+  <option value="choclate">Chocolate</option>
+  <option value="lollipop">Lollipop</option>
+  <option value="bubble-gum">Bubble gum</option>
+</select>
+
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"select read_m"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"choclate"</span><span class="nt">&gt;</span>Chocolate<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"lollipop"</span><span class="nt">&gt;</span>Lollipop<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"bubble-gum"</span><span class="nt">&gt;</span>Bubble gum<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;/select&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="invalid-input" class="ma-b_s">
+      Invalid input
+      <a class="anchor" href="#invalid-input"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>HTML form data validation is a simple and cheap way to validate user input on entering. An <code class="highlighter-rouge">:invalid</code> text is redish. Below, an e-mail address is expected.</p>
+
+    </div>
+    
+    
+
+    <div class="ma-v_m">
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//forms.scss" class="link">forms.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-invalid-input ma-h_l- pa-h_l pa-v_l">
+    <input class="input read_m" type="email" required value="invalid email">
+
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input read_m"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">required</span> <span class="na">value=</span><span class="s">"invalid email"</span><span class="nt">&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="radio" class="ma-b_s">
+      Radio
+      <a class="anchor" href="#radio"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Streamlined radio elements in a familar but unified look.</p>
+
+    </div>
+    
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>input[type=radio].radio</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//forms.scss" class="link">forms.scss</a></code>
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//labelinput.scss" class="link">labelinput.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-radio ma-h_l- pa-h_l pa-v_l">
+    <div class="read_m">
+  <h4 class="bo-b_xs pa-b_xs">
+    Warrenty
+  </h4>
+  <div class="grid-auto gap-no">
+    <label class="box">
+      <input class="radio" type="radio" name="insurance" checked>
+      1 year
+    </label>
+    <label class="box">
+      <input class="radio" type="radio" name="insurance">
+      2 years
+    </label>
+    <label class="box">
+      <input class="radio" type="radio" name="insurance">
+      3 years
+    </label>
+  </div>
+</div>
+
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"read_m"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"bo-b_xs pa-b_xs"</span><span class="nt">&gt;</span>
+    Warrenty
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-auto gap-no"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"radio"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"insurance"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+      1 year
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"radio"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"insurance"</span><span class="nt">&gt;</span>
+      2 years
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"radio"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"insurance"</span><span class="nt">&gt;</span>
+      3 years
+    <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="checkbox" class="ma-b_s">
+      Checkbox
+      <a class="anchor" href="#checkbox"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Streamlined checkboxes in a familar but unified look.</p>
+
+    </div>
+    
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>checkbox.checkbox</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//forms.scss" class="link">forms.scss</a></code>
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//labelinput.scss" class="link">labelinput.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-checkbox ma-h_l- pa-h_l pa-v_l">
+    <div class="read_m">
+  <h4 class="pa-b_xs bo-b_xs">
+    Equipment
+  </h4>
+  <div class="flex gap-no collapse-p">
+    <label class="span-half box">
+      <input class="checkbox" type="checkbox" name="bluetooth"> Bluetooth
+    </label>
+    <label class="span-half box">
+      <input class="checkbox" type="checkbox" name="aircon" checked> Air con
+    </label>
+    <label class="span-half box">
+      <input class="checkbox" type="checkbox" name="turbo-boost" checked> Turbo boost
+    </label>
+    <label class="span-half box">
+      <input class="checkbox" type="checkbox" name="cd-player"> CD player
+    </label>
+    <label class="span-half box">
+      <input class="checkbox" type="checkbox" name="ejection-seat"> Ejection seat
+    </label>
+    <label class="span-half box">
+      <input class="checkbox" type="checkbox" name="afterburner"> Afterburner
+    </label>
+  </div>
+  <div class="text_s ma-t_s">
+    <input class="checkbox" type="checkbox" id="choice" name="choice">
+    <label for="choice">Remember my choice</label>
+  </div>
+</div>
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"read_m"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"pa-b_xs bo-b_xs"</span><span class="nt">&gt;</span>
+    Equipment
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex gap-no collapse-p"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"span-half box"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"checkbox"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"bluetooth"</span><span class="nt">&gt;</span> Bluetooth
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"span-half box"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"checkbox"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"aircon"</span> <span class="na">checked</span><span class="nt">&gt;</span> Air con
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"span-half box"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"checkbox"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"turbo-boost"</span> <span class="na">checked</span><span class="nt">&gt;</span> Turbo boost
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"span-half box"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"checkbox"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"cd-player"</span><span class="nt">&gt;</span> CD player
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"span-half box"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"checkbox"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"ejection-seat"</span><span class="nt">&gt;</span> Ejection seat
+    <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"span-half box"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"checkbox"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"afterburner"</span><span class="nt">&gt;</span> Afterburner
+    <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text_s ma-t_s"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"checkbox"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"choice"</span> <span class="na">name=</span><span class="s">"choice"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"choice"</span><span class="nt">&gt;</span>Remember my choice<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="date" class="ma-b_s">
+      Date
+      <a class="anchor" href="#date"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>This is just a date input. Your browser might or might not help you filling it out.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>Height of this element does not align with other inputs in WebKit.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>input[type=date].input</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//forms.scss" class="link">forms.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-date ma-h_l- pa-h_l pa-v_l">
+    <input class="input read_m" type="date">
+
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input read_m"</span> <span class="na">type=</span><span class="s">"date"</span><span class="nt">&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="time" class="ma-b_s">
+      Time
+      <a class="anchor" href="#time"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>This is just a time input. Your browser might or might not help you filling it out.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>Height of this element does not align with other inputs in WebKit.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>input[type=time].input</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//forms.scss" class="link">forms.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-time ma-h_l- pa-h_l pa-v_l">
+    <input class="input read_m" type="time">
+
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input read_m"</span> <span class="na">type=</span><span class="s">"time"</span><span class="nt">&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="textarea" class="ma-b_s">
+      Textarea
+      <a class="anchor" href="#textarea"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Note that you can resize the textarea only vertically.</p>
+
+    </div>
+    
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>textarea.textarea</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//forms.scss" class="link">forms.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-textarea ma-h_l- pa-h_l pa-v_l">
+    <textarea class="textarea read_m" rows="3" placeholder="To whom it may concern …"></textarea>
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"textarea read_m"</span> <span class="na">rows=</span><span class="s">"3"</span> <span class="na">placeholder=</span><span class="s">"To whom it may concern …"</span><span class="nt">&gt;&lt;/textarea&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="search" class="ma-b_s">
+      Search
+      <a class="anchor" href="#search"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Here is some love for the search input. The basic search is resetted to match other text inputs, but still features the cancel button in WebKit. You can also wrap the search in a <code class="highlighter-rouge">.search-box</code> container. Have a look at the search form over <a href="/examples/real-world#search-form">here</a>.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>input[type="search"].input</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//input_search.scss" class="link">input_search.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-search ma-h_l- pa-h_l pa-v_l">
+    <div class="read_l">
+  <h4 class="text_m ma-b_xs">Plain search <span class="text-normal">is styled like text input mostly</span></h4>
+  <input type="search" class="input" placeholder="Search">
+  <h4 class="text_m ma-b_xs ma-t_l text-clip">
+    Wrapped in a .search-box <span class="text-normal">comes with a magnifier icon</span>
+  </h4>
+  <div class="search-box">
+    <input type="search" class="input" placeholder="Search">
+  </div>
+  <h4 class="text_m ma-b_xs ma-t_s text-normal">… and with bigger text</h4>
+  <div class="search-box">
+    <input type="search" class="input text_xl" placeholder="Search">
+  </div>
+  <h4 class="text_m ma-b_xs ma-t_s text-normal">… and with some more padding</h4>
+  <div class="search-box">
+    <input type="search" class="input pa_m" placeholder="Search">
+  </div>
+  <h4 class="text_m ma-b_xs ma-t_s text-normal">… and with less padding</h4>
+  <div class="search-box">
+    <input type="search" class="input pa_xs" placeholder="Search">
+  </div>
+  <h4 class="text_m ma-b_xs ma-t_s text-normal">… and with the magnifier icon on the right side</h4>
+  <div class="search-box right">
+    <input type="search" class="input" placeholder="Search">
+  </div>
+  <h4 class="text_m ma-b_xs ma-t_s text-normal">… and with rounded corners</h4>
+  <div class="search-box">
+    <input type="search" class="input ra-pill" placeholder="Search">
+  </div>
+</div>
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"read_l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text_m ma-b_xs"</span><span class="nt">&gt;</span>Plain search <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-normal"</span><span class="nt">&gt;</span>is styled like text input mostly<span class="nt">&lt;/span&gt;&lt;/h4&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">placeholder=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text_m ma-b_xs ma-t_l text-clip"</span><span class="nt">&gt;</span>
+    Wrapped in a .search-box <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-normal"</span><span class="nt">&gt;</span>comes with a magnifier icon<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"search-box"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">placeholder=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text_m ma-b_xs ma-t_s text-normal"</span><span class="nt">&gt;</span>… and with bigger text<span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"search-box"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"input text_xl"</span> <span class="na">placeholder=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text_m ma-b_xs ma-t_s text-normal"</span><span class="nt">&gt;</span>… and with some more padding<span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"search-box"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"input pa_m"</span> <span class="na">placeholder=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text_m ma-b_xs ma-t_s text-normal"</span><span class="nt">&gt;</span>… and with less padding<span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"search-box"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"input pa_xs"</span> <span class="na">placeholder=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text_m ma-b_xs ma-t_s text-normal"</span><span class="nt">&gt;</span>… and with the magnifier icon on the right side<span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"search-box right"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">placeholder=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text_m ma-b_xs ma-t_s text-normal"</span><span class="nt">&gt;</span>… and with rounded corners<span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"search-box"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"input ra-pill"</span> <span class="na">placeholder=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="file" class="ma-b_s">
+      File
+      <a class="anchor" href="#file"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Here is some basic styling for a file upload field. Apply the two classes: <code class="highlighter-rouge">.input</code> and <code class="highlighter-rouge">.file</code> to the HTML element to achieve alignment with other form elements.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>This looks best in WebKit/Blink but degrades gracefully under other browsers.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>input[type=file].input.file</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//input-file.scss" class="link">input-file.scss</a></code>
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//forms.scss" class="link">forms.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-file ma-h_l- pa-h_l pa-v_l">
+    <div class="read_l">
+  <h4 class="ma-b_xs">
+    Only file class
+  </h4>
+  <input type="file" name="file" id="file" class="file">
+  <h4 class="ma-b_xs ma-t_m">
+    With input and file class
+  </h4>
+  <input type="file" name="file" id="file" class="file input">
+</div>
+
+
+
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"read_l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ma-b_xs"</span><span class="nt">&gt;</span>
+    Only file class
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"file"</span> <span class="na">id=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"file"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ma-b_xs ma-t_m"</span><span class="nt">&gt;</span>
+    With input and file class
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"file"</span> <span class="na">id=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"file input"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="range" class="ma-b_s">
+      Range
+      <a class="anchor" href="#range"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>A range input is a (horizontal) slider. It lets a user specify a value within a range.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>Wrap the range input in a <code class="highlighter-rouge">.range-box</code> container to better deal with size in more complex forms. Datalists for are currently not supported.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>input[type=range].range</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//input-range.scss" class="link">input-range.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-range ma-h_l- pa-h_l pa-v_l">
+    <div class="read_l">
+  <h4 class="pa-b_xs ma-b_xs">
+    Stand alone
+  </h4>
+  <input type="range" class="range">
+  <h4 class="ma-b_xs ma-t_m">
+    Wrapped in a .range-box
+  </h4>
+  <div class="range-box">
+    <input type="range" name="range" id="range-example-2" class="range" min="0" max="10" value="4" step="2">
+  </div>
+  <h4 class="ma-b_xs ma-t_m">
+    A mini form
+  </h4>
+  <form class="flex gap-no" onsubmit="return false" oninput="level.value = slevel.valueAsNumber">
+    <label class="box pa_m" for="skill">Skill level</label>
+    <div class="range-box pa_m">
+      <input name="slevel" id="skill" type="range" class="range" min="0" max="100" value="0"> 
+      <output for="skill" name="level" class="mini-info">0</output>
+    </div>
+  </form>
+</div>
+
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"read_l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"pa-b_xs ma-b_xs"</span><span class="nt">&gt;</span>
+    Stand alone
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">class=</span><span class="s">"range"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ma-b_xs ma-t_m"</span><span class="nt">&gt;</span>
+    Wrapped in a .range-box
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"range-box"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">name=</span><span class="s">"range"</span> <span class="na">id=</span><span class="s">"range-example-2"</span> <span class="na">class=</span><span class="s">"range"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"10"</span> <span class="na">value=</span><span class="s">"4"</span> <span class="na">step=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ma-b_xs ma-t_m"</span><span class="nt">&gt;</span>
+    A mini form
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"flex gap-no"</span> <span class="na">onsubmit=</span><span class="s">"return false"</span> <span class="na">oninput=</span><span class="s">"level.value = slevel.valueAsNumber"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"box pa_m"</span> <span class="na">for=</span><span class="s">"skill"</span><span class="nt">&gt;</span>Skill level<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"range-box pa_m"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"slevel"</span> <span class="na">id=</span><span class="s">"skill"</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">class=</span><span class="s">"range"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">value=</span><span class="s">"0"</span><span class="nt">&gt;</span> 
+      <span class="nt">&lt;output</span> <span class="na">for=</span><span class="s">"skill"</span> <span class="na">name=</span><span class="s">"level"</span> <span class="na">class=</span><span class="s">"mini-info"</span><span class="nt">&gt;</span>0<span class="nt">&lt;/output&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/form&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="progress" class="ma-b_s">
+      Progress
+      <a class="anchor" href="#progress"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>The progress element represents the completion progress of a task. Use this for loading bars, form completion states, order status indicators … Don’t confound it with it’s bigger brother, the <a href="#meter">meter</a>.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>The progress comes with two states. When indeterminate, it shows a spinning animation when it is waiting to receive a value. When determinate, it shows a completion bar when <code class="highlighter-rouge">value</code> and <code class="highlighter-rouge">max</code> parameters are set. This is looking a little different in MS Edge, but still OK.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>progress.progress</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//progress.scss" class="link">progress.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-progress ma-h_l- pa-h_l pa-v_l">
+    <div class="read_l">
+  <h4 class="text-clip">Standalone</h4>
+  <progress class="progress ma-t_xs"></progress>
+  <progress class="progress ma-t_xs" value="30" max="100"></progress>
+
+  <h4 class="text-clip ma-t_m">
+    Wrapped in a .progress-box with content
+  </h4>
+  <div class="progress-box ma-t_xs">
+    <div>Waiting for signal</div>
+    <progress class="progress"></progress>
+  </div>
+  <div class="progress-box ma-t_xs">
+    <div><output class="text-bold">50%</output> loaded</div>
+    <progress max="10" value="5" class="progress"></progress>
+  </div>
+  <h4 class="text-clip ma-t_m">
+    Wrapped with custom padding and font size
+  </h4>
+  <div class="progress-box ma-t_xs text_xl pa_m">
+    <div><output class="text-bold">90%</output> done</div>
+    <progress max="10" value="9" class="progress"></progress>
+  </div>
+  <h4 class="text-clip ma-t_m">
+    Wrapped custom colors, no content
+  </h4>
+  <div class="progress-box ma-t_xs">
+    <progress class="progress custom"></progress>
+  </div>
+  <div class="progress-box ma-t_xs">
+    <progress max="10" value="8" class="progress custom"></progress>
+  </div>
+</div>
+
+    
+    <div class="docs-css-edit-container bs_s">
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_m">.progress.custom {
+  --value-color:      Turquoise;
+  --background-color: Aquamarine;
+}
+</style>
+</div>
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"read_l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text-clip"</span><span class="nt">&gt;</span>Standalone<span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;progress</span> <span class="na">class=</span><span class="s">"progress ma-t_xs"</span><span class="nt">&gt;&lt;/progress&gt;</span>
+  <span class="nt">&lt;progress</span> <span class="na">class=</span><span class="s">"progress ma-t_xs"</span> <span class="na">value=</span><span class="s">"30"</span> <span class="na">max=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/progress&gt;</span>
+
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text-clip ma-t_m"</span><span class="nt">&gt;</span>
+    Wrapped in a .progress-box with content
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-box ma-t_xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>Waiting for signal<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;progress</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;&lt;/progress&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-box ma-t_xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;&lt;output</span> <span class="na">class=</span><span class="s">"text-bold"</span><span class="nt">&gt;</span>50%<span class="nt">&lt;/output&gt;</span> loaded<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;progress</span> <span class="na">max=</span><span class="s">"10"</span> <span class="na">value=</span><span class="s">"5"</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;&lt;/progress&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text-clip ma-t_m"</span><span class="nt">&gt;</span>
+    Wrapped with custom padding and font size
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-box ma-t_xs text_xl pa_m"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;&lt;output</span> <span class="na">class=</span><span class="s">"text-bold"</span><span class="nt">&gt;</span>90%<span class="nt">&lt;/output&gt;</span> done<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;progress</span> <span class="na">max=</span><span class="s">"10"</span> <span class="na">value=</span><span class="s">"9"</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;&lt;/progress&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text-clip ma-t_m"</span><span class="nt">&gt;</span>
+    Wrapped custom colors, no content
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-box ma-t_xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;progress</span> <span class="na">class=</span><span class="s">"progress custom"</span><span class="nt">&gt;&lt;/progress&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-box ma-t_xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;progress</span> <span class="na">max=</span><span class="s">"10"</span> <span class="na">value=</span><span class="s">"8"</span> <span class="na">class=</span><span class="s">"progress custom"</span><span class="nt">&gt;&lt;/progress&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="meter" class="ma-b_s">
+      Meter
+      <a class="anchor" href="#meter"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>The meter element - similar to it’s little brother <a href="#progress">progress</a> - looks like horizontal graph element. But the meter has a colored bar chart, which indicates if the value is too low, too high or just right. Use this for disk usage, the relevance of a query result …</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>It doesn’t have an indeterminate state. The HTML element has a lot of attributes: <code class="highlighter-rouge">min</code>, <code class="highlighter-rouge">max</code>, <code class="highlighter-rouge">low</code>, <code class="highlighter-rouge">high</code>, <code class="highlighter-rouge">optimum</code> and <code class="highlighter-rouge">value</code>. Wrap it in box for best alignment with other form elements within Teutonic CSS. Browser support for a styled meter element is a bit sloppy. This looks kind of OK in MS Edge.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//forms.scss" class="link">forms.scss</a></code>
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//meter.scss" class="link">meter.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-meter ma-h_l- pa-h_l pa-v_l">
+    <div class="read_l">
+  <h4 class="ma-t_m">
+    Standalone
+  </h4>
+  <meter class="meter ma-t_xs" value="5"   min="0" low="10" optimum="50" high="90" max="100"></meter>
+  <meter class="meter ma-t_xs" value="50"  min="0" low="10" optimum="50" high="90" max="100"></meter>
+  <meter class="meter ma-t_xs" value="95"  min="0" low="10" optimum="50" high="90" max="100"></meter>
+  <meter class="meter ma-t_xs" low=".25" optimum=".2" high=".75" value=".8"></meter>
+  <h4 class="ma-t_m">
+    Wrapped in a .meter-box
+  </h4>
+  <div class="meter-box ma-t_xs">
+    <meter class="meter" value="5" min="0" low="10" optimum="50" high="90" max="100"></meter>
+  </div>
+  <div class="meter-box ma-t_xs">
+    <meter class="meter" value="50" min="0" low="10" optimum="50" high="90" max="100"></meter>
+  </div>
+  <div class="meter-box ma-t_xs">
+    <meter class="meter" value="91" min="0" low="10" optimum="50" high="90" max="100"></meter>
+  </div>
+  <div class="meter-box ma-t_xs">
+    <meter class="meter" value="110" min="0" low="10" optimum="5" high="90" max="100"></meter>
+  </div>
+  <h4 class="ma-t_m">
+    Wrapped in a .meter-box with content
+  </h4>
+  <div class="meter-box ma-t_xs">
+    <div>5</div>
+    <meter class="meter" value="5" min="0" low="10" optimum="50" high="90" max="100"></meter>
+  </div>
+  <div class="meter-box ma-t_xs">
+    <div>50</div>
+    <meter class="meter" value="50" min="0" low="10" optimum="50" high="90" max="100"></meter>
+  </div>
+  <div class="meter-box ma-t_xs">
+    <div>91</div>
+    <meter class="meter" value="91" min="0" low="10" optimum="50" high="90" max="100"></meter>
+  </div>
+  <div class="meter-box ma-t_xs">
+    <div>110</div>
+    <meter class="meter" value="110" min="0" low="10" optimum="5" high="90" max="100"></meter>
+  </div>
+</div>
+
+
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"read_l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ma-t_m"</span><span class="nt">&gt;</span>
+    Standalone
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;meter</span> <span class="na">class=</span><span class="s">"meter ma-t_xs"</span> <span class="na">value=</span><span class="s">"5"</span>   <span class="na">min=</span><span class="s">"0"</span> <span class="na">low=</span><span class="s">"10"</span> <span class="na">optimum=</span><span class="s">"50"</span> <span class="na">high=</span><span class="s">"90"</span> <span class="na">max=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/meter&gt;</span>
+  <span class="nt">&lt;meter</span> <span class="na">class=</span><span class="s">"meter ma-t_xs"</span> <span class="na">value=</span><span class="s">"50"</span>  <span class="na">min=</span><span class="s">"0"</span> <span class="na">low=</span><span class="s">"10"</span> <span class="na">optimum=</span><span class="s">"50"</span> <span class="na">high=</span><span class="s">"90"</span> <span class="na">max=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/meter&gt;</span>
+  <span class="nt">&lt;meter</span> <span class="na">class=</span><span class="s">"meter ma-t_xs"</span> <span class="na">value=</span><span class="s">"95"</span>  <span class="na">min=</span><span class="s">"0"</span> <span class="na">low=</span><span class="s">"10"</span> <span class="na">optimum=</span><span class="s">"50"</span> <span class="na">high=</span><span class="s">"90"</span> <span class="na">max=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/meter&gt;</span>
+  <span class="nt">&lt;meter</span> <span class="na">class=</span><span class="s">"meter ma-t_xs"</span> <span class="na">low=</span><span class="s">".25"</span> <span class="na">optimum=</span><span class="s">".2"</span> <span class="na">high=</span><span class="s">".75"</span> <span class="na">value=</span><span class="s">".8"</span><span class="nt">&gt;&lt;/meter&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ma-t_m"</span><span class="nt">&gt;</span>
+    Wrapped in a .meter-box
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"meter-box ma-t_xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meter</span> <span class="na">class=</span><span class="s">"meter"</span> <span class="na">value=</span><span class="s">"5"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">low=</span><span class="s">"10"</span> <span class="na">optimum=</span><span class="s">"50"</span> <span class="na">high=</span><span class="s">"90"</span> <span class="na">max=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/meter&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"meter-box ma-t_xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meter</span> <span class="na">class=</span><span class="s">"meter"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">low=</span><span class="s">"10"</span> <span class="na">optimum=</span><span class="s">"50"</span> <span class="na">high=</span><span class="s">"90"</span> <span class="na">max=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/meter&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"meter-box ma-t_xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meter</span> <span class="na">class=</span><span class="s">"meter"</span> <span class="na">value=</span><span class="s">"91"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">low=</span><span class="s">"10"</span> <span class="na">optimum=</span><span class="s">"50"</span> <span class="na">high=</span><span class="s">"90"</span> <span class="na">max=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/meter&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"meter-box ma-t_xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meter</span> <span class="na">class=</span><span class="s">"meter"</span> <span class="na">value=</span><span class="s">"110"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">low=</span><span class="s">"10"</span> <span class="na">optimum=</span><span class="s">"5"</span> <span class="na">high=</span><span class="s">"90"</span> <span class="na">max=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/meter&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ma-t_m"</span><span class="nt">&gt;</span>
+    Wrapped in a .meter-box with content
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"meter-box ma-t_xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>5<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;meter</span> <span class="na">class=</span><span class="s">"meter"</span> <span class="na">value=</span><span class="s">"5"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">low=</span><span class="s">"10"</span> <span class="na">optimum=</span><span class="s">"50"</span> <span class="na">high=</span><span class="s">"90"</span> <span class="na">max=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/meter&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"meter-box ma-t_xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>50<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;meter</span> <span class="na">class=</span><span class="s">"meter"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">low=</span><span class="s">"10"</span> <span class="na">optimum=</span><span class="s">"50"</span> <span class="na">high=</span><span class="s">"90"</span> <span class="na">max=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/meter&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"meter-box ma-t_xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>91<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;meter</span> <span class="na">class=</span><span class="s">"meter"</span> <span class="na">value=</span><span class="s">"91"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">low=</span><span class="s">"10"</span> <span class="na">optimum=</span><span class="s">"50"</span> <span class="na">high=</span><span class="s">"90"</span> <span class="na">max=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/meter&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"meter-box ma-t_xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>110<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;meter</span> <span class="na">class=</span><span class="s">"meter"</span> <span class="na">value=</span><span class="s">"110"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">low=</span><span class="s">"10"</span> <span class="na">optimum=</span><span class="s">"5"</span> <span class="na">high=</span><span class="s">"90"</span> <span class="na">max=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/meter&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="color" class="ma-b_s">
+      Color
+      <a class="anchor" href="#color"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>Here is a color picker. Wrap in a box so that it aligns with other form elements.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>Note that the label does not interfere with the underlying color picker. This is because the text is a label that points to the input below, additionally the label has the <code class="highlighter-rouge">text-point-no</code> class which omits the pointer events. The pseudo-placeholder text effect is done with mix-blend-mode in an inline style. This looks OKish in MS Edge.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>input[type=color].color</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//input-color.scss" class="link">input-color.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-color ma-h_l- pa-h_l pa-v_l">
+    <div class="read_l">
+  <h4 class="ma-b_xs">
+    Stand alone
+  </h4>
+  <input type="color" class="color" value="#ff9999">
+  <h4 class="ma-b_xs ma-t_m">
+    Wrapped in a .color-box
+  </h4>
+  <div class="color-box">
+    <input id="docs-color-picker" type="color" class="color" value="#ffdddd">
+  </div>
+  <h4 class="ma-b_xs ma-t_m">
+    Wrapped in a .color-box with label
+  </h4>
+  <div class="color-box">
+    <label for="docs-color-picker" class="text-point-no docs-color-label">Click to choose a color</label>
+    <input id="docs-color-picker" type="color" class="color" value="#ffdddd">
+  </div>
+</div>
+
+<style>
+  .docs-color-label { 
+    color: #333;
+    mix-blend-mode: difference;
+  }
+</style>
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"read_l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ma-b_xs"</span><span class="nt">&gt;</span>
+    Stand alone
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"color"</span> <span class="na">class=</span><span class="s">"color"</span> <span class="na">value=</span><span class="s">"#ff9999"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ma-b_xs ma-t_m"</span><span class="nt">&gt;</span>
+    Wrapped in a .color-box
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"color-box"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"docs-color-picker"</span> <span class="na">type=</span><span class="s">"color"</span> <span class="na">class=</span><span class="s">"color"</span> <span class="na">value=</span><span class="s">"#ffdddd"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"ma-b_xs ma-t_m"</span><span class="nt">&gt;</span>
+    Wrapped in a .color-box with label
+  <span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"color-box"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"docs-color-picker"</span> <span class="na">class=</span><span class="s">"text-point-no docs-color-label"</span><span class="nt">&gt;</span>Click to choose a color<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"docs-color-picker"</span> <span class="na">type=</span><span class="s">"color"</span> <span class="na">class=</span><span class="s">"color"</span> <span class="na">value=</span><span class="s">"#ffdddd"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;style&gt;</span>
+  <span class="nc">.docs-color-label</span> <span class="p">{</span> 
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#333</span><span class="p">;</span>
+    <span class="py">mix-blend-mode</span><span class="p">:</span> <span class="n">difference</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/style&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="form-box" class="ma-b_s">
+      Form box
+      <a class="anchor" href="#form-box"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>This wrapper element combines a “label” with some form element and possibly other helpers. Most commonly used with <code class="highlighter-rouge">.input</code>, <code class="highlighter-rouge">.textarea</code> or <code class="highlighter-rouge">.select</code>. By default, the padding is small. Add the <code class="highlighter-rouge">.pa_m</code> class for a some padding.</p>
+
+    </div>
+    
+    
+    <div class="read_l ma-t_s">
+      <p>You can also combine it with a <code class="highlighter-rouge">.search-box</code> — pushing the magnifier glass will to the right — but it will not work in combonation with <code class="highlighter-rouge">.range-box</code>, <code class="highlighter-rouge">.meter-box</code> or <code class="highlighter-rouge">.progress-box</code>.</p>
+
+    </div>
+    
+
+    <div class="ma-v_m">
+      
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>.form-box</code>
+      </div>
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//form-box.scss" class="link">form-box.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-form-box ma-h_l- pa-h_l pa-v_l">
+    <div class="read_l">
+  <div class="gap_xs">
+    <h4>Standard</h4>
+    <div class="form-box">
+      <label class="mini-label required">Text input</label>
+      <input type="text" class="input">
+      <div class="mini-info">Give sense here</div>
+    </div>
+    <div class="form-box">
+      <label class="mini-label">Select</label>
+      <select class="select">
+        <option value="">Please select</option>
+        <optgroup label="Favorite CSS preprocessor">
+          <option>SASS</option>
+          <option>LESS</option>
+          <option>Stylus</option>
+          <option>Post CSS</option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="form-box search-box">
+      <label class="mini-label">Search</label>
+      <input type="search" class="input">
+    </div>
+    <div class="form-box">
+      <label class="mini-label">Textarea</label>
+      <textarea class="textarea" name="form-box-message" id="form-box-message" rows="3"></textarea>
+    </div>
+  </div>
+  <div class="gap_xs ma-t_m">
+    <h4>With extra padding</h4>
+    <div class="form-box pa_m">
+      <label class="mini-label required">Text input</label>
+      <input type="text" class="input pa-l_s">
+      <div class="mini-info">Please provide some sense here</div>
+    </div>
+    <div class="form-box pa_m">
+      <label class="mini-label">Select</label>
+      <select class="select" name="" id="">
+        <option value="">Please select</option>
+        <optgroup label="Favorite CSS preprocessor">
+          <option>SASS</option>
+          <option>LESS</option>
+          <option>Stylus</option>
+          <option>Post CSS</option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="form-box search-box pa_m">
+      <label class="mini-label">Search</label>
+      <input type="search" class="input">
+    </div>
+    <div class="form-box pa_m">
+      <label class="mini-label">Textarea</label>
+      <textarea class="textarea" name="form-box-message" id="form-box-message" rows="3"></textarea>
+    </div>
+  </div>
+</div>
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"read_l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gap_xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>Standard<span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-box"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mini-label required"</span><span class="nt">&gt;</span>Text input<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"input"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mini-info"</span><span class="nt">&gt;</span>Give sense here<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-box"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mini-label"</span><span class="nt">&gt;</span>Select<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"select"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>Please select<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"Favorite CSS preprocessor"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;option&gt;</span>SASS<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option&gt;</span>LESS<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option&gt;</span>Stylus<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option&gt;</span>Post CSS<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/optgroup&gt;</span>
+      <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-box search-box"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mini-label"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"input"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-box"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mini-label"</span><span class="nt">&gt;</span>Textarea<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"textarea"</span> <span class="na">name=</span><span class="s">"form-box-message"</span> <span class="na">id=</span><span class="s">"form-box-message"</span> <span class="na">rows=</span><span class="s">"3"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gap_xs ma-t_m"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>With extra padding<span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-box pa_m"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mini-label required"</span><span class="nt">&gt;</span>Text input<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"input pa-l_s"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mini-info"</span><span class="nt">&gt;</span>Please provide some sense here<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-box pa_m"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mini-label"</span><span class="nt">&gt;</span>Select<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"select"</span> <span class="na">name=</span><span class="s">""</span> <span class="na">id=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>Please select<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;optgroup</span> <span class="na">label=</span><span class="s">"Favorite CSS preprocessor"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;option&gt;</span>SASS<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option&gt;</span>LESS<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option&gt;</span>Stylus<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option&gt;</span>Post CSS<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/optgroup&gt;</span>
+      <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-box search-box pa_m"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mini-label"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"input"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-box pa_m"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"mini-label"</span><span class="nt">&gt;</span>Textarea<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"textarea"</span> <span class="na">name=</span><span class="s">"form-box-message"</span> <span class="na">id=</span><span class="s">"form-box-message"</span> <span class="na">rows=</span><span class="s">"3"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+        
+
+
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="disabled" class="ma-b_s">
+      Disabled
+      <a class="anchor" href="#disabled"></a>
+    </h2>
+
+    
+    <div class="text_l read_l">
+      <p>When things are “OFF”. Some elemnts have a <code class="highlighter-rouge">disabled</code> attribute, on others you can add a <code class="highlighter-rouge">.disabled</code> class.</p>
+
+    </div>
+    
+    
+
+    <div class="ma-v_m">
+      
+
+      
+      
+
+      
+      <div>
+        <b>SCSS</b>:
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//disabled.scss" class="link">disabled.scss</a></code>
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//buttons.scss" class="link">buttons.scss</a></code>
+        
+          <code class="ma-r_xs"><a href="https://github.com/fortrabbit/teutonic-css/css/includes//forms.scss" class="link">forms.scss</a></code>
+        
+      </div>
+      
+
+    </div>
+
+  </header>
+
+
+  <div class="docs-example docs-disabled ma-h_l- pa-h_l pa-v_l">
+    <div class="flex gap-no read_l">
+  <div class="box disabled">div.box.disabled</div>
+  <a href="#" class="box disabled">a.box.disabled</a>
+</div>
+<div class="gap-no read_l ma-t_s">
+  <textarea class="textarea" disabled>textarea.textarea:disabled</textarea>
+  <input class="input" type="text" disabled value="disabled input">
+  <div class="range-box disabled">
+    <input type="range" class="range" disabled>
+  </div>
+  <div class="color-box disabled">
+    <div>.box.disabled + .color:disabled</div>
+    <input type="color" class="color" disabled>
+  </div>
+  <input class="input" type="text" disabled value="input.input:disabled">
+  <select class="select" disabled>
+    <option value="disabled">select.select:disabled</option>
+  </select>
+  <label class="box disabled">
+    <input class="radio m-r-s" type="radio" disabled>
+    radio:disabled + label.box.disabled 
+  </label>
+  <label class="box disabled">
+    <input class="checkbox m-r-s" type="checkbox" disabled>
+    checkbox:disabled + label.box.disabled
+  </label>
+  <label class="form-box disabled">
+    <div class="mini-label">.form-box.disabled</div>
+    <input class="input" type="email" disabled>
+    <div class="mini-info shown">mini-info</div>
+  </label>
+</div>
+<div class="grid gap_xs read_l ma-t_s">
+  <a href="#" class="span-6 button disabled">a.button.disabled</a>
+  <button class="span-6 button disabled">button.button:disabled</button>
+  <a href="#" class="span-6 button prime disabled">a.button.prime.disabled</a>
+  <button class="span-6 button prime disabled">button.button.prime:disabled</button>
+</div>
+
+    
+  </div>
+
+
+<div class="docs-code-block ma-h_l-">
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex gap-no read_l"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box disabled"</span><span class="nt">&gt;</span>div.box.disabled<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"box disabled"</span><span class="nt">&gt;</span>a.box.disabled<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"gap-no read_l ma-t_s"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"textarea"</span> <span class="na">disabled</span><span class="nt">&gt;</span>textarea.textarea:disabled<span class="nt">&lt;/textarea&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">disabled</span> <span class="na">value=</span><span class="s">"disabled input"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"range-box disabled"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">class=</span><span class="s">"range"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"color-box disabled"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>.box.disabled + .color:disabled<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"color"</span> <span class="na">class=</span><span class="s">"color"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">disabled</span> <span class="na">value=</span><span class="s">"input.input:disabled"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"select"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>select.select:disabled<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"box disabled"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"radio m-r-s"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    radio:disabled + label.box.disabled 
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"box disabled"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"checkbox m-r-s"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    checkbox:disabled + label.box.disabled
+  <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-box disabled"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mini-label"</span><span class="nt">&gt;</span>.form-box.disabled<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mini-info shown"</span><span class="nt">&gt;</span>mini-info<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid gap_xs read_l ma-t_s"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"span-6 button disabled"</span><span class="nt">&gt;</span>a.button.disabled<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"span-6 button disabled"</span><span class="nt">&gt;</span>button.button:disabled<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"span-6 button prime disabled"</span><span class="nt">&gt;</span>a.button.prime.disabled<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"span-6 button prime disabled"</span><span class="nt">&gt;</span>button.button.prime:disabled<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+</div>
+
+
+</article>
+
+      
+    </main>
+
+    <footer class="pa-h_l pa-v_m text_s span-auto">
+  <nav class="flex">
+    <div>
+        <b>Teutonic CSS</b> v0.8.6<br>
+        by <a href="https://twitter.com/frank_laemmer" class="link">Frank Lämmer</a> at <a class="fortrabbit link" href="https://www.fortrabbit.com">fortrabbit</a><br>
+        licensed under <a class="link" href="">MIT</a>
+    </div>
+    <a class="ma-l-auto span-auto link flex-end" href="https://github.com/fortrabbit/teutonic-css/">GitHub ›</a>
+  </nav>
+</footer>
+    
+  </body>
+</html>
+<!-- You have reached the end of the internet  -->

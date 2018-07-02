@@ -1,0 +1,50 @@
+---
+
+title:    Search
+category: forms
+order:    10
+syntax:   input[type="search"].input
+hide:     no
+
+description: >
+  Here is some love for the search input. The basic search is resetted to match other text inputs, but still features the cancel button in WebKit. You can also wrap the search in a `.search-box` container. Have a look at the search form over [here](/examples/real-world#search-form).
+
+details: >
+  
+
+scss-files:
+  - 'input_search'
+
+---
+
+
+<div class="read_l">
+  <h4 class="text_m ma-b_xs">Plain search <span class="text-normal">is styled like text input mostly</span></h4>
+  <input type="search" class="input" placeholder="Search">
+  <h4 class="text_m ma-b_xs ma-t_l text-clip">
+    Wrapped in a .search-box <span class="text-normal">comes with a magnifier icon</span>
+  </h4>
+  <div class="search-box">
+    <input type="search" class="input" placeholder="Search">
+  </div>
+  <h4 class="text_m ma-b_xs ma-t_s text-normal">… and with bigger text</h4>
+  <div class="search-box">
+    <input type="search" class="input text_xl" placeholder="Search">
+  </div>
+  <h4 class="text_m ma-b_xs ma-t_s text-normal">… and with some more padding</h4>
+  <div class="search-box">
+    <input type="search" class="input pa_m" placeholder="Search">
+  </div>
+  <h4 class="text_m ma-b_xs ma-t_s text-normal">… and with less padding</h4>
+  <div class="search-box">
+    <input type="search" class="input pa_xs" placeholder="Search">
+  </div>
+  <h4 class="text_m ma-b_xs ma-t_s text-normal">… and with the magnifier icon on the right side</h4>
+  <div class="search-box right">
+    <input type="search" class="input" placeholder="Search">
+  </div>
+  <h4 class="text_m ma-b_xs ma-t_s text-normal">… and with rounded corners</h4>
+  <div class="search-box">
+    <input type="search" class="input ra-pill" placeholder="Search">
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="docs-css-edit-container bs_s">
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_m">{%- for item in example.css-vars -%}
+{{ item.selector }} {% raw %}{{% endraw %}
+  {%- for var in item.vars %}
+  {{ var }};
+  {%- endfor %}
+{% raw %}}{% endraw %}
+{% endfor -%}
+</style>
+</div>

@@ -1,0 +1,80 @@
+<div class="flex">
+  <h3>
+    Choose a theme
+  </h3>
+</div>
+<menu id="skin-switcher" class="flex gap-no wrap-no{% if page.themeSwitcherClass %} {{ page.themeSwitcherClass }}{% endif %}">
+  <button class="button pa_s text-clip active auto" value="none">
+    none
+  </button>
+  {% for theme in site.data.themes %}
+  <button class="button text-clip span-auto" value="{{ theme.cssFile }}">
+    {{ theme.name }}
+  </button>
+  {% endfor %}
+</menu>
+
+<!-- TODO: JS make selection persitent in localstorage -->
+
+<script>
+  /* jshint esversion: 6 */
+  // don't copy this! demo only
+
+  loadStyle = function(url) {
+    return new Promise((resolve, reject) => {
+      let link    = document.createElement('link');
+      link.type   = 'text/css';
+      link.rel    = 'stylesheet';
+      link.id     = 'theme';
+      link.onload = () => { resolve(); };
+      link.href   = url;
+
+      // reconsider placement
+      let headScript = document.querySelector('script');
+      headScript.parentNode.insertBefore(link, headScript);
+    });
+  };
+
+  var buttons = document.getElementById('skin-switcher');
+  buttons.addEventListener('click', function(event) {
+    changeStyle(event.target);
+    styleTransition();
+  });
+
+  function changeStyle(element) {
+    theme = element.value;
+    if (theme === 'none') destroyStyle();
+    else {
+      destroyStyle();
+      loadStyle(`/css/${theme}`);
+    }
+    removeActiveClass();
+    element.classList.add('active');
+  }
+
+  function removeActiveClass() {
+    buttons.querySelectorAll('button').forEach(function(button){
+      button.classList.remove('active');
+    });
+  }
+
+  function destroyStyle() { 
+    let styleLinkElem = document.getElementById('theme');
+    if (styleLinkElem) { styleLinkElem.remove(); } 
+  }
+
+  function styleTransition() {
+    let bodyElem = document.querySelector('body');
+    let transitionClass = 'docs-in-transition';
+    bodyElem.classList.add(transitionClass);
+    setTimeout(function(){
+       bodyElem.classList.remove(transitionClass);
+   }, 700);
+  }
+
+</script>
+
+<style>
+  .docs-in-transition { transition: all .5s !important;  }
+  .docs-in-transition * { transition: all .5s !important;  }
+</style>

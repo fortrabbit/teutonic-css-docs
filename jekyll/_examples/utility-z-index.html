@@ -1,0 +1,41 @@
+---
+
+title:     Z-index
+category:  utilities
+order:     100
+hide:      no
+syntax:    z-{height}
+
+description: >
+  Add `zi-1` - `zi-4` or `zi-99`, `zi-999`, `zi-max` to change the z-index of an object. Mind that `z-index` will only work on relative or absolute positioned elements.
+
+scss-files:
+  - 'z-index'
+
+---
+
+<div class="docs-zindex bg-1 text_l">
+  <div class="box pa_m bg-a docs-z-1 zi-1">Snoop Dogg</div>
+  <div class="box pa_m bg-b docs-z-2 zi-2">50 Cent</div>
+  <div class="box pa_m bg-c docs-z-3 zi-3">Drake</div>
+  <div class="box pa_m bg-d docs-z-4 zi-4">Eminem</div>
+  <div class="box pa_m bg-f docs-z-99 zi-99">JAY-Z</div>
+  <div class="box pa_m bg-g docs-z-999 zi-999">Kayne West</div>
+  <div class="box pa_m bg-h docs-z-max zi-max">Tupac Shakur</div>
+</div>
+
+<style>
+  .docs-zindex {
+    position: relative;
+    width: 100%;
+    min-height: 20rem;
+  }
+  .docs-zindex [class*="docs-z-"] { position: absolute; }
+  .docs-z-1   { left: -2rem;  top: -1rem; }
+  .docs-z-2   { left: -1rem;  top: 3rem;  }
+  .docs-z-3   { left: 12rem;  top: 12rem; }
+  .docs-z-4   { left: 12rem;  top: 6rem;  }
+  .docs-z-99  { left: 6rem;   top: 13rem; }
+  .docs-z-999 { left: 4rem;   top: 4rem;  }
+  .docs-z-max { left: 4rem;   top: 9rem;  }
+</style>

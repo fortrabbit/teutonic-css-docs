@@ -1,0 +1,27 @@
+---
+title:    Anchors
+category: typography
+order:    10
+
+description: >
+  Helper class for text heavy pages to easily jump to deeplinks, aka hashlinks. A headline with an ID can have a visual anchor which adds a "¶" character. Linked targets are highlighted. It works for headlines and any other block elements. Just like on the pages here you can create a Table Of Contents navigation.
+
+scss-files:
+  - 'anchor'
+
+---
+
+<div class="read_m">
+  <div class="ma-b_s text_s">
+    <a href="#anchor-headline" class="button text-clip pa_xs">&darr; Link to anchor headline</a>
+    <a href="#anchor-block" class="button text-clip pa_xs">&darr; Link to anchor block</a>
+  </div>
+
+  <h3 id="anchor-headline">
+    An anchored headline
+    <a href="#anchor-headline" class="anchor"></a>
+  </h3>
+  <p id="anchor-block" class="ma-t_s">
+    When hovering the headline above, you'll see a reverse <a href="http://www.shadycharacters.co.uk/series/the-pilcrow/">Pilcrow</a> character that also links itself, so you can click and then share a deeplink.
+  </p>
+</div>

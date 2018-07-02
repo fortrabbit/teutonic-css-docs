@@ -1,0 +1,12 @@
+{%- for js in site.custom_js %}
+<script src="{{js}}"></script>
+{% endfor -%}
+
+{%- if site.ga_code %}
+<script>
+var _gaq=[['_setAccount','{{site.ga_code}}'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+{% endif -%}

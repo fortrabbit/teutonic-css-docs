@@ -1,0 +1,35 @@
+---
+
+title:     Data list
+category:  real-world
+order:     20
+
+description: >
+
+details: >
+  For the best visual result, adjust the number of columns based on the number of content items.
+
+scss-files:
+  - 'columns'
+
+data: 
+  chancellors:
+    1949: Konrad Adenauer
+    1963: Ludwig Erhard
+    1966: Kurt Georg Kiesinger
+    1969: Willy Brandt
+    1974: Helmut Schmidt
+    1982: Helmut Kohl
+    1998: Gerhard Schröder
+    2005: Angela Merkel
+
+---
+
+<h3 class="pa-b_xs text_xxl">
+  Chancellors of West Germany
+</h3>
+<div class="columns gap-bo_xs cols-3 cols-2-t collapse-p text-serif ma-t_s bg-0 pa_m">
+  {%- for chancellor in page.data.chancellors %}
+  <div class="pa_s text-clip {% if chancellor[0] == 2005 %} active{% endif %}"><b>{{ chancellor[0] }}</b> {{ chancellor[1] }}</div>
+  {%- endfor %}
+</div>

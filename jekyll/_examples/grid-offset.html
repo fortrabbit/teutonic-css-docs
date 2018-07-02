@@ -1,0 +1,33 @@
+---
+
+title:     Offset grid
+category:  css-grid
+order:     40
+
+description: >
+  As an alternative to the floating spans, you can also define the start and end point of grid items. Mind that this grid has 11 gaps (gutters in between), 12 columns (content areas) and 13 tracks (points to start and end columns).
+
+scss-files:
+  - 'grid'
+  - 'grid-spans'
+
+boxes:
+  - "start-1 end-2"
+  - "start-2 end-6"
+  - "start-6 end-12"
+  - "start-1 end-3"
+  - "start-5 end-8"
+  - "start-1 end-4"
+  - "start-6 end-10"
+  - "start-4 end-8"
+  - "start-8 end-13"
+
+---
+
+{% assign letters = site.data.alphabet %}
+
+<div class="grid gap_s">
+  {%- for box in page.boxes %}
+  <div class="box text-clip text-mono bg-{{ letters[forloop.index] }} {{ box }}">{{ box }}</div>
+  {%- endfor %}
+</div>

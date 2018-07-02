@@ -1,0 +1,34 @@
+---
+
+title:    Borders
+category: columns
+hide:     no
+order:    7
+syntax:   .gap-bo_{size}
+
+description: >
+  Set a vertical border between the columns.
+
+scss-files:
+  - columns
+
+data:
+  gap-border-sizes:
+    "Pixel"       : px
+    "Extra small" : xs
+    "Small"       : s
+
+---
+
+
+{%- capture markdown_content %}{% include examples/blindtext.md %}{% endcapture %}
+
+{%- for gap-border-size in page.data.gap-border-sizes -%}
+<h4 class="flex wrap-no ma-b_xs ma-b_m{% unless forloop.first %} ma-t_l{% endunless %}">
+  <div>{{ gap-border-size[0] }}</div>
+  <div class="span-auto text-thin text-mono">.gap-bo_{{ gap-border-size[1] }}</div>
+</h4>
+<article class="columns text-serif cols-4 cols-2-t collapse-p gap-h_l gap-bo_{{ gap-border-size[1] }}">
+  {{ markdown_content }}
+</article>
+{%- endfor %}

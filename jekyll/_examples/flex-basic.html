@@ -1,0 +1,23 @@
+---
+
+title:     Basic grid
+category:  flexbox
+order:     1
+syntax:    .flex.gap_s
+
+description: >
+  This is the bare naked Flexbox grid. There is no fixed size of columns here, instead the number of columns is defined by the number and the size of the childs.
+
+details: >
+  This looks similar to the [basic CSS grid](/examples/css-grid#basic-grid) but is in fact different. The childs take all space available. See how the last container childs wrap on a next row when your browser window get's smaller. Also note that the direct childs of the Flebox containers with gap need to be encapsulated.
+
+scss-files:
+  - 'flex'
+
+---
+
+<div class="flex gap_s">
+  {%- for num in (1..20) %}
+  <div><div class="box text-clip text-mono">&nbsp;</div></div>
+  {%- endfor %}
+</div>

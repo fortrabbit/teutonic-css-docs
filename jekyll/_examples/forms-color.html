@@ -1,0 +1,43 @@
+---
+title:    Color
+category: forms
+order:    15
+syntax:   input[type=color].color
+
+description: >
+  Here is a color picker. Wrap in a box so that it aligns with other form elements.
+
+details: >
+  Note that the label does not interfere with the underlying color picker. This is because the text is a label that points to the input below, additionally the label has the `text-point-no` class which omits the pointer events. The pseudo-placeholder text effect is done with mix-blend-mode in an inline style. This looks OKish in MS Edge.
+
+scss-files:
+  - 'input-color'
+
+---
+
+<div class="read_l">
+  <h4 class="ma-b_xs">
+    Stand alone
+  </h4>
+  <input type="color" class="color" value="#ff9999">
+  <h4 class="ma-b_xs ma-t_m">
+    Wrapped in a .color-box
+  </h4>
+  <div class="color-box">
+    <input id="docs-color-picker" type="color" class="color" value="#ffdddd">
+  </div>
+  <h4 class="ma-b_xs ma-t_m">
+    Wrapped in a .color-box with label
+  </h4>
+  <div class="color-box">
+    <label for="docs-color-picker" class="text-point-no docs-color-label">Click to choose a color</label>
+    <input id="docs-color-picker" type="color" class="color" value="#ffdddd">
+  </div>
+</div>
+
+<style>
+  .docs-color-label { 
+    color: #333;
+    mix-blend-mode: difference;
+  }
+</style>

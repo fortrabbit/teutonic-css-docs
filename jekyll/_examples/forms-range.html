@@ -1,0 +1,41 @@
+---
+title:      Range
+category:   forms
+order:      12
+syntax:     input[type=range].range
+
+
+description: >
+   A range input is a (horizontal) slider. It lets a user specify a value within a range.
+
+details: >
+  Wrap the range input in a `.range-box` container to better deal with size in more complex forms. Datalists for are currently not supported.
+
+scss-files:
+  - 'input-range'
+
+---
+
+
+<div class="read_l">
+  <h4 class="pa-b_xs ma-b_xs">
+    Stand alone
+  </h4>
+  <input type="range" class="range">
+  <h4 class="ma-b_xs ma-t_m">
+    Wrapped in a .range-box
+  </h4>
+  <div class="range-box">
+    <input type="range" name="range" id="range-example-2" class="range" min="0" max="10" value="4" step="2">
+  </div>
+  <h4 class="ma-b_xs ma-t_m">
+    A mini form
+  </h4>
+  <form class="flex gap-no" onsubmit="return false" oninput="level.value = slevel.valueAsNumber">
+    <label class="box pa_m" for="skill">Skill level</label>
+    <div class="range-box pa_m">
+      <input name="slevel" id="skill" type="range" class="range" min="0" max="100" value="0"> 
+      <output for="skill" name="level" class="mini-info">0</output>
+    </div>
+  </form>
+</div>

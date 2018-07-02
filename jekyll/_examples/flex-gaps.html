@@ -1,0 +1,49 @@
+---
+
+title:     Gaps
+category:  flexbox
+order:     10
+hide:      no
+
+description: >
+  Use gutter classes from `.gap_xs` to `.gap_xl` to control the space between the objects.
+
+details: >
+  There is no `flex-gap` property (yet?), so the gutters are based on a negative margin on the grid container and paddings for it's direct child elements. Direct childs need to be nested one level. The benefit: In contrast to [CSS Grid gaps](/examples/css-grid#grid-gaps), even large gaps are no problem. Downsides: There is no gap-default here, so you'll need to set one. Margin-collapsing might appear in certain situations.
+
+
+scss-files:
+  - 'flex'
+  - 'box'
+
+data: 
+  gap-sizes:
+    "extra small" : xs
+    "small"       : s
+    "medium"      : m
+    "large"       : l
+  box-widths:
+    - span-fifth
+    - span-fifth
+    - span-fifth
+    - span-fifth
+    - span-fifth
+    - span-third
+    - span-third
+    - span-third
+
+---
+
+{%- assign letters = site.data.alphabet -%}
+
+{%- for gap-size in page.data.gap-sizes -%}
+<h4 class="{% unless forloop.first %}ma-t_l {% endunless %}flex wrap-no">
+  <span>{{ gap-size[0] | capitalize }} gap</span>
+  <span class="span-auto text-thin text-mono">.flex.gap_{{ gap-size[1] }}</span>
+</h4>
+<div class="flex ma-t_s gap_{{ gap-size[1] }}">
+  {%- for box-width in page.data.box-widths %}
+  <div class="{{ box-width }}"><div class="box text-clip text-mono bg-{{ letters[forloop.index] }}">&nbsp;</div></div>
+  {%- endfor %}
+</div>
+{% endfor %}

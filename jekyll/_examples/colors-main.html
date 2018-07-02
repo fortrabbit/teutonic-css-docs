@@ -1,0 +1,37 @@
+---
+
+title:     Main colors
+category:  colors
+hideCode:  yes
+syntax:    .bg-{state}-{level}
+order:     1
+
+description: >
+  Here are the main interface colors. There are only five sets, with five colors each. And there is a background class to use them.
+
+details: >
+  See how to [theme the colors over here](/examples/theming#coloring).
+
+scss-files:
+  - 'color-map'
+  - 'color-vars'
+  - 'ui-bg-colors'
+
+---
+
+{%- assign colors = site.data.colors  %}
+
+<div class="grid-auto collapse-p" style="--grid-auto-min: 11rem;">
+  {%- for group in colors %}
+  <div>
+    <h4>{{ group.title }}</h4>
+    <div class="gap-no ma-t_xs">
+      {%- for color in group.colors %}
+      <div class="box height_l text-clip bg-{{ group.title | downcase }}-{{ forloop.index }}">
+        <div class="mini-info">.bg-{{ group.title | downcase }}-{{ forloop.index }}</div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+  {%- endfor %}
+</div>

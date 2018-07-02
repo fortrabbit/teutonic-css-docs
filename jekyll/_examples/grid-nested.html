@@ -1,0 +1,38 @@
+---
+title:    Nesting
+category: css-grid
+order:    10
+syntax:   ".grid .grid"
+
+description: >
+  You can put a grid into a grid into a grid into a grid. And you can do so with very little markup, as the grid childs can be grid containers themselves.
+
+
+scss-files:
+  - 'grid'
+  - 'box'
+
+---
+
+<div class="grid gap_s">
+  <div class="span-6 box bg-a grid gap_s">
+    <div class="span-6 box bg-d grid gap_xs">
+      <div class="box span-6 bg-l"></div>
+      <div class="box span-6 bg-l"></div>
+    </div>
+    <div class="span-6 box bg-d grid gap_xs">
+      <div class="box span-6 bg-l"></div>
+      <div class="box span-6 bg-l"></div>
+    </div>
+  </div>
+  <div class="span-6 box bg-a grid gap_s">
+    <div class="span-6 box bg-d grid gap_xs">
+      <div class="box span-6 bg-l"></div>
+      <div class="box span-6 bg-l"></div>
+    </div>
+    <div class="span-6 box bg-d grid gap_xs">
+      <div class="box span-6 bg-l"></div>
+      <div class="box span-6 bg-l"></div>
+    </div>
+  </div>
+</div>

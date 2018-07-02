@@ -1,0 +1,30 @@
+---
+
+title:     Breakpoints
+category:  columns
+order:     5
+syntax:    .cols-{number}-{breakpoint}
+
+description: >
+  Resize your browser window to see different number of columns on the different viewport breakoints desktop, tablet and phone.
+
+details: >
+  The breakpoint classes are applied on the parental column container, not on the childs like with [Flexbox breakpoints](/examples/flexbox#breakpoints) or [CSS grid](examples/css-grid#breakpoints). That's because columns have a uniform table like look.
+
+scss-files:
+  - 'columns'
+
+---
+
+
+<div class="columns gap-no cols-9 cols-6-t cols-3-p text-mono">
+  {%- for num in (1..42) %}
+  <div class="box text-clip">{{ forloop.index }}</div>
+  {%- endfor %}
+</div>
+<p>
+  &uarr;<br>
+  9 columns on desktop<br>
+  6 columns on tablet<br>
+  3 columns on phone
+</p>

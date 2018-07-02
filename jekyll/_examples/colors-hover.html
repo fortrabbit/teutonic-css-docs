@@ -1,0 +1,32 @@
+---
+
+title:     Hoverable
+category:  colors
+hideCode:  yes
+syntax:    .bg-{state}-{level}-h
+order:     2
+
+description: >
+  Like above, but this time the color boxes will become darker when the mouse pointer is `:hover` or the element is in `:focus`.
+
+scss-files:
+  - 'ui-bg-colors-h'
+
+---
+
+
+{%- assign colors = site.data.colors  %}
+
+<div class="grid-auto min_m collapse-p">
+  {%- for group in colors %}
+  <div>
+    <div class="gap-no ma-t_xs text-mono">
+      {%- for color in group.colors %}
+      <div class="box height_l text-clip text-mono bg-{{ group.title | downcase }}-{{ forloop.index }}-h">
+        <div class="mini-info">.bg-{{ group.title | downcase }}-{{ forloop.index }}-h</div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+  {%- endfor %}
+</div>

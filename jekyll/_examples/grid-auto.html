@@ -1,0 +1,112 @@
+---
+
+title:    Automatic grid
+category: css-grid
+order:    6
+syntax:   .grid-auto(.min_{size})
+
+description: >
+  This is the **hip grid**! It uses `min-max` for a fancy flexible layout and is defined bottom-up. Instead of a fixed number of columns, the content defines the grid look, by the minium and the maximum size of the childs and the number childs. It's almost like a container query. Make your browser window smaller to see how it will add lines and wrap across them fluidly without breakpoints or media-queries.
+
+details: >
+  The optional different min-size classes, `.min_m` — `.min_xl` are presets for minimum child size. When no class is given, the default min-width is `8rem`. The default maximun width of each container is `1fr`: When only one container is given, it will span across the whole row. There are no presets for the max size, but you can run your own by defining the local CSS vars. You can further customize the grid with the [spans](#grid-spans), breakpoints and gaps.
+
+
+css-vars:
+  - selector: .grid-auto.custom
+    vars:
+      - '--grid-auto-min: 9rem'
+
+scss-files:
+  - 'grid'
+
+data: 
+  min-sizes:
+    - 'No'          : ''
+    - 'Medium'      : 'm'
+    - 'Large'       : 'l'
+    - 'Extra large' : 'xl'
+  custom-span-classes:
+    - span-2
+    - span-1
+    - span-2
+    - span-1
+    - span-2
+    - span-1
+    - span-1
+    - span-1
+    - span-3
+    - span-1
+    - span-1
+    - span-2
+    - span-2
+    - span-1
+
+---
+
+
+{%- assign letters = site.data.alphabet %}
+{%- assign phrases = site.data.latin-phrases %}
+
+<h3 id="grid-auto-16">
+  Automatic grid with 16 items
+</h3>
+<p class="text_l read_xl ma-t_s">
+  Here, with many items the minium size is clearly visible.
+</p>
+
+{%- for min-sizes in page.data.min-sizes %}{%- for min-size in min-sizes %}
+<h4 class="ma-t_m ma-b_s flex wrap-no text-clip">
+  <span>{{ min-size[0] }} min size</span>
+  <code class="span-auto">.grid-auto{% if min-size[1] != "" %}.min_{{ min-size[1] }}{% endif %}</code>
+</h4>
+<div class="grid-auto {% if min-size[1] != "" %}min_{{ min-size[1] }}{% endif %} text-serif text_s">
+  {%- for num in (1..16) %}
+  <div class="box text-hyphen bg-{{ letters[forloop.index] }}">{{ phrases[forloop.index] }}</div>
+  {%- endfor %}
+</div>
+{% endfor -%}{% endfor -%}
+
+<h3 class="ma-t_xl ma-b_s" id="grid-auto-3">
+  Automatic grid with 3 items
+</h3>
+<p class="text_l read_xl ma-t_s">
+  This is the same markup as above, only with less items in each grid row. On all large screen viewport the next four rows look the same. Resize your browser to see differences.
+</p>
+
+{% for min-sizes in page.data.min-sizes -%}{%- for min-size in min-sizes %}
+<h4 class="ma-t_m ma-b_s flex wrap-no text-clip">
+  <span>{{ min-size[0] }} min size</span>
+  <code class="span-auto">.grid-auto{% if min-size[1] != "" %}.min_{{ min-size[1] }}{% endif %}</code>
+</h4>
+<div class="grid-auto {% if min-size[1] != "" %}min_{{ min-size[1] }}{% endif %} text-serif text_s">
+  {%- for num in (1..3) %}
+  <div class="box text-hyphen bg-{{ letters[forloop.index] }}">{{ phrases[forloop.index] }}</div>
+  {%- endfor %}
+</div>
+{% endfor -%}{%- endfor %}
+
+<h3 class="ma-t_xl ma-b_s" id="grid-auto-spans">
+  Spans and gaps
+</h3>
+<p class="text_l read_xl ma-t_s ma-b_m">
+  Add <a href="#grid-gaps">gap-classses</a>, or <a href="#no-gap">gap-no</a> to the auto-grid, <a href="#spans">span-classes</a> on the child elements work as well.
+</p>
+<div class="grid-auto gap-no text-serif text_s">
+  {%- for span in page.data.custom-span-classes %}
+  <div class="box text-hyphen {{ span }} span-12-p bg-{{ letters[forloop.index] }}">{{ phrases[forloop.index] }}</div>
+  {%- endfor %}
+</div>
+
+
+<h3 class="ma-t_xl ma-b_s" id="grid-auto-custom">
+  Custom automatic grid
+</h3>
+<p class="text_l read_xl ma-t_s ma-b_m">
+  Last not least — you can change the min and max values of the childs using CSS Vars. Match the grid specs to your content. Check out the <a href="/examples/real-world#profile-cards">profile cards</a> example to see this in action.
+</p>
+<div class="grid-auto custom text-serif text_s">
+  {%- for num in (1..12) %}
+  <div class="box text-hyphen bg-{{ letters[forloop.index] }}">{{ phrases[forloop.index] }}</div>
+  {%- endfor %}
+</div>

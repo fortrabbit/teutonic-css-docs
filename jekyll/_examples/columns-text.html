@@ -1,0 +1,22 @@
+---
+
+title:    Text columns
+category: columns
+hide:     no
+order:    6
+syntax:   .columns.break-inside
+
+description: >
+  Columns are intentionally made for text contents in a newspaper style layout. You can do this as well.
+
+scss-files:
+  - columns
+
+---
+
+
+{%- capture markdown_content %}{% include examples/blindtext.md %}{% endcapture %}
+
+<article class="columns text_s break-inside cols-5 cols-3-t collapse-p gap-h_l">
+  {{ markdown_content | markdownify }}
+</article>

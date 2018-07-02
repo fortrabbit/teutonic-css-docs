@@ -1,0 +1,46 @@
+---
+title:    Spans
+category: css-grid
+order:    2
+syntax:   .span-{size}
+
+description: >
+  It get's a bit more fun when working with span classes. With a 12 columns grid, a `.span-6` will use half of the width of a row, while `.span-4` will use a third and `.span-12` will cover the whole row.
+
+scss-files:
+  - 'grid'
+  - 'grid-spans'
+
+data: 
+  box-widths:
+    - span-2
+    - span-2
+    - span-2
+    - span-2
+    - span-2
+    - span-2
+    - span-3
+    - span-3
+    - span-3
+    - span-3
+    - span-4
+    - span-4
+    - span-4
+    - span-6
+    - span-6
+    - span-12
+    - span-8
+    - span-4
+    - span-6
+    - span-3
+    - span-3
+
+---
+
+{% assign letters = site.data.alphabet %}
+
+<div class="grid gap_s">
+  {%- for box-width in page.data.box-widths %}
+  <div class="box text-clip text-mono bg-{{ letters[forloop.index] }} {{ box-width }}">{{ box-width }}</div>
+  {%- endfor %}
+</div>

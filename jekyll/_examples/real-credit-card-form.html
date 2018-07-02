@@ -1,0 +1,79 @@
+---
+
+title:      Credit card form
+category:   real-world
+sub-cat:    form
+fullscreen: no
+order:      1
+
+
+description: >
+  Common form input elements put together in a flex grid. The `form-box` wrapper combines an input element with a label and an optional focus-tip.
+
+scss-files:
+  - 'mini-info'
+  - 'gap-no'
+  - 'flex'
+  - 'forms'
+  - 'form-box'
+
+---
+
+<form class="gap-no read_m ma-v_s">
+  <h4 class="bo-b_xs pa-b_xs">
+    Credit card details
+  </h4>
+  <div class="form-box pa_m">
+    <label for="email" class="mini-label required">Name on card</label>
+    <input type="text" class="input" id="cardholder" name="cardholder" required>
+    <div class="mini-info">Exact name as shown on card</div>
+  </div>
+  <div class="flex gap-no">
+    <div class="form-box pa_m">
+      <label for="card_expire_month" class="required mini-label">Expire month</label>
+      <select id="card_expire_month" name="card_expire_month" class="select">
+        <option disabled selected>MM</option>
+        <option value="01">01</option>
+        <option value="01">02</option>
+        <option value="01">03</option>
+        <option value="04">04</option>
+        <option value="05">05</option>
+        <option value="06">06</option>
+        <option value="07">07</option>
+        <option value="08">08</option>
+        <option value="09">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+    </div>
+    <div class="form-box pa_m">
+      <label for="card_expire_month" class="required mini-label">Expire year</label>
+      <select id="card_expire_year" name="card_expire_year" class="select">
+        <option disabled selected>YYYY</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+      </select>
+    </div>
+  </div>
+  <div class="flex wrap-no gap-no">
+    <div class="form-box pa_m">
+      <label for="card_number" class="mini-label required">Card number</label>
+      <input type="text" id="card_number" name="card_number" class="input" maxlength="16" placeholder="4916800099659557" required>
+    </div>
+    <div class="form-box pa_m span-third">
+      <label for="card_cvv" class="mini-label required">Security Code</label>
+      <input type="text" id="card_cvv" name="card_cvv" class="input" maxlength="4" placeholder="123" required>
+      <div class="mini-info">3-4 digits</div>
+    </div>
+  </div>
+  <button class="button prime dis-b text_l pa_m block" type="submit">Save</button>
+  <p class="text_s ma-t_s">
+    Pisa, Vastercard &amp; Emerican Axpress are accepted.
+  </p>
+</form>

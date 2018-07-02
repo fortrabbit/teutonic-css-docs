@@ -1,0 +1,30 @@
+---
+title:     File
+category:  forms
+syntax:    input[type=file].input.file
+order:     12
+
+description: >
+  Here is some basic styling for a file upload field. Apply the two classes: `.input` and `.file` to the HTML element to achieve alignment with other form elements.
+
+details: >
+  This looks best in WebKit/Blink but degrades gracefully under other browsers.
+
+scss-files:
+  - 'input-file'
+  - 'forms'
+
+---
+
+<div class="read_l">
+  <h4 class="ma-b_xs">
+    Only file class
+  </h4>
+  <input type="file" name="file" id="file" class="file">
+  <h4 class="ma-b_xs ma-t_m">
+    With input and file class
+  </h4>
+  <input type="file" name="file" id="file" class="file input">
+</div>
+
+

@@ -1,0 +1,23 @@
+    {% include examples/form-test.html %}
+    <div class="gap-no ma-t_s">
+      <div class="meter-box">
+        <div>meter</div>
+        <meter class="meter" value="30" min="0" low="10" optimum="50" high="90" max="100"></meter>
+      </div>
+      <div class="range-box">
+        <input type="range" name="range" id="range" class="range" min="0" max="10" value="4">
+      </div>
+    </div>
+    <h4 class="ma-t_l ma-b_xs">Local theming</h4>
+    {% include examples/signup-form-error.html %}
+    <div class="grid gap-no ma-v_s">
+      <div class="box striped span-6">
+        striped
+      </div>
+      <div class="box loading span-6">
+        loading
+      </div>
+    </div>
+    <article class="article ma-t_l">
+      {{ markdown_content | markdownify }}
+    </article>

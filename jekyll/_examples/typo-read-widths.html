@@ -1,0 +1,25 @@
+---
+title:     Read widths
+category:  typography
+order:     4
+syntax:    .read_{size}
+
+description: >
+  I don't know about you. But I think Wikipedia is a terrible reading experience on a desktop browser — the text lines are too long. Something between 45-75 characters is widely regarded as a satisfactory length per line. The text-length helper classes are keeping this in an aesthetic balance. 
+
+
+details: >
+  The read-width class name is matching the text-size class name. Usually use `read_l` in combination with `.text_l`. Appearance can differ from typeface to typeface. 
+
+scss-files:
+- 'typography'
+
+---
+
+
+{% assign sentence = "I am Posdnous; I be the new generation of slaves; Here to make papes to buy a record exec rakes; The pile of revenue I create." %}
+
+<p class="pa-v_m text_s read_s">{{ sentence }}</p>
+<p class="pa-v_m text_m read_m">{{ sentence }}</p>
+<p class="pa-v_m text_l read_l">{{ sentence }}</p>
+<p class="pa-v_m text_xl read_xl">{{ sentence }}</p>

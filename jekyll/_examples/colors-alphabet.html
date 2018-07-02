@@ -1,0 +1,30 @@
+---
+
+title:     Alphabet colors
+category:  colors
+hideCode:  yes-please
+order:     61
+syntax:    .bg-{color}
+
+description: >
+  Here is an additional shaded color spectrum. Use cases are: "heat tables", "generic avatars", "zebra stripes" and possibly much more. Other than the [core interface colors](/examples/colors), these colors are ready-made and not accessible as CSS Vars, so they can only be modified in the SCSS files.
+
+
+details: >
+  Use `.bg-` for background-color and than any small latin character or number (^a-z0-9). These colors also have no `:hover` sate.
+
+scss-files:
+  - 'colors-alphabet'
+
+---
+
+{% assign letters = site.data.spelling-alphabet %}
+
+<div class="columns gap-no cols-4 cols-2-p">
+  {% for letter in letters %}
+  <div class="box text-mono bg-{{ letter[0] }}">
+    bg-{{ letter[0] }}
+    <div class="mini-info">{{ letter[1] }}</div>
+  </div>
+  {% endfor %}
+</div>

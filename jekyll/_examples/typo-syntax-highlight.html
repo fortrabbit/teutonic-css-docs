@@ -1,0 +1,48 @@
+---
+title:      Syntax highlighting
+category:   typography
+order:      8
+hideCode:   yes-please
+syntax:     "pre > code"
+fullscreen: yes
+
+description: >
+  Here is a built-in code coloring theme that likely works for your preferred syntax highlighter engine. 
+
+
+details: >
+  Just place a code element inside a pre block. span classes will styled. The highlighting magic itself — wrapping code in spans of different classes — is not included. Teutonic only provides the necessary CSS for styling code block. The syntax highlighting engines here are only included for demonstration. 
+
+scss-files:
+  - 'codetype'
+
+---
+
+<div class="grid gap_s collapse-t pa_s">
+  <div class="span-4">
+    <h4 class="pa-b_xs bo-b_xs text-clip">Highlight.js</h4>
+<pre><code id="hljsWrap">{% include examples/javascript-example.js %}</code></pre>
+  </div>
+  <div class="span-4 rouge">
+    <h4 class="pa-b_xs bo-b_xs text-clip">Rouge <span class="amp">&amp;</span> Pygment</h4>
+{% highlight ruby %}
+{% include examples/javascript-example.js %}
+{% endhighlight %}
+  </div>
+  <div class="span-4">
+    <h4 class="pa-b_xs bo-b_xs text-clip">Prism.js</h4>
+<pre><code id="prismWrap" class="language-javascript">{% include examples/javascript-example.js %}</code></pre>
+  </div>
+</div>
+
+<!-- Render code with different syntax highlighters for demo -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/prism.min.js" data-manual></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script>
+  var hljsWrap = document.getElementById('hljsWrap');
+  var prismWrap = document.getElementById('prismWrap');
+  hljs.highlightBlock(hljsWrap);
+  Prism.highlightElement(prismWrap);
+</script>

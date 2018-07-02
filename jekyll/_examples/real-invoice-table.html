@@ -1,0 +1,69 @@
+---
+title:    Invoice
+category: extended-table
+order:    22
+
+description: >
+  This simple invoice table makes use of an auto width table, some coloring and text style helpers and also in inverted table head.
+
+details: >
+
+
+scss-files:
+  - 'table'
+  - 'colors-ui'
+  - 'inverted'
+  - 'text-helpers'
+
+---
+
+<h3 class="pa-b_xs">
+  Receipt #4472
+</h3>
+<table class="table auto">
+  <thead class="bo-b_xs">
+    <tr>
+     <th>Apple</th>
+     <th class="text-right">Units</th>
+     <th class="text-right">Price / Unit</th>
+     <th class="text-right">Price / Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Golden Delicous</td>
+      <td class="text-right">2</td>
+      <td class="text-right"><span class="text-thin">€</span> 2</td>
+      <td class="text-right"><span class="text-thin">€</span> 4</td>
+    </tr>
+    <tr class="bg-0">
+      <td>Granny Smith</td>
+      <td class="text-right">2</td>
+      <td class="text-right"><span class="text-thin">€</span> 2</td>
+      <td class="text-right"><span class="text-thin">€</span> 4</td>
+    </tr>
+    <tr>
+      <td>Pink Lady</td>
+      <td class="text-right">2</td>
+      <td class="text-right"><span class="text-thin">€</span> 2</td>
+      <td class="text-right"><span class="text-thin">€</span> 4</td>
+    </tr>
+  </tbody>
+  <tfoot class="bo-t_px">
+    <tr>
+      <td colspan="3" class="text-right">Subtotal net</td>
+      <td class="text-right"><span class="text-thin">€</span> 12</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="text-right">Taxes 50%</td>
+      <td class="text-right"><span class="text-thin">€</span> 6</td>
+    </tr>
+    <tr class="text-bold bg-success-2">
+      <td colspan="3" class="text-right">Total gross</td>
+      <td class="text-right"><span class="text-thin">€</span> 18</td>
+    </tr>
+  </tfoot>
+</table>
+<p class="ma-t_xs">
+  Thanks for business.
+</p>

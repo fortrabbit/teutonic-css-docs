@@ -1,0 +1,35 @@
+---
+
+title:     Columns count
+category:  columns
+order:     1
+syntax:    .columns.cols-{number}
+
+description: >
+  Add a class from `.cols-2` up to `.cols-10` in addition to the `.columns` class to control over how many columns the content should span.
+
+details: >
+  The distribution of contents over the number of columns is a bit tricky. For the best visual result, adjust the number of columns based on the number of content items.
+
+scss-files:
+  - columns
+
+---
+
+{%- assign letters = site.data.alphabet -%}
+
+{%- for cols in (2..6) %}
+
+<h3 class="ma-t_m pa-b_xs">{{ cols }} columns</h3>
+<div class="columns gap-no cols-{{ cols }} gap_{{ gap-size[1] }} text-mono">
+  {%- for num in (1..12) %}
+  <div class="box text-clip bg-{{ letters[forloop.index] }}">{{ forloop.index }}</div>
+  {%- endfor %}
+</div>
+{% if cols == 5 %}
+<p class="text_s ma-t_xs text-right">
+  12 can not be devided by 5. &uarr;
+</p>
+{% endif %}
+
+{%- endfor %}

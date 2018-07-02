@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include templates/head.html %}
+  <body>
+    {% include templates/header-navigation.html %}
+    {% include templates/content-navigation.html %}
+
+    {%- assign h-i = '<link rel="stylesheet" href="' | escape  %}
+    {%- assign h-o = '">' | escape  %}
+
+    <main class="pa-h_l ma-b-auto">
+      <div class="docs-quick-start inverted ma-h_l- pa-h_l pa-t_l pa-b_l pos-rel">
+        <h1 class="mini-info pa-l_l text_m pa-r_s pos-tl text-bold" id="quick-start">
+          Quick start
+        </h1>
+        
+        {% comment %}
+        <h1 id="quick-start">
+          Quick start
+          <a class="anchor" href="#quick-start"></a>
+        </h1>
+        {% endcomment %}
+        <h3 class="ma-t_l" id="quick-start-learn">
+          1. Learn
+        </h3>
+        <p class="ma-t_xs text_l read_m">
+          Explore the examples.
+        </p>
+        <h3 class="ma-t_l pa-b_xs" id="quick-start-install">
+          2. Install
+        </h3>
+        <pre class="ma-h_l-"><code class="text_m pa-h_l">{{ h-i }}{{ site.cdn_url }}{{ h-o }}</code></pre>
+        <p class="ma-t_xs text_l read_m">
+          {{ "Include Teutonic into the <head> of your <html>." | escape }}
+        </p>
+
+        {% comment %}
+        <div class="form-box ma-b_s pa_m">
+          <label class="mini-label">Hotlink the CSS from the CDN</label>
+          <input type="input" onClick="this.select();" class="input text-mono text-select-all text-clip" readonly value="{{ h-i }}{{ site.cdn_url }}{{ h-o }}">
+          <div class="mini-info">{{ "Copy/paste this into the <head> of your <html>" | escape }}</div>
+        </div>
+        {% endcomment %}
+        <h3 class="ma-t_l" id="quick-start-adapt">
+          3. Adapt
+        </h3>
+        <p class="ma-t_xs text_l read_m">
+          Alter CSS Vars to make it yours.
+        </p>
+      </div>
+      <article class="text-all_l">
+        <section class="ma-b_l">
+          <h1 class="text-black text-hero_m read_xxl ma-t_m">
+            {{ page.headline }}
+          </h1>
+          {% if page.subline %}
+          <div class="text_xl read_xl ma-t_m">
+            <p>{{ page.subline }}</p>
+          </div>
+          {% endif %}
+        </section>
+
+        {%- capture markdown_content %}{{ content }}{% endcapture %}
+        <div class="article read_l ma-t_l ma-b_xl">
+          {{ markdown_content | markdownify }}
+        </div>
+      </article>
+    </main>
+    {% include templates/footer.html %}
+    {% include templates/foot.html %}
+  </body>
+</html>
+<!-- You have reached the end of the internet  -->

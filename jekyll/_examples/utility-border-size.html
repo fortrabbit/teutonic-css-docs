@@ -1,0 +1,85 @@
+---
+
+title:      Border size
+category:   utilities
+order:      5
+syntax:     .bo{-side?}{_width?}
+
+description: >
+   To border or not to border, that's the question! When no side is given, the border applies to all sides. When no width is given, the default var width of `--space-px` will apply. There is also a border reset class that will remove all borders for sure. You can customize the border color with CSS variables.
+
+details: |
+  In the example, different border sizes are mixed, an unlikely design case. A border usually adds up to the size of a container, to align the boxes here a [fixed height](#sizes) is set and the text labels are centered using a [flexbox alignment](). 
+
+css-vars:
+  - selector: .bo_xs.bo-custom
+    vars:
+      - "--border-color: hsl(30,100%,50%)"
+  - selector: .bo-t_s.bo-custom
+    vars:
+      - "--border-color: hsl(100,100%,20%)"
+      - "--border-style: dashed"
+
+scss-files:
+  - 'border-size'
+
+data: 
+  border-sizes:
+    pixel: px
+    extra-small: xs
+    small: s
+  border-directions:
+    Top: t
+    Right: r
+    Bottom: b
+    Left: l
+
+---
+
+{% assign letters = site.data.alphabet %}
+
+<h4 class="ma-b_xs">
+  Border on all sides
+</h4>
+<div class="grid-auto ma-b_m text-mono">
+  <div class="s-h_l bg-j pa_s bo_px flex-center">
+    <div class="text-clip">bo_px</div>
+  </div>
+  <div class="s-h_l bg-j pa_s bo_xs flex-center">
+    <div class="text-clip">bo_xs</div>
+  </div>
+  <div class="s-h_l bg-j pa_s bo_s flex-center">
+    <div class="text-clip">bo_s</div>
+  </div>
+</div>
+
+{%- for direction in page.data.border-directions %}
+<h4 class="ma-b_xs">
+ {{ direction[0] }} border
+</h4>
+<div class="grid-auto ma-b_s text-mono">
+  {%- for size in page.data.border-sizes %}
+  <div class="pa_s flex-center height_l pos-rel bg-{{ letters[forloop.index] }} bo-{{ direction[1] }}_{{ size[1] }}">
+    <div>bo-{{ direction[1] }}_{{ size[1] }}</div>
+  </div>
+  {%- endfor %}
+</div>{% endfor %}
+
+<div class="grid gap_s ma-t_m">
+  <div class="span-6">
+    <h4 class="ma-b_xs">
+      Reset border
+    </h4>
+    <div class="text-clip flex-center height_l bg-o box bo-no">
+      <div class="text-mono text-clip">.box.bo-no</div>
+    </div>
+  </div>
+  <div class="span-6">
+    <h4 class="ma-b_xs">
+      Custom border
+    </h4>
+    <div class="text-clip flex-center height_l bg-f bo-t_s bo-custom">
+      <div class="text-mono text-clip">.bo-t_s.bo-custom</div>
+    </div>
+  </div>
+</div>

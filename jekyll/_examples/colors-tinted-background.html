@@ -1,0 +1,60 @@
+---
+
+title:    Tinted background
+category: colors
+order:    12
+syntax:   .tinted-bg-{color}
+hideCode: yes
+
+description: >
+  **Paint the town again.** With this wrapper you'll modify the background color and some magic extras with the predefined states `warn`, `success` and `danger` or your own colors.
+
+details: >
+  The tinted background class will only color child elements, that already have a background color. To alter the background color of an element directly use the [background color class](/examples/interface#background-colors).  This can be combined with [colored text and borders](#colored). See the [form validation example](/examples/real-world#form-error). When applied to a whole container, like in the example below, everything will be tinted in a mono-colored way. To match all states (hover, disabled …), five color variables need to be set. Keep an eye on paint performance when working with tinted images. 
+
+css-vars:
+  - selector: .tinted-bg-custom
+    vars:
+      - "--color-bg-1: hsl(330,100%,90%)"
+      - "--color-bg-2: hsl(330,100%,80%)"
+      - "--color-bg-3: hsl(330,100%,70%)"
+      - "--color-bg-4: hsl(330,100%,60%)"
+      - "--color-bg-5: hsl(330,100%,50%)"
+
+
+scss-files:
+  - 'tinted'
+
+data:
+  classes:
+    - 'No Class' : 'standard'
+    - Danger     : 'redish'
+    - Warn       : 'yellowish'
+    - Success    : 'greenish'
+    - Custom     : 'different'
+
+---
+
+{%- assign css-blabla = site.data.css-blabla %}
+
+<div class="grid gap_s collapse-p">
+  {%- for entry in page.data.classes %}
+  {%- assign index = forloop.index %}
+  {%- for class in entry %}
+  {%- assign classname = class[0] | downcase %}
+  {%- assign color     = class[1] %}
+  <div class="span-4 span-6-t{% unless color == 'standard' %} tinted-bg-{{ classname }}{% endunless %}">
+    <h5 class="pa-b_xs bo-b_s text-clip">
+      {{ class[0] }}
+      <span class="text-thin">is <mark>{{ color }}</mark></span>
+      {% unless color == 'standard' %}<span class="text-mono text_s">.tinted-bg-{{ classname }}</span>{% endunless %}
+    </h5>
+    <figure class="media bo_px ma-v_xs">
+      <img src="//picsum.photos/500/200/?random" alt="Photo via picsum.photos">
+      <div class="text-mono mini-info">{{ color }} image</div>
+    </figure>
+    {%- include examples/form-test.html %}
+  </div>
+  {%- endfor %}
+  {%- endfor %}
+</div>

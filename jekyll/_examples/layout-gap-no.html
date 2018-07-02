@@ -1,0 +1,54 @@
+---
+
+title:      No gap
+category:   layout
+hide:       no
+order:      1
+syntax:     .gap-no
+
+description: >
+  The `.gap-no` class is a Teutonic CSS special gutter class for borderish interface elements. It emulates a collapsed-border look, just like you know from tables.
+
+details: >
+  It works for all kind of boxy elements and can be applied in a stand-alone parental container or in combination with `.flex`, `.grid` or `.columns`. It can also be nested.
+
+scss-files:
+  - 'gap-no'
+
+---
+
+<h4 class="bo-b_xs pa-b_xs">
+  Without grid
+</h4>
+<div class="gap-no">
+  <div class="box">Vertically</div>
+  <div class="box">stacked in a</div>
+  <div class="box">single column</div>
+</div>
+<h4 class="bo-b_xs pa-b_xs ma-t_m">
+  Flexbox grid
+</h4>
+<div class="flex wrap-no gap-no">
+  <div class="span-quarter box text-clip">Horizontally</div>
+  <div class="span-quarter box text-clip">stacked in</div>
+  <div class="span-quarter box text-clip">rows with</div>
+  <div class="span-quarter box text-clip">Flexbox</div>
+</div>
+<h4 class="bo-b_xs pa-b_xs ma-t_m">
+  CSS Grid grid
+</h4>
+<div class="grid gap-no">
+  <div class="span-3 box text-clip">Horizontally</div>
+  <div class="span-3 box text-clip">stacked in</div>
+  <div class="span-3 box text-clip">rows with</div>
+  <div class="span-3 box text-clip">CSS Grid</div>
+</div>
+<h4 class="bo-b_xs pa-b_xs ma-t_m">
+  Columns
+</h4>
+<div class="columns gap-no">
+  <div class="box">Vertically</div>
+  <div class="box">stacked in</div>
+  <div class="box">columns</div>
+  <div class="box">with CSS columns</div>
+</div>

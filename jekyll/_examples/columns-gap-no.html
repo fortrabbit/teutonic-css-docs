@@ -1,0 +1,23 @@
+---
+
+title:    No gap
+category: columns
+hide:     no
+order:    3
+syntax:   .columns.gap-no
+
+description: >
+  Add `.gap-no` to the CSS columns to have a collapse border look. See [this example](/examples/interface#no-gap) for the same method in other grid types.
+
+scss-files:
+  - 'gap-no'
+
+---
+
+{%- assign letters = site.data.alphabet -%}
+
+<div class="columns cols-5 cols-4-t cols-2-p gap-no text-mono">
+  {%- for num in (1..23) %}
+  <div class="box text-clip bg-{{ letters[forloop.index] }}">{{ forloop.index }}</div>
+  {%- endfor %}
+</div>

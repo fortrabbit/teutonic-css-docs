@@ -1,0 +1,55 @@
+---
+
+title:     A list of links
+category:  real-world
+order:     20
+
+description: >
+
+details: >
+  
+
+scss-files:
+  - 'columns'
+  - 'row-list'
+  - 'block-link'
+
+data: 
+  websites:
+    4chan : http://www.4chan.org/
+    A List Apart : https://alistapart.com
+    Apple : https://www.apple.com
+    Bloomberg: https://www.bloomberg.com/
+    But does it float: https://butdoesitfloat.com/
+    CodePen : https://codepen.io
+    Designer News : https://www.designernews.co
+    DuckDuckGo : https://duckduckgo.com/
+    Facebook : https://www.facebook.com
+    fortrabbit : https://www.fortrabbit.com
+    Google : https://www.google.com
+    Hacker News : https://news.ycombinator.com
+    Instructables: http://www.instructables.com/
+    LinkedIn : https://www.linkedin.com
+    MDN docs : https://developer.mozilla.org
+    Medium : https://medium.com
+    Motherf… website: http://motherfuckingwebsite.com/
+    Overflow : https://stackoverflow.com
+    Reddit : https://www.reddit.com
+    Soundcloud: https://soundcloud.com/
+    The Onion: https://www.theonion.com/
+    Twitter : https://twitter
+    Vimeo : https://vimeo.com
+    Wikipedia : https://en.wikipedia.com
+    xkcd: https://xkcd.com/
+    YouTube : https://www.youtube.com
+
+---
+
+<h4 class="bo-b_xs pa-b_xs">
+  Favorite websites
+</h4>
+<ul class="columns gap-h_s cols-3 cols-2-p ma-t_px-">
+  {%- for link in page.data.websites %}
+  <li class="bo-t_px text-clip"><a class="block-link pa_xs" href="{{ link[1] }}">{{ link[0] }}</a></li>
+  {%- endfor %}
+</ul>

@@ -1,0 +1,34 @@
+---
+
+title:      Form error
+category:   real-world
+sub-cat:    form
+order:      3
+
+description: >
+  Design for failure. When things go wrong, you can use HTML form validation. But — as you know — never ever trust any user input, validate all data on application level. This is the same signup form in different states.
+
+details: >
+  This is just one opinionated way to do this. Imagine that the form fields validate via AJAX while entering data. When everything is fine, the sign up button get's enabled.
+
+scss-files:
+  - 'tinted'
+  - 'forms'
+  - 'flexbox'
+
+---
+
+<div class="flex gap_m collapse-t">
+  <div class="span-third">
+    <h4 class="ma-b_xs text-clip">1. <span class="text-thin">Empty</span></h4>
+    {% include examples/signup-form-empty.html %}
+  </div>
+  <div class="span-third">
+    <h4 class="ma-b_xs text-clip">2. <span class="text-thin">With errors and warnings</span></h4>
+    {% include examples/signup-form-error.html %}
+  </div>
+  <div class="span-third">
+    <h4 class="ma-b_xs text-clip">3. <span class="text-thin">Finally valid</span></h4>
+    {% include examples/signup-form-valid.html %}
+  </div>
+</div>

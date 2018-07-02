@@ -1,0 +1,24 @@
+---
+
+title:    Zebra table
+category: extended-table
+order:    25
+hideCode: no
+
+description: >
+  Use background color classes to create striped tables.
+
+scss-files:
+  - table
+  - colors-ui
+
+---
+
+<div class="grid gap_s collapse-t">
+  <div class="span-6">
+{% include examples/zebra-table.html stripe-class="inverted" %}
+  </div>
+  <div class="span-6">
+{% include examples/zebra-table.html stripe-class="bg-warn-2" %}
+  </div>
+</div>

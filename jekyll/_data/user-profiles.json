@@ -1,0 +1,62 @@
+[
+  {
+    "name" : {
+      "first"       : "Jessica",
+      "last"        : "Joe"
+    },
+    "motto"       : "Bald. Often Unreliable. Easily distracte.",
+    "numbers"     : [ 83, 123, 343, 232 ],
+    "bg-image"    : "//picsum.photos/300/200/?random&1",
+    "profile-pic" : "//randomuser.me/api/portraits/lego/1.jpg"
+  },
+  {
+    "name" : {
+      "first"       : "Manual",
+      "last"        : "Man"
+    },
+    "motto"       : "A human. Being.",
+    "numbers"     : [ 69, 89, 320, 203 ],
+    "bg-image"    : "//picsum.photos/300/200/?random&asd",
+    "profile-pic" : "//randomuser.me/api/portraits/lego/2.jpg"
+  },
+  {
+    "name" : {
+      "first"       : "Johannes",
+      "last"        : "Jan"
+    },
+    "motto"       : "Born at a very young age.",
+    "numbers"     : [ 176, 123, 343, 232 ],
+    "bg-image"    : "//picsum.photos/300/200/?random&22",
+    "profile-pic" : "//randomuser.me/api/portraits/lego/3.jpg"
+  },
+  {
+    "name" : {
+      "first"       : "Franky",
+      "last"        : "Free"
+    },
+    "motto"       : "Insert pretentious crap about myself here.",
+    "numbers"     : [ 119, 37, 243, 220 ],
+    "bg-image"    : "//picsum.photos/300/200/?random&vvv",
+    "profile-pic" : "//randomuser.me/api/portraits/lego/4.jpg"
+  },
+  {
+    "name" : {
+      "first"       : "Angie",
+      "last"        : "Ace"
+    },
+    "motto"       : "I’m really a giant cupcake. Afraid of roller coasters and dry ice.",
+    "numbers"     : [ 117, 102, 282, 221 ],
+    "bg-image"    : "//picsum.photos/300/200/?random&zzzz",
+    "profile-pic" : "//randomuser.me/api/portraits/lego/5.jpg"
+  },
+  {
+    "name" : {
+      "first"       : "Judy",
+      "last"        : "Jane"
+    },
+    "motto"       : "I’m not smart. I just wear glasses.",
+    "numbers"     : [ 70, 89, 92, 113 ],
+    "bg-image"    : "//picsum.photos/300/200/?random&gg",
+    "profile-pic" : "//randomuser.me/api/portraits/lego/6.jpg"
+  }
+]

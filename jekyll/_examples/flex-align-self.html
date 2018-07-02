@@ -1,0 +1,40 @@
+---
+
+title:    Align self
+category: flexbox
+order:    27
+hide:     no
+syntax:   .self-{position}
+
+description: >
+  Use the Flexbox self alignment helper classes to position the Flexbox childs individually on the **secondary axis**.
+
+scss-files:
+  - 'flex-align-self'
+
+---
+
+
+<h3 class="ma-b_xs">Align self in flexbox row</h3>
+<div class="bg-0 pa_s text-mono">
+  <div class="flex height_xl">
+    <div class="self-start bg-d box">self-start</div>
+    <div class="self-center bg-e box">self-center</div>
+    <div class="self-end bg-f box">self-end</div>
+  </div>
+</div>
+<p class="ma-t_xs text_s">
+  &uarr; In a Flexbox row, the main axis is horizontal, so the end is on the right — in case of left to right.
+</p>
+
+<h3 class="ma-t_m ma-b_xs">Align self in flexbox column</h3>
+<div class="bg-0 pa_s text-mono">
+  <div class="flex column height_xl">
+    <div class="self-start bg-q box">self-start</div>
+    <div class="self-center bg-r box">self-center</div>
+    <div class="self-end bg-s box">self-end</div>
+  </div>
+</div>
+<p class="ma-t_xs text_s">
+  &uarr; In a Flexbox column, the main axis is vertical, so the end is on the bottom — in case of top to bottom.
+</p>

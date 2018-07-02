@@ -1,0 +1,25 @@
+---
+
+title:      Loading button
+category:   real-world
+sub-cat:    interface
+order:      10
+
+description: >
+  Interactive example: Click the "Click me" button to add a loading state and disable the button.
+
+scss-files:
+  - 'button'
+  - 'loading'
+
+---
+
+<button class="pa_m text_xl button prime" id="docsAddLoading">Click me</button>
+
+<script>
+  // Don't copy! It's just for demo purposes.
+  document.querySelector('#docsAddLoading').addEventListener('click', function() { 
+    this.setAttribute('disabled', 'true');
+    this.classList.add('loading');
+  });
+</script>

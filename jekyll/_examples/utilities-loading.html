@@ -1,0 +1,31 @@
+---
+
+title:      Loading
+category:   components
+order:      15
+syntax:     .loading
+
+description: >
+  The loading class is adding some funky moving stripes on most elemnts to indicate, well, that something is loading. It's a good practive to disable a button and add a loding class so that the user does not submits a form again.
+
+scss-files:
+  - 'loading'
+
+---
+
+<div class="grid gap_s collapse-p text-mono">
+  <div class="span-2 box text-clip">.box</div>
+  <a href="#" class="span-2 box text-clip">a.box</a>
+  <button class="span-2 button text-clip">.button</button>
+  <button class="span-2 button prime text-clip">.button.prime</button>
+  <button disabled class="span-2 button prime text-clip">.button:disabled.prime</button>
+  <button disabled class="span-2 button text-clip">.button:disabled</button>
+</div>
+<div class="grid gap_s collapse-p text-mono ma-t_s">
+  <div class="span-2 box text-clip loading">.box.loading</div>
+  <a href="#" class="span-2 box text-clip loading">a.box.loading</a>
+  <button class="span-2 button text-clip loading">.button.loading</button>
+  <button class="span-2 button prime text-clip loading">.button.prime.loading</button>
+  <button disabled class="span-2 button prime text-clip loading">.button:disabled.prime.loading</button>
+  <button disabled class="span-2 button text-clip loading">.button:disabled.loading</button>
+</div>

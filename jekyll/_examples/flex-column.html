@@ -1,0 +1,63 @@
+---
+title:     Column
+category:  flexbox
+order:     20
+hide:      no
+
+description: >
+   Add a `.column` to a `.flex` container, to change the flex-diretion from row to column. Note how the right column here defines the height of all columns by it's contents and how the price is always aligned on the bottom.
+
+scss-files:
+  - 'flex'
+
+---
+
+<h3 class="pa-b_s bo-b_xs">Pricing Table</h3>
+<div class="grid gap-no collapse-p">
+  <div class="box pa-no flex column span-4">
+    <div class="pa_m bg-a">
+      <h3>Basic</h3>
+      <p class="text-clip ma-t_s">competently negotiate extensible</p>
+      <ul class="row-list ma-t_m bo-t_px">
+        <li class="pa-v_xs">5 items</li>
+        <li class="pa-v_xs">10 friends</li>
+        <li class="pa-v_xs">10 undoes</li>
+      </ul>
+    </div>
+    <div class="span-auto text-right text_xxxl pa_m bg-a ma-t_xs">
+      <span class="text-thin">€</span>10
+    </div>
+  </div>
+  <div class="box pa-no flex column span-4 bs_l zi-1">
+    <div class="pa_m bg-b">
+      <h3>Pro</h3>
+      <p class="text-clip ma-t_s">progressively pontificate 24/365</p>
+      <ul class="row-list ma-t_m bo-t_px">
+        <li class="pa-v_xs">10 items</li>
+        <li class="pa-v_xs">20 friends</li>
+        <li class="pa-v_xs">20 undoes</li>
+        <li class="pa-v_xs">20 benchmarks</li>
+      </ul>
+    </div>
+    <div class="span-auto text-right text_xxxl pa_m bg-b ma-t_xs">
+      <span class="text-thin">€</span>100
+    </div>
+  </div>
+  <div class="box pa-no flex column span-4">
+    <div class="pa_m bg-c">
+      <h3>Enterprise</h3>
+      <p class="text-clip ma-t_s">holisticly aggregate data</p>
+      <ul class="row-list ma-t_m bo-t_px">
+        <li class="pa-v_xs">20 items</li>
+        <li class="pa-v_xs">40 friends</li>
+        <li class="pa-v_xs">40 undoes</li>
+        <li class="pa-v_xs">40 benchmarks</li>
+        <li class="pa-v_xs">40 rollbacks</li>
+        <li class="pa-v_xs">80 snapshots</li>
+      </ul>
+    </div>
+    <div class="span-auto text-right text_xxxl pa_m bg-c ma-t_xs">
+      <span class="text-thin">€</span>1000
+    </div>
+  </div>
+</div>

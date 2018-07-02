@@ -1,0 +1,58 @@
+<div class="labelinput">
+  <label for="skin" class="minilabel">Current theme</label>
+  <select id="skin-switcher" name="skin-switcher">
+    <option selected>none</option>
+
+    {% for theme in site.data.themes %}
+    <option value="{{ theme.cssFile }}">{{ theme.name }}</option>
+    {% endfor %}
+    
+  </select>
+</div>
+
+
+<!-- TODO: JS time-out to add an tranform-all class! -->
+
+
+<script>
+  /* jshint esversion: 6 */
+  // don't copy this! demo only
+
+  document.querySelector('select[name="skin-switcher"]').onchange=changeStyle;
+
+  function changeStyle(event) {
+    theme = event.target.value;
+    if (theme === 'none') destroyStyle();
+    else {
+      destroyStyle();
+      loadStyle(`/css/${theme}`);
+    }
+  }
+
+  function destroyStyle() { 
+    let styleLinkElem = document.getElementById('theme');
+    if (styleLinkElem) { styleLinkElem.remove(); } 
+  }
+
+  let loadStyle = function(url) {
+    return new Promise((resolve, reject) => {
+      let link    = document.createElement('link');
+      link.type   = 'text/css';
+      link.rel    = 'stylesheet';
+      link.id     = 'theme';
+      link.onload = () => { resolve(); };
+      link.href   = url;
+
+      // reconsider placement.
+      let headScript = document.querySelector('script');
+      headScript.parentNode.insertBefore(link, headScript);
+    });
+  };
+
+
+  // style switcher should replace the styles with ones selected in the 
+  // there is a CSS file of that name can be loaded
+  // but what happens when :root > :root vars get loaded?
+  // chosen value should be persistent (across pages) > store info in localstorage?
+</script>
+

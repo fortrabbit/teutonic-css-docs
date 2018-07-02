@@ -1,0 +1,21 @@
+---
+
+title:     Hide
+category:  utilities
+order:     50
+hide:      no
+syntax:    .hide-{breakpoint}
+
+description: >
+  This is a general responsive helper class to be applied to any element. `-t` is for tablet and `-p` for phone screen resolutions. This one here set hides certain content on smaller devices.
+
+scss-files:
+  - 'media-queries'
+
+---
+
+<div class="gap_s text-mono">
+  <div class="text-clip box bg-r">Always shown, first box of three</div>
+  <div class="text-clip box bg-s hide-t">.hide-t, hidden on tablet and smaller, second box of three</div>
+  <div class="text-clip box bg-t hide-p">.hide-p, hidden on phone sizes, third box of three</div>
+</div>

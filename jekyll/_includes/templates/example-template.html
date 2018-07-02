@@ -1,0 +1,68 @@
+{% assign letters = site.data.alphabet %}
+
+{% unless example.hide %}
+<article>
+  <header class="ma-t_l ma-b_s">
+    <h2 id="{{ example.title | slugify }}" class="ma-b_s">
+      {{ example.title }}
+      <a class="anchor" href="#{{ example.title | slugify }}"></a>
+    </h2>
+
+    {% if example.description %}
+    <div class="text_l read_l">
+      {{ example.description | markdownify  }}
+    </div>
+    {% endif %}
+    {% if example.details %}
+    <div class="read_l ma-t_s">
+      {{ example.details | markdownify  }}
+    </div>
+    {% endif %}
+
+    <div class="ma-v_m">
+      {% if example.syntax %}
+      <div class="ma-b_xs">
+        <b>Syntax</b>: 
+        <code>{{ example.syntax  }}</code>
+      </div>
+      {% endif %}
+
+      
+      {% if example.status %}
+      <div class="ma-b_xs">
+        <b>Status</b>: {{ example.status  }}
+      </div>
+      {% endif %}
+
+      {% if example.scss-files %}
+      <div>
+        <b>SCSS</b>:
+        {% for scssfile in example.scss-files %}
+          <code class="ma-r_xs"><a href="{{ site.github_scss_url }}/{{ scssfile }}.scss" class="link">{{ scssfile }}.scss</a></code>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+    </div>
+
+  </header>
+
+{% unless example.hideExample %}
+  <div class="docs-example docs-{{ example.title | slugify }} ma-h_l-{% unless example.fullscreen %} pa-h_l pa-v_l{% endunless %}">
+    {{ example.content }}
+    {% if example.css-vars %}
+    {% include templates/example-css-vars-editor.html %}
+    {% endif %}
+  </div>
+
+{% unless example.hideCode %}
+<div class="docs-code-block ma-h_l-">
+
+{% highlight html %}
+{{ example.content }}
+{% endhighlight %}
+</div>
+{% endunless %}{% comment %}      HIDES the example code output {% endcomment %}
+{% endunless %}{% comment %}      HIDES the whole example output {% endcomment %}
+</article>
+{% endunless %}{% comment %}      HIDES the whole thing {% endcomment %}

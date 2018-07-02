@@ -1,0 +1,31 @@
+---
+title:      Negative margin
+category:   utilities
+order:      2
+syntax:     .m{-direction}{_size}-
+fullscreen: true
+
+description: >
+  Sometimes you just want to break out. For instance: your page might be contained in a wrapping container, that comes with some margin or padding to the left and to the right. Or you want to have some fancy looking overlapping elements. The margin utility classes also contain a notation for a "minus margin": just add a dash at the end of the margin class. 
+
+
+details: >
+  The class name is the same as for the standard margin classes, only that dash for minus is added at the end.
+
+scss-files:
+  - 'margin'
+
+---
+
+<div class="pa-b_s">
+  <div class="bg-0 pa_l">
+    <p>Here is some normal content.</p>
+    <div class="bg-1 ma-h_l- ma-v_xs pa-h_l pa-v_s">
+      <p>Here is some break out content.</p>
+    </div>
+    <p>Here is some more normal content.</p>
+  </div>
+  <div class="bg-2 bo-r_s pa-h_l pa-v_s ma-t_m- ma-b_m read_l">
+    <p>Here be dragons. This content is pulled up.</p>
+  </div>
+</div>

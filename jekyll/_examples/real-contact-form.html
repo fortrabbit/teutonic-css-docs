@@ -1,0 +1,28 @@
+---
+
+title:      Contact form
+category:   real-world
+order:      10
+
+description: >
+  Drop Santa a message.
+
+scss-files:
+  - 'forms'
+  - 'form-box'
+  - 'mini-info'
+
+---
+
+<form class="gap-no read_m">
+  <div class="form-box pa_m">
+    <label for="form-box-name" class="mini-label required">Your name</label>
+    <input type="text" class="input" id="form-box-name" name="form-box-name" value="Jeff Besoz" required placeholder="Jeff Besoz">
+    <div class="mini-info">Please provide your first and last name</div>
+  </div>
+  <div class="form-box pa_m">
+    <label for="form-box-message" class="mini-label">Your message to Santa Claus</label>
+    <textarea class="textarea" name="form-box-message" id="form-box-message" rows="10">Dear Mister Claus,</textarea>
+  </div>
+  <input type="submit" class="button block prime pa_m" value="Send to Santa">
+</form>

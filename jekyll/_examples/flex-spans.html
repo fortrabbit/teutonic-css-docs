@@ -1,0 +1,47 @@
+---
+
+title:     Spans
+category:  flexbox
+order:     2
+
+description: >
+  A simple application of the flexbox CSS grid system is to stack fixed sized layout modules.
+
+details: >
+  There is no number of fixed columns here. So the Flexbox span classes are based on fractions like `span-half` instead of `span-6`.
+
+scss-files:
+  - 'flex'
+
+data: 
+  box-widths:
+    - span-fifth
+    - span-fifth  
+    - span-fifth
+    - span-fifth
+    - span-fifth
+    - span-quarter
+    - span-quarter
+    - span-quarter
+    - span-quarter
+    - span-third
+    - span-third
+    - span-third
+    - span-half
+    - span-half
+    - span-full
+    - span-twothird
+    - span-third
+    - span-half
+    - span-quarter
+    - span-quarter
+
+---
+
+{% assign letters = site.data.alphabet %}
+
+<div class="flex gap_s">
+  {%- for box in page.data.box-widths %}
+  <div class="{{ box }}"><div class="box text-clip text-mono bg-{{ letters[forloop.index] }}">{{ box }}</div></div>
+  {%- endfor %}
+</div>

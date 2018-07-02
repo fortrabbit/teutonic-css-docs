@@ -1,0 +1,42 @@
+---
+
+title:     Coloring
+category:  theming
+hideCode:  yes
+syntax:    .bg-{state}-{level}
+order:     1
+
+description: >
+  The main UI colors are exposed as CSS variables.
+
+details: >
+  All shades are set in HSL in the original scss files, but unfortunately converted by SASS to HEX values.
+
+scss-files:
+  - 'color-map'
+  - 'color-vars'
+  - 'ui-bg-colors'
+
+---
+
+
+{%- assign colors = site.data.colors  %}
+
+<div class="grid-auto collapse-p" style="--grid-auto-min: 18rem;">
+  {%- for group in colors %}
+  <div>
+    <h4>{{ group.title }}</h4>
+    <div class="flex gap-no ma-t_xs">
+      {%- for color in group.colors %}
+      <div class="box pa_m text-clip text-mono bg-{{ group.title | downcase }}-{{ forloop.index }}"></div>
+      {%- endfor %}
+    </div>
+<style contenteditable class="docs-css-edit input text-mono pre text_s pa_s">:root {
+  {%- for color in group.colors %}
+  --{{ group.title | downcase }}-{{ forloop.index }}: {{ color }};
+  {%- endfor %}
+}
+</style>
+  </div>
+  {%- endfor %}
+</div>

@@ -1,0 +1,61 @@
+---
+title:     Gaps
+category:  css-grid
+order:     3
+hide:      no
+syntax:    .gap_{size}
+
+description: >
+   Control the vertical and horizonral space between grid container childs with gutter classes.
+
+details: >
+  Caution: the gap spaces add app up to the container width. Overflow will happen, when the grid container get's smaller than the sum of all gaps.
+
+css-vars:
+  - selector: .grid.gap-custom
+    vars:
+      - "--gap-space : 2rem"
+
+scss-files:
+  - 'grid'
+  - 'grid-gaps'
+
+data: 
+  gap-sizes:
+    "Extra small": xs
+    Small        : s
+    Medium       : m
+  box-widths:
+    - span-3
+    - span-3
+    - span-3
+    - span-3
+    - span-4
+    - span-4
+    - span-4
+
+---
+
+{%- assign letters = site.data.alphabet -%}
+
+{%- for gap-size in page.data.gap-sizes -%}
+<h4 class="flex wrap-no{% if forloop.first == false %} ma-t_m{% endif %}">
+  <div>{{ gap-size[0] }} gap</div>
+  <div class="span-auto text-thin text-mono">.grid.gap_{{ gap-size[1] }}</div>
+</h4>
+<div class="grid gap_{{ gap-size[1] }} ma-t_s text-mono">
+  {%- for box-width in page.data.box-widths %}
+  <div class="box text-clip bg-{{ letters[forloop.index] }} {{ box-width }}">&nbsp;</div>
+  {%- endfor %}
+</div>
+{% endfor %}
+<!-- Set your own grid gaps -->
+<h4 class="flex wrap-no ma-t_l">
+  <div>Custom gap</div>
+  <div class="span-auto text-thin text-mono">.grid.gap-custom</div>
+</h4>
+<div class="grid gap-custom ma-t_s text-mono">
+  {%- for box-width in page.data.box-widths %}
+  <div class="box text-clip bg-{{ letters[forloop.index] }} {{ box-width }}">&nbsp;</div>
+  {%- endfor %}
+</div>

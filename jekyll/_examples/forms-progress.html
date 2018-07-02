@@ -1,0 +1,57 @@
+---
+
+title:    Progress
+category: forms
+order:    13
+syntax:   progress.progress
+
+description: >
+  The progress element represents the completion progress of a task. Use this for loading bars, form completion states, order status indicators … Don't confound it with it's bigger brother, the [meter](#meter).
+
+details: >
+  The progress comes with two states. When indeterminate, it shows a spinning animation when it is waiting to receive a value. When determinate, it shows a completion bar when `value` and `max` parameters are set. This is looking a little different in MS Edge, but still OK.
+
+css-vars:
+  - selector: .progress.custom
+    vars:
+      - "--value-color:      Turquoise"
+      - "--background-color: Aquamarine"
+
+scss-files:
+  - 'progress'
+
+---
+
+<div class="read_l">
+  <h4 class="text-clip">Standalone</h4>
+  <progress class="progress ma-t_xs"></progress>
+  <progress class="progress ma-t_xs" value="30" max="100"></progress>
+
+  <h4 class="text-clip ma-t_m">
+    Wrapped in a .progress-box with content
+  </h4>
+  <div class="progress-box ma-t_xs">
+    <div>Waiting for signal</div>
+    <progress class="progress"></progress>
+  </div>
+  <div class="progress-box ma-t_xs">
+    <div><output class="text-bold">50%</output> loaded</div>
+    <progress max="10" value="5" class="progress"></progress>
+  </div>
+  <h4 class="text-clip ma-t_m">
+    Wrapped with custom padding and font size
+  </h4>
+  <div class="progress-box ma-t_xs text_xl pa_m">
+    <div><output class="text-bold">90%</output> done</div>
+    <progress max="10" value="9" class="progress"></progress>
+  </div>
+  <h4 class="text-clip ma-t_m">
+    Wrapped custom colors, no content
+  </h4>
+  <div class="progress-box ma-t_xs">
+    <progress class="progress custom"></progress>
+  </div>
+  <div class="progress-box ma-t_xs">
+    <progress max="10" value="8" class="progress custom"></progress>
+  </div>
+</div>

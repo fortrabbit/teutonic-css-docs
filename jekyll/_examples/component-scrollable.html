@@ -1,0 +1,31 @@
+---
+title:      Scrollable
+category:   components
+order:      40
+syntax:     .scroll-{direction}
+
+description: >
+  Wrap content in a `.scroll-h` or `.scroll-v` container to get a "poor mans responsive website". 
+
+details: >
+  In WebKit/Blink browsers an additional `.show-scrollbar` class will make the scrollbar always visible and styled. Also see the [vertical scrollable example](/examples/real-world#sticky).
+
+scss-files:
+  - 'scrollable'
+
+---
+
+{%- assign faces = site.data.emoji-faces %}
+{%- assign letters = site.data.alphabet %}
+
+<div class="scroll-h bo_xs">
+  <div class="text_xxxl flex wrap-no">
+    {%- for num in (1..81) %}
+    <div class="bo-r_px pa_s span-auto text-center docs-scroll-emoji">{{ faces[forloop.index] }}</div>
+    {%- endfor %}
+  </div>
+</div>
+
+<style>
+  .docs-scroll-emoji { min-width: {{ size }}; line-height: {{ size }}  }
+</style>

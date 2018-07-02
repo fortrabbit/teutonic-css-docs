@@ -1,0 +1,28 @@
+---
+
+title:      Article
+order:      90
+fullscreen: yes
+hideCode:   yes
+category:   typography
+fullscreen: yes
+syntax:     .article
+
+description: >
+  This is a single wrapper class to handle WYSIWYG or Markdown generated content, where only HTML tags are available and no CSS classes can be set. Use it for articles, blog posts, docs … 
+
+details: >
+  PRO TIP: Combining the `.article` class with [text size containers](#text-size-containers) and [read widths](#read-widths) enables different sizes of articles.
+
+scss-files:
+  - 'article'
+
+---
+
+{%- capture markdown_content %}{% include examples/markdown-example.md %}{% endcapture %}
+
+<div class="bg-0 ma-l_m">
+  <article class="article read_l pa-h_m pa-v_m">
+    {{ markdown_content | markdownify }}
+  </article>
+</div>

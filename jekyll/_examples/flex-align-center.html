@@ -1,0 +1,32 @@
+---
+
+title:    Centered
+category: flexbox
+order:    33
+hide:     no
+
+description: >
+  Here is a two ways on how to perfectly center and element within another with Flexbox.
+
+scss-files:
+  - 'flex'
+  - 'flex-align'
+
+---
+
+<h3 class="ma-t_m ma-b_xs">Vertically and horizontally centered 1</h3>
+<div class="bg-0 pa_s flex justify-center items-center height_xl pos-rel">
+  <div class="span-auto bg-a box">Hello</div>
+  <div class="mini-info text-mono">.justify-center.items-center</div>
+</div>
+<p class="ma-t_xs text_s">
+  &uarr; Combines the justify-center items-center on the flex element.
+</p>
+
+<h3 class="ma-t_m ma-b_xs">Vertically and horizontally centered 2</h3>
+<div class="bg-0 pa_s flex height_xl text-mono">
+  <div class="span-auto bg-j box ma-h-auto self-center">.self-center.span-auto</div>
+</div>
+<p class="ma-t_xs text_s">
+  &uarr; Combines span-auto and <a href="#auto-margin">margin helpers</a> on the element itself.
+</p>

@@ -1,0 +1,30 @@
+---
+
+title:      Mini info
+category:   components
+order:      9
+syntax:     .mini-info
+
+description: >
+  Adds a little info on most boxy containers, most commonly used in combination with [form-box](/examples/forms#form-box) or [box](#box).
+
+
+scss-files:
+  - 'mini-info'
+
+---
+
+<div class="grid-auto collapse-t">
+  <div class="box text-mono text-clip">
+    Always shown with boxes
+    <div class="mini-info">mini-info</div>
+  </div>
+  <div class="form-box no-label">
+    <input type="text" class="input text-mono" value="Shown at hover">
+    <div class="mini-info">mini-info on focus &amp; focus</div>
+  </div>
+  <div class="form-box no-label">
+    <input type="text" class="input text-mono" value="Always shown">
+    <div class="mini-info shown">mini-info always on</div>
+  </div>
+</div>

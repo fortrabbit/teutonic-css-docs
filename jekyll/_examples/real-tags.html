@@ -1,0 +1,57 @@
+---
+
+title:    Tags
+order:    10
+category: real-world
+
+description: >
+  Use existing methods to display tags in various styles and forms.
+
+scss-files:
+  - 'flex'
+  - 'states'
+
+---
+
+{% assign tagnames = "new|cool|old|doggy|bummer|cliffhanger|shaggy|monster|double|2x|WOW|extended|tuff|burner|sweeeeeeeeeat|lazy|lounge|rap|hip-hop|groove|dandy" | split: "|" %}
+
+<div class="read_l">
+  <h3 class="ma-b_s">Simple passive tags</h3>
+  <div class="flex gap_xs">
+    {%- for i in (1..20) %}
+    <div class="span-auto"><div class="pa_s bg-1">{{tagnames[forloop.index]}}</div></div>
+    {%- endfor %}
+  </div>
+  <h3 class="ma-t_m ma-b_s">
+    Tag filter
+  </h3>
+  <div class="flex gap_s">
+    <div class="span-auto">
+      <label class="box pa_s tinted-success tinted-bg-success">
+        <input type="checkbox" class="checkbox"> Success
+      </label>
+    </div>
+    <div class="span-auto">
+      <label class="box pa_s tinted-warn tinted-bg-warn">
+        <input type="checkbox" class="checkbox"> Warn
+      </label>
+    </div>
+    <div class="span-auto">
+      <label class="box pa_s tinted-danger tinted-bg-danger">
+        <input type="checkbox" class="checkbox"> Danger
+      </label>
+    </div>
+  </div>
+  <h3 class="ma-t_m ma-b_s">Radio pills</h3>
+  <div class="grid-auto">
+    <label class="box ra-pill pa_s text-clip">
+      <input type="radio" class="radio" name="docs-radio-filter"> More
+    </label>
+    <label class="box ra-pill pa_s text-clip">
+      <input type="radio" class="radio" name="docs-radio-filter"> Much more
+    </label>
+    <label class="box ra-pill pa_s text-clip">
+      <input type="radio" class="radio" name="docs-radio-filter"> Much much more
+    </label>
+  </div>
+</div>

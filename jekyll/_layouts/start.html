@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include templates/head.html %}
+  <body class="flex column min-height-full">
+    {% include templates/header-navigation.html %}
+    {% include templates/content-navigation.html %}
+    <div class="pa-h_l">
+      <p class="text-hero_l text-sans text-black read_xxl">
+        {{ page.intro }}
+      </p>
+      <p class="text_xxl text-sans read_xl ma-t_m">
+        {{ page.details }}
+      </p>
+      {% comment %}
+      {{ content }}
+      {% endcomment %}
+    </div>
+    {% include templates/footer.html %}
+    {% include templates/foot.html %}
+  </body>
+</html>
+<!-- You have reached the end of the internet  -->

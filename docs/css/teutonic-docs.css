@@ -1,0 +1,105 @@
+
+/*  Gray checker background for transparent colors */
+.docs-checker-bg {
+  --checker-1: hsl(0,0%,40%);
+  --checker-2: hsl(0,0%,60%);
+  position: relative;
+  background-image: 
+    linear-gradient( 45deg, var(--checker-1) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--checker-1) 25%, transparent 25%),
+    linear-gradient( 45deg, transparent 75%, var(--checker-1) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--checker-1) 75%);
+  background-size: 8px 8px;
+  background-color: var(--checker-2);
+  background-position: 0 0, 0 4px, 4px -4px, -4px 0px;
+}
+
+.docs-bg-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* CSS Block to edit */
+.docs-css-edit {
+  display: block;
+  white-space: pre-wrap;
+  position: relative;
+}
+.docs-css-edit:after {
+  background-color: var(--color-main-5);
+  font-size: var(--text-s);
+  color: var(--color-main-1);
+  content: 'edit this';
+  position: absolute;
+  padding: var(--space-xs);
+  right: 0;
+  bottom: 0;
+}
+/* Container to wrap style elem for custom config */
+.docs-css-edit-container {
+  position: absolute;
+  right: var(--space-m);
+  top: 100%;
+  margin-top: calc(-1 * var(--space-m));
+  max-width: 30rem;
+  min-width: 15rem;
+  z-index: 100;
+}
+
+.docs-code-block {
+  position: relative;
+}
+
+.docs-code-block figure pre code {
+  padding-left:  var(--space-l);
+  padding-right: var(--space-l);
+}
+
+/* separator line for examples */
+.docs-example {
+  position: relative;
+  z-index: 1;
+}
+.docs-example:before, .docs-example:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 10;
+  border-top: calc(var(--space-px) * 2) dashed var(--color-main-3);
+}
+.docs-example:before { 
+  top: 0;
+  transform: translateY(calc(-1 * var(--space-px)));
+}
+.docs-example:after  { 
+  bottom: 0;
+  transform: translateY(calc(1 * var(--space-px)));
+}
+.docs-teutonic-link {
+  /*background-color: var(--color-prime-2);*/
+  color: var(--color-main-1);
+  background-image: linear-gradient(
+   to right, 
+   var(--danger-5),
+   var(--danger-5) 25%,
+   var(--prime-5)  25%,
+   var(--prime-5)  50%,
+   var(--success-5) 50%,
+   var(--success-5) 75%,
+   var(--warn-5) 75%
+ );
+}
+.docs-teutonic-link.active, .docs-teutonic-link:hover {
+  background-image: none;
+  background-color: var(--color-main-5);
+}
+
+/*.docs-search .input:not(:focus) { border-color: var(--color-shadow-2) }*/
+/*.docs-search:before             {        color: var(--color-shadow-2) }*/
+
+                            .docs-hide-old { display: block  }
+@supports (display: grid) { .docs-hide-old { display: none !important } }

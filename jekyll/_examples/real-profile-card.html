@@ -1,0 +1,58 @@
+---
+
+title:     Profile cards
+category:  real-world
+order:     50
+
+description: >
+  Here is one way to display a bunch of user profile cards. The [automatic CSS grid](/examples/css-grid#automatic-grid) has a customized min-size for the cards, so they are flexbile in their width. Inside a Flexbox column pushes the meta-footer to the bottom. 
+
+scss-files:
+  - 'grid-auto'
+  - 'flex'
+  - 'radius'
+  - 'border'
+  - 'box-shadow'
+
+---
+
+{%- assign users = site.data.user-profiles  -%}
+
+<div class="docs-profile-container grid-auto gap_s">
+  {%- for user in users %}
+  <div class="flex column bo_px docs-profile ra_s bs_xs">
+    <div class="span-auto cover media ar-16-9 ra-t_s tinted-bg-warn">
+      <img src="{{ user.bg-image }}" alt="">
+    </div>
+    <div class="pa-h_m zi-1">
+      <div class="text-center ma-b_m">
+        <img src="{{ user.profile-pic }}" alt="Portrait" class="ra-circle ma-t_l- bo_xs">
+        <h3 class="text-clip">{{ user.name.first }} {{ user.name.last }}</h3>
+        <p class="ma-t_xs">{{ user.motto }}</p>
+      </div>
+    </div>
+    <div class="span-auto ma-t-auto pa-v_m bg-warn-2 ra-b_s">
+      <div class="flex wrap-no">
+        <div class="span-third text-center">
+          <b class="block">{{ user.numbers[0] }}</b>
+          <span class="text_s block">Photos</span>
+        </div>
+        <div class="span-third text-center">
+          <b class="block">{{ user.numbers[1] }}</b>
+          <span class="text_s block">Followers</span>
+        </div>
+        <div class="span-third text-center">
+          <b class="block">{{ user.numbers[2] }}</b>
+          <span class="text_s block">Likes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  {%- endfor %}
+</div>
+
+
+<style>
+  .docs-profile-container  { --grid-auto-min: 14rem;  }
+  .docs-profile img {  width:8rem; }
+</style>
