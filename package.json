@@ -21,9 +21,10 @@
   "bugs": {
     "url": "https://github.com/fortrabbit/teutonic-css-docs/issues"
   },
-  "homepage": "https://github.com/fortrabbit/teutonic-css-docs#readme",
+  "homepage": "https://teutonic.co",
   "devDependencies": {
-    "browser-sync": "^2.24.5",
+    "hoek": "~4.2",
+    "browser-sync": "2.24.5",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.9.4",
