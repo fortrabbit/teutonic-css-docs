@@ -17,16 +17,25 @@ keep_files: [ css ]
 # so it's gonna be overwritten on jekyll build
 
 # where are the actual pages?
-source: jekyll
+# source: jekyll
 
 # where the build will be found, when not on GH pages
 destination: docs
 
 # Exclude in generated site
-exclude: []
-
-# dump attempt
-# permalink: pretty
+exclude:
+- CNAME
+- Gemfile
+- Gemfile.lock
+- gulpfile.js
+- package.json
+- package-lock.json
+- LICENSE
+- README.md
+- TODO.md
+- Vagrantfile
+- Dockerfile
+- node_modules
 
 # Collections
 collections:
