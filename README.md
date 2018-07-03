@@ -21,7 +21,6 @@ Want to contribute and develop the main styles? This is how to run it locally.
 ## Data structure
 
 * `docs` where the site is gonna be build.
-* `jekyll` where the templates are.
  * All content lives in `_examples`.
 
 ## Component frontend metadata cheat sheet
