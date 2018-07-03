@@ -1,6 +1,6 @@
 # Welcome to the Teutonic CSS docs
 
-This repo here (only) contains the website contents for https://teutonic.io, which is the documentation for Teutonic CSS. This is a static page thing, based on Jekyll, hosted on GitHub pages. The CSS for Teutonic CSS is over [here](https://github.com/fortrabbit/teutonic-css/).
+This repo here (only) contains the website contents for https://teutonic.co, which is the documentation for Teutonic CSS. This is a static page thing, based on Jekyll, hosted on GitHub pages. The CSS for Teutonic CSS is over [here](https://github.com/fortrabbit/teutonic-css/).
 
 ## Quick contributing
 
