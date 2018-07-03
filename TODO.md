@@ -1,8 +1,6 @@
 # TODOs
 
 * [ ] Concatenate URLs and versions in smarter ways in `_config.yml`
-* [ ] Host min version on CDN unpkg [jsdelvr, rawgit …]
-* [ ] Implement GitHub real links
 * [ ] Recheck all SCSS links (half of them are probably dead)
 * [ ] Example for viewport sizes
 
@@ -38,6 +36,8 @@
 
 ## Done
 
+* [x] Implement GitHub real links
+* [x] Host min version on CDN unpkg [jsdelvr, rawgit …]
 * [x] Load external CDN CSS in production
 * [x] Publish docs on GitHub
 * [x] Check license!
