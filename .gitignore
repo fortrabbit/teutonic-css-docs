@@ -1,5 +1,9 @@
+# build stuff
 .sass-cache
 node_modules
+
+# local build of jekyll
+docs/
 
 # OS generated files
 .DS_Store
