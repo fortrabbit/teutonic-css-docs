@@ -63,7 +63,7 @@ version:                 0.7.1
 cdn_url:                 https://unpkg.com/teutonic-css@0.7.1/teutonic.min.css
 licence_url:             https://github.com/fortrabbit/teutonic-css/blob/master/LICENSE
 github_download_url:     https://github.com/fortrabbit/teutonic-css/archive/master.zip
-github_url:              https://github.com/fortrabbit/teutonic-css/
-github_scss_url:         https://github.com/fortrabbit/teutonic-css/css/includes/
-github_min_css_url:      https://raw.githubusercontent.com/teutonic-css/teutonic/master/css/
+github_url:              https://github.com/fortrabbit/teutonic-css
+github_scss_url:         https://github.com/fortrabbit/teutonic-css/css/includes
+github_min_css_url:      https://raw.githubusercontent.com/teutonic-css/teutonic/master/css
 keywords:                "CSS utility library, responsive, OOCSS, Pattern Library"
