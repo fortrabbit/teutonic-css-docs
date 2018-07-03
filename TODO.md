@@ -1,7 +1,7 @@
 # TODOs
 
+* [ ] Concatenate URLs and versions in smarter ways in `_config.yml`
 * [ ] Host min version on CDN unpkg [jsdelvr, rawgit …]
-* [ ] Load external CDN CSS in production
 * [ ] Implement GitHub real links
 * [ ] Recheck all SCSS links (half of them are probably dead)
 * [ ] Example for viewport sizes
@@ -38,6 +38,7 @@
 
 ## Done
 
+* [x] Load external CDN CSS in production
 * [x] Publish docs on GitHub
 * [x] Check license!
 * [x] Implemented domain "teutonic.co"
