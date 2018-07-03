@@ -59,8 +59,8 @@ kramdown:
 # Custom vars
 css_file_docs:           teutonic.css
 css_file_min:            teutonic.min.css
-version:                 0.7.0
-cdn_url:                 https://unpkg.com/teutonic-css@0.7.0/teutonic.min.css
+version:                 0.7.1
+cdn_url:                 https://unpkg.com/teutonic-css@0.7.1/teutonic.min.css
 github_download_url:     https://github.com/fortrabbit/teutonic-css/archive/master.zip
 github_url:              https://github.com/fortrabbit/teutonic-css/
 github_scss_url:         https://github.com/fortrabbit/teutonic-css/css/includes/
