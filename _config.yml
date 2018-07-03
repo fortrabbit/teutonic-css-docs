@@ -61,6 +61,7 @@ css_file_docs:           teutonic.css
 css_file_min:            teutonic.min.css
 version:                 0.7.1
 cdn_url:                 https://unpkg.com/teutonic-css@0.7.1/teutonic.min.css
+licence_url:             https://github.com/fortrabbit/teutonic-css/blob/master/LICENSE
 github_download_url:     https://github.com/fortrabbit/teutonic-css/archive/master.zip
 github_url:              https://github.com/fortrabbit/teutonic-css/
 github_scss_url:         https://github.com/fortrabbit/teutonic-css/css/includes/
