@@ -1,8 +1,5 @@
 # TODOs
 
-* [ ] Publish docs on GitHub
-* [ ] Check license!
-* [ ] Implement CNAME for domain
 * [ ] Host min version on CDN unpkg [jsdelvr, rawgit …]
 * [ ] Load external CDN CSS in production
 * [ ] Implement GitHub real links
@@ -41,6 +38,9 @@
 
 ## Done
 
+* [x] Publish docs on GitHub
+* [x] Check license!
+* [x] Implemented domain "teutonic.co"
 * [x] Check Cards example
 * [ ] ~~Redo Generic Icons with generic classes?~~
 * [ ] ~~Browserchrome example~~
