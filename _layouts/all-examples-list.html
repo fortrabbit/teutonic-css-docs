@@ -16,7 +16,7 @@
         {% for example in examples %}
         {% unless example.hide %}
         <li>
-          <a href="{{ category.id }}#{{ example.title | slugify }}" class="block">{{ example.title }}</a></li>
+          <a href="{{ category.id }}#{{ example.title | slugify }}" class="block-link pa_xs bo-t_px">{{ example.title }}</a></li>
         {% endunless %}
         {% endfor %}
       </ul>
