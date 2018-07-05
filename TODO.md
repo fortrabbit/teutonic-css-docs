@@ -1,9 +1,9 @@
 # TODOs
 
 
-
 ## Ideas
 
+* [ ] Delete --old templates
 * [ ] Example for viewport sizes
 * [ ] Open example in a new window (realize via collection output > for better resizing)
 * [ ] Concatenate URLs and versions in smarter ways in `_config.yml` ?
