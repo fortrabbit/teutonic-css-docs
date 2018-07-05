@@ -1,15 +1,14 @@
 # TODOs
 
-* [ ] Recheck all SCSS links (half of them are probably dead)
-* [ ] Example for viewport sizes
 
 
 ## Ideas
 
+* [ ] Example for viewport sizes
+* [ ] Open example in a new window (realize via collection output > for better resizing)
 * [ ] Concatenate URLs and versions in smarter ways in `_config.yml` ?
 * [ ] Subresource Integrity (SRI) for CDN links
 * [ ] Implement Agolia Doc Search!
-* [ ] Open example in a new window (realize via collection output > for better resizing)
 * [ ] Show span-all example with columns
 * [ ] Usage: Explain use cases for FlexBox Grid CSS grid (Medium Post!)
 * [ ] Twitter/FB Card (image)
@@ -36,6 +35,7 @@
 
 ## Done
 
+* [x] Recheck all SCSS links (half of them are probably dead)
 * [x] Implement GitHub real links
 * [x] Host min version on CDN unpkg [jsdelvr, rawgit …]
 * [x] Load external CDN CSS in production
