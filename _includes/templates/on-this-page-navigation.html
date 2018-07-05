@@ -10,7 +10,7 @@
 {% endcomment %}
 
 <div class="ma-t_m ma-h_l- pa-h_l pa-v_m inverted pos-rel">
-  <ul class="row-list columns cols-4 cols-2-p gap_px read_xl ma-v_s">
+  <ul class="columns cols-4 cols-2-p gap_px read_xl ma-v_s">
     {% for example in examples %}
     {% unless example.hide %}
     <li><a href="#{{ example.title | slugify }}" class="block-link">{{ example.title }}</a></li>
