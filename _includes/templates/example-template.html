@@ -3,11 +3,12 @@
 {% unless example.hide %}
 <article>
   <header class="ma-t_l ma-b_s">
-    <h2 id="{{ example.title | slugify }}" class="ma-b_s">
-      {{ example.title }}
-      <a class="anchor" href="#{{ example.title | slugify }}"></a>
-    </h2>
-
+    <div class="flex wrap-no ma-b_s">
+      <h2 id="{{ example.title | slugify }}">
+        {{ example.title }}
+        <a class="anchor" href="#{{ example.title | slugify }}"></a>
+      </h2>
+    </div>
     {% if example.description %}
     <div class="text_l read_l">
       {{ example.description | markdownify  }}
@@ -27,13 +28,6 @@
       </div>
       {% endif %}
 
-      
-      {% if example.status %}
-      <div class="ma-b_xs">
-        <b>Status</b>: {{ example.status  }}
-      </div>
-      {% endif %}
-
       {% if example.scss-files %}
       <div>
         <b>SCSS</b>:
@@ -44,6 +38,7 @@
       {% endif %}
 
     </div>
+    <a href="{{ example.url }}" class="text_xs link span-auto self-end ma-l-auto">Open this example in a dedicated page &rarr;</a>
 
   </header>
 

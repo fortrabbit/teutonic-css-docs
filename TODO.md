@@ -3,12 +3,12 @@
 
 ## Ideas
 
+* [ ] Implement Agolia Doc Search!
+* [ ] Open example in a new window (realize via collection output > for better resizing)
 * [ ] Delete --old templates
 * [ ] Example for viewport sizes
-* [ ] Open example in a new window (realize via collection output > for better resizing)
 * [ ] Concatenate URLs and versions in smarter ways in `_config.yml` ?
 * [ ] Subresource Integrity (SRI) for CDN links
-* [ ] Implement Agolia Doc Search!
 * [ ] Show span-all example with columns
 * [ ] Usage: Explain use cases for FlexBox Grid CSS grid (Medium Post!)
 * [ ] Twitter/FB Card (image)

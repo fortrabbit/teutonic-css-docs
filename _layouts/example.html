@@ -1,0 +1,19 @@
+{% comment %}
+
+This is the single view of an example!
+
+{% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+  {% include templates/head.html %}
+  <body>
+    {% include templates/header-navigation.html %}
+    {% include templates/content-navigation.html %}
+    <main class="pa-h_l">
+      {{ content }}
+    </main>
+    {% include templates/footer.html %}
+    {% include templates/foot.html %}
+  </body>
+</html>
+<!-- You have reached the end of the internet  -->
