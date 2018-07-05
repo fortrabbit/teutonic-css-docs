@@ -1,12 +1,12 @@
 # TODOs
 
-* [ ] Concatenate URLs and versions in smarter ways in `_config.yml`
 * [ ] Recheck all SCSS links (half of them are probably dead)
 * [ ] Example for viewport sizes
 
 
 ## Ideas
 
+* [ ] Concatenate URLs and versions in smarter ways in `_config.yml` ?
 * [ ] Subresource Integrity (SRI) for CDN links
 * [ ] Implement Agolia Doc Search!
 * [ ] Open example in a new window (realize via collection output > for better resizing)

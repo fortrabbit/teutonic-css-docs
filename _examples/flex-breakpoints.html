@@ -10,8 +10,7 @@ description: >
   The responsive helper classes for childs: `.span-half-t`, `.span-half-p`, `collapse-t` and `collapse-p`. `-t` is for tablet and `-p` for phone screen resolutions.
 
 scss-files:
-  - 'flex'
-  - 'box'
+  - 'flex-breakpoints'
 
 
 data: 
@@ -35,7 +34,7 @@ data:
 {% assign letters = site.data.alphabet %}
 
 <div class="flex gap_s">
-  {% for box in page.data.boxes %}
+  {%- for box in page.data.boxes %}
   <div class="{{ box }} text-clip">
     <div class="box text-clip text-mono bg-{{ letters[forloop.index] }}">{{ box }}</div>
   </div>
