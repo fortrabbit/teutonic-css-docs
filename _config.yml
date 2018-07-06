@@ -1,16 +1,16 @@
 # Site settings
 
-title:               Teutonic CSS
-slug-title:          teutonic-css
+title:               "Teutonic CSS"
+slug-title:          "teutonic-css"
 email:               frank@franklaemmer.de
 description:         "A modern CSS framework — versatile, well documented. Enjoy a fresh look. Customize at ease."
 baseurl:             ""
 url:                 "https://teutonic.co" # the base hostname & protocol for your site
-twitter_username:    frank_laemmer
-github_username:     frank-laemmer
+twitter_username:    "frank_laemmer"
+github_username:     "frank-laemmer"
 
-css_file_docs:       teutonic.css
-css_file_min:        teutonic.min.css
+css_file_docs:       "teutonic.css"
+css_file_min:        "teutonic.min.css"
 version:             0.7.2
 cdn_url:             https://unpkg.com/teutonic-css@0.7.2/teutonic.min.css
 licence_url:         https://github.com/fortrabbit/teutonic-css/blob/master/LICENSE
@@ -66,6 +66,14 @@ collections:
 
 plugins:
   - jekyll-sitemap
+
+defaults:
+  -
+    scope:
+      path:  "examples/*/"
+    values:
+      sitemap:   false
+
 
 
 # General settings

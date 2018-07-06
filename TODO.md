@@ -1,6 +1,8 @@
 # TODOs
 
 * [ ] Include Sitemap (to exclude single views from search results?)
+* [ ] Better version management! Currently: 1. package.json > 2.config 
+
 
 ## Ideas
 
