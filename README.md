@@ -57,6 +57,24 @@ data:                       # dummy data to populate examples
     A List Apart : https://alistapart.com
 ```
 
+
+## Releasing
+
+The release cycle sucks. Here is how to do it currently:
+
+### Release the core
+
+1. Run `npm version patch` or whatever to create a new version in `package.json`
+2. Take care that an associated Git tag is created as well
+3. Make sure to push tag and changes to GitHub like `git push --tags`
+4. Run `gulp` so that the new CSS files are created as well
+5. Run `npm publish` to up the source code and make CDN links from UNPKG available
+
+### Update the docs (here)
+
+The teutonic-css-docs should know about the new release as well. Therefore find all instances of the release tag in `_config.yml` and update accordingly. Push the changes to GitHub to update the files on https://teutonic.co
+
+
 ## Author
 
 * [Frank Lämmer](https://twitter.com/frank_laemmer)

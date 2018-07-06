@@ -1,11 +1,12 @@
 # TODOs
 
 * [ ] Include Sitemap (to exclude single views from search results?)
-* [ ] Better version management! Currently: 1. package.json > 2.config 
 
 
 ## Ideas
 
+* [ ] Better version management! Currently: 1. package.json > 2.config 
+* [ ] Better publishing
 * [ ] Comparsion table ala https://bulma.io/alternative-to-bootstrap/s
 * [ ] Make Bundler install dependencies locally?
 * [ ] Implement Agolia Doc Search!
