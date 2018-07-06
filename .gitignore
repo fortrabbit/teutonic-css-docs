@@ -2,11 +2,6 @@
 .sass-cache
 node_modules
 
-# local Bundler installs
-vendor
-.bundle
-
-
 # local build of jekyll
 docs/
 
@@ -17,4 +12,12 @@ docs/
 .Spotlight-V100
 .Trashes
 ehthumbs.db
-Thumbs.db
+Thumbs.db_site
+.sass-cache
+.jekyll-metadata
+
+# Bundler
+vendor/
+vendor
+.bundle
+.bundle/
