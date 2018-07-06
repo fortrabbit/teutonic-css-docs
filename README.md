@@ -20,11 +20,14 @@ Want to contribute and develop the main styles and the docs? This is how to run 
 7. The CSS changes will be loaded into the docs
 
 
+It is recommended to install the dependencies in the `vendor` folder: 
+https://jekyllrb.com/tutorials/using-jekyll-with-bundler/#configure-bundler
+
 
 ## Data structure
 
 * `docs` where the site is gonna be build.
- * All content lives in `_examples`.
+* All content lives in `_examples`.
 
 ## Component frontend metadata cheat sheet
 
