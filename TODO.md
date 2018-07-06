@@ -3,6 +3,7 @@
 
 ## Ideas
 
+* [ ] Make Bundler install dependencies locally?
 * [ ] Implement Agolia Doc Search!
 * [ ] Open example in a new window (realize via collection output > for better resizing)
 * [ ] Delete --old templates
