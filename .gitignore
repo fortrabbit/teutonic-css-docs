@@ -2,6 +2,11 @@
 .sass-cache
 node_modules
 
+# local Bundler installs
+vendor
+.bundle
+
+
 # local build of jekyll
 docs/
 
