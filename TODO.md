@@ -1,8 +1,10 @@
 # TODOs
 
+* [ ] Include Sitemap (to exclude single views from search results?)
 
 ## Ideas
 
+* [ ] Comparsion table ala https://bulma.io/alternative-to-bootstrap/s
 * [ ] Make Bundler install dependencies locally?
 * [ ] Implement Agolia Doc Search!
 * [ ] Open example in a new window (realize via collection output > for better resizing)
