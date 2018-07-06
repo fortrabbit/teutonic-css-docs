@@ -12,7 +12,7 @@
         <a href="/examples/{{ category.id }}" class="link">{{ category.title }}</a>
       </h3>
       {% assign examples = site.examples | where:"category", category.id | sort: "order", "last" %}
-      <ul class="columns cols-2 collap gap-no ma-t_px-">
+      <ul class="columns cols-4 collap gap-no ma-t_px-">
         {% for example in examples %}
         {% unless example.hide %}
         <li>

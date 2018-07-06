@@ -1,17 +1,21 @@
 {% comment %}
-
 This is the single view of an example!
-
 {% endcomment %}
+
+{% assign single = true %}
+{% assign example = page %}
+
 <!DOCTYPE html>
 <html lang="en">
   {% include templates/head.html %}
   <body>
     {% include templates/header-navigation.html %}
     {% include templates/content-navigation.html %}
-    <main class="pa-h_l">
-      {{ content }}
-    </main>
+
+    <div class="pa-h_l">
+    {% include templates/example-template.html %}
+    </div>
+
     {% include templates/footer.html %}
     {% include templates/foot.html %}
   </body>

@@ -44,7 +44,7 @@ exclude:
 collections:
   examples:
     output: true
-    permalink: /:collection/:name
+    permalink: /:collection/:path
 
 
 # Front Matter Defaults

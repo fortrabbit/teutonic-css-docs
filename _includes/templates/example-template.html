@@ -8,6 +8,11 @@
         {{ example.title }}
         <a class="anchor" href="#{{ example.title | slugify }}"></a>
       </h2>
+      {% if single %}
+      <a href="/examples/{{ example.category }}#{{ example.title | slugify }}" class="text_s link span-auto self-end ma-l-auto" data-tooltip="Back to context">&larr;</a>
+      {% else %}
+      <a href="{{ example.url }}" class="text_s link span-auto self-end ma-l-auto" data-tooltip="Open dedicated">&rarr;</a>
+      {% endif %}
     </div>
     {% if example.description %}
     <div class="text_l read_l">
@@ -37,9 +42,7 @@
       </div>
       {% endif %}
 
-    </div>
-    <a href="{{ example.url }}" class="text_xs link span-auto self-end ma-l-auto">Open this example in a dedicated page &rarr;</a>
-
+    </div>  
   </header>
 
 {% unless example.hideExample %}
