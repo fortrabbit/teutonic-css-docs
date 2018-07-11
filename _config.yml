@@ -1,24 +1,26 @@
 # Site settings
 
-title:               "Teutonic CSS"
-slug-title:          "teutonic-css"
-email:               frank@franklaemmer.de
-description:         "A modern CSS framework — versatile, well documented. Enjoy a fresh look. Customize at ease."
-baseurl:             ""
-url:                 "https://teutonic.co" # the base hostname & protocol for your site
-twitter_username:    "frank_laemmer"
-github_username:     "frank-laemmer"
+title:                "Teutonic CSS"
+slug-title:           "teutonic-css"
+email:                frank@franklaemmer.de
+description:          "A modern CSS framework — versatile, well documented. Enjoy a fresh look. Customize at ease."
+baseurl:              ""
+url:                  "https://teutonic.co" # the base hostname & protocol for your site
+twitter_username:     "frank_laemmer"
+github_username:      "frank-laemmer"
 
-css_file_docs:       "teutonic.css"
-css_file_min:        "teutonic.min.css"
-version:             0.7.4
-cdn_url:             https://unpkg.com/teutonic-css@0.7.4/teutonic.min.css
-licence_url:         https://github.com/fortrabbit/teutonic-css/blob/master/LICENSE
-github_download_url: https://github.com/fortrabbit/teutonic-css/archive/master.zip
-github_url:          https://github.com/fortrabbit/teutonic-css
-github_scss_url:     https://github.com/fortrabbit/teutonic-css/blob/master/includes
-github_min_css_url:  https://raw.githubusercontent.com/teutonic-css/teutonic/master/css
-keywords:            "CSS utility library, responsive, OOCSS, Pattern Library"
+css_file_docs:        "teutonic.css"
+css_file_min:         "teutonic.min.css"
+version:              0.7.4
+cdn_url:              https://unpkg.com/teutonic-css@0.7.4/teutonic.min.css
+licence_url:          https://github.com/fortrabbit/teutonic-css/blob/master/LICENSE
+github_download_url:  https://github.com/fortrabbit/teutonic-css/archive/master.zip
+github_url:           https://github.com/fortrabbit/teutonic-css
+github_scss_url:      https://github.com/fortrabbit/teutonic-css/blob/master/includes
+github_gzip_css_url:  https://github.com/fortrabbit/teutonic-css/blob/master/teutonic.css.min.gz?raw=true
+github_min_css_url:   https://raw.githubusercontent.com/fortrabbit/teutonic-css/master/teutonic.min.css
+github_large_css_url: https://raw.githubusercontent.com/fortrabbit/teutonic-css/master/teutonic.css
+keywords:             "CSS utility library, responsive, OOCSS, Pattern Library"
 
 
 

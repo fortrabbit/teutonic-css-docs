@@ -70,7 +70,11 @@ This is the easiest way. See the above [quick start guide](#quick-start) on how 
 
 ##### B. Download
 
-You can also download and include the [teutonic.min.css]({{ site.github_min_css_url }}) directly into your project to avoid external sources.
+You can also download and include the CSS file directly into your project to avoid external sources. There are three ready-build files available:
+
+* [teutonic.css]({{github_large_css_url}}) - readable for development ~80 KB
+* [teutonic.min.css]({{github_gzip_css_url}}) - minified to oneline ~65 KB
+* [teutonic.min.css.gz]({{github_min_css_url}}) - minified and gzipped ~12 KB
 
 #### Theme the compiled
 
@@ -140,7 +144,7 @@ The file `teutonic.scss` bascially just imports all the files that are stored wi
 
 Teutonic contains some features not documented here in the docs. Discover them, by reading the source files. Each file contains an abstract on what to expect, functions and styles are self-explaining.
 
-## Resposnive design
+## Responsive design
 
 Altough Teutonic CSS is more responsive and less adapative, some media queries and breakpoints are provided. Unfortunatly these breakpoints can not be controlled by CSS Vars and are therefore "hardcoded" as SCSS Vars: `$breakpoint-desktop: 1600px`, `$breakpoint-tablet: 800px` and `$breakpoint-phone: 400px`. While changing the viewport to smaller breakpoints, the only global rule affects the font size, which will get smaller, which in return has a huge effect, as everything depends on it. Additional helpers media query breakpoint classes are supplied to:
 
