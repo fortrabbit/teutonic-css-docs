@@ -2,6 +2,8 @@
 <script src="{{js}}"></script>
 {% endfor -%}
 
+{% include templates/docsearch-js.html %}
+
 {%- if site.ga_code %}
 <script>
 var _gaq=[['_setAccount','{{site.ga_code}}'],['_trackPageview']];
