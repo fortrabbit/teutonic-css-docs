@@ -8,6 +8,8 @@ baseurl:              ""
 url:                  "https://teutonic.co" # the base hostname & protocol for your site
 twitter_username:     "frank_laemmer"
 github_username:      "frank-laemmer"
+media-splash-image:   "/img/teutonic-splash-image.jpg"
+
 
 css_file_docs:        "teutonic.css"
 css_file_min:         "teutonic.min.css"
