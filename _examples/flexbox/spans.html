@@ -44,6 +44,11 @@ data:
 
 <div class="flex gap_s">
   {%- for box in page.data.box-widths %}
-  <div class="{{ box }}"><div class="box text-clip text-mono bg-{{ letters[forloop.index] }}">{{ box }}</div></div>
+  <div class="{{ box }}">
+    <div class="box text-clip text-mono bg-{{ letters[forloop.index] }}">
+      &nbsp;
+      <div class="mini-info">{{ box }}</div>
+    </div>
+  </div>
   {%- endfor %}
 </div>
