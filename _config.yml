@@ -23,6 +23,7 @@ github_gzip_css_url:  https://github.com/fortrabbit/teutonic-css/blob/master/teu
 github_min_css_url:   https://raw.githubusercontent.com/fortrabbit/teutonic-css/master/teutonic.min.css
 github_large_css_url: https://raw.githubusercontent.com/fortrabbit/teutonic-css/master/teutonic.css
 keywords:             "CSS utility library, responsive, OOCSS, Pattern Library"
+medium_url:           https://medium.com/teutonic-css
 
 
 
