@@ -1,6 +1,6 @@
 {
   "name": "teutonic-css-docs",
-  "version": "0.7.2",
+  "version": "0.7.6",
   "description": "Jekyll based static page to showcase Teutonic CSS.",
   "directories": {},
   "scripts": {},
@@ -23,14 +23,12 @@
   },
   "homepage": "https://teutonic.co",
   "devDependencies": {
-    "browser-sync": "2.24.6",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-clean-css": "^3.10.0",
-    "gulp-header": "^2.0.5",
-    "gulp-sass": "^4.0.1",
+    "browser-sync": "2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-watch": "^5.0.1",
-    "hoek": "^5.0.4"
+    "gulp-watch": "^5.0.1"
   }
 }
