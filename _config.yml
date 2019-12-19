@@ -69,9 +69,6 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-plugins:
-  # - jekyll-sitemap
-
 defaults:
   -
     scope:
