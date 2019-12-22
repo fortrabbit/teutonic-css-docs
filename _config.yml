@@ -13,8 +13,8 @@ media-splash-image:   "/img/teutonic-splash-image.jpg"
 
 css_file_docs:        "teutonic.css"
 css_file_min:         "teutonic.min.css"
-version:              0.7.7
-cdn_url:              https://unpkg.com/teutonic-css@0.7.7/teutonic.min.css
+version:              0.7.12
+cdn_url:              https://unpkg.com/teutonic-css@0.7.12/teutonic.min.css
 licence_url:          https://github.com/fortrabbit/teutonic-css/blob/master/LICENSE
 github_download_url:  https://github.com/fortrabbit/teutonic-css/archive/master.zip
 github_url:           https://github.com/fortrabbit/teutonic-css
