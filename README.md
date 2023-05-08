@@ -1,4 +1,6 @@
-# Welcome to the Teutonic CSS docs
+# Welcome to the Teutonic CSS docs (retired)
+
+As of 2023-05 Teutonic CSS will no longer be continued. More details [here](https://medium.com/teutonic-css/retiring-my-own-little-css-framework-e0a130ca2a33).
 
 This repo here (only) contains the website contents for https://teutonic.co, which is the documentation for Teutonic CSS. This is a static page thing, based on Jekyll, hosted on GitHub pages. The CSS for Teutonic CSS is over [here](https://github.com/fortrabbit/teutonic-css/).
 
